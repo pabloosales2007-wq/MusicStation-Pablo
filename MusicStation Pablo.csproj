@@ -103,6 +103,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ucTabelaDashBoard.resx">
+      <DependentUpon>ucTabelaDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucTabelaFinanceiro.resx">
       <DependentUpon>ucTabelaFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
