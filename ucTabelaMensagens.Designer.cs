@@ -132,6 +132,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ucTabelaMensagens";
             this.Size = new System.Drawing.Size(200, 536);
+            this.Load += new System.EventHandler(this.ucTabelaMensagens_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

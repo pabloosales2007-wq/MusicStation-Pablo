@@ -38,8 +38,8 @@
             this.btnOperacional = new System.Windows.Forms.Button();
             this.btnCatalogo = new System.Windows.Forms.Button();
             this.btnPessoas = new System.Windows.Forms.Button();
-            this.pboLogo = new System.Windows.Forms.PictureBox();
             this.panelConteudo = new System.Windows.Forms.Panel();
+            this.pboLogo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelAbrirTabelas.SuspendLayout();
@@ -76,6 +76,8 @@
             // 
             // panelAbrirTabelas
             // 
+            this.panelAbrirTabelas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelAbrirTabelas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(26)))));
             this.panelAbrirTabelas.Controls.Add(this.btnDashboard);
             this.panelAbrirTabelas.Controls.Add(this.btnMensagens);
@@ -83,7 +85,6 @@
             this.panelAbrirTabelas.Controls.Add(this.btnOperacional);
             this.panelAbrirTabelas.Controls.Add(this.btnCatalogo);
             this.panelAbrirTabelas.Controls.Add(this.btnPessoas);
-            this.panelAbrirTabelas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAbrirTabelas.Location = new System.Drawing.Point(200, 0);
             this.panelAbrirTabelas.Name = "panelAbrirTabelas";
             this.panelAbrirTabelas.Size = new System.Drawing.Size(976, 100);
@@ -185,6 +186,13 @@
             this.btnPessoas.UseVisualStyleBackColor = false;
             this.btnPessoas.Click += new System.EventHandler(this.btnPessoas_Click);
             // 
+            // panelConteudo
+            // 
+            this.panelConteudo.Location = new System.Drawing.Point(200, 100);
+            this.panelConteudo.Name = "panelConteudo";
+            this.panelConteudo.Size = new System.Drawing.Size(976, 536);
+            this.panelConteudo.TabIndex = 2;
+            // 
             // pboLogo
             // 
             this.pboLogo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -195,14 +203,6 @@
             this.pboLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboLogo.TabIndex = 0;
             this.pboLogo.TabStop = false;
-            // 
-            // panelConteudo
-            // 
-            this.panelConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelConteudo.Location = new System.Drawing.Point(200, 100);
-            this.panelConteudo.Name = "panelConteudo";
-            this.panelConteudo.Size = new System.Drawing.Size(976, 536);
-            this.panelConteudo.TabIndex = 2;
             // 
             // Form1
             // 
