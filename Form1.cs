@@ -18,32 +18,33 @@ namespace MusicStation_Pablo
             InitializeComponent();
         }
 
+
+
+
         #region ////Metodo para arredondar os botao
         //Metodo para arredondar os botao
-        private void ArredondarBotao(Button btn, int raio)
+        
+
+        public void AlterarConteudo(UserControl uc)
         {
-            GraphicsPath path = new GraphicsPath();
-            path.StartFigure();
+            // Limpa o painel de conteúdo
+            if (panelConteudo.Controls.Count > 0)
+            {
+                panelConteudo.Controls[0].Dispose();
+            }
 
-            path.AddArc(0, 0, raio, raio, 180, 90);
-            path.AddArc(btn.Width - raio, 0, raio, raio, 270, 90);
-            path.AddArc(btn.Width - raio, btn.Height - raio, raio, raio, 0, 90);
-            path.AddArc(0, btn.Height - raio, raio, raio, 90, 90);
+            panelConteudo.Controls.Clear();
 
-            path.CloseFigure();
-            btn.Region = new Region(path);
+            // Configura e adiciona o novo UserControl
+            uc.Dock = DockStyle.Fill;
+            panelConteudo.Controls.Add(uc);
         }
 
 
         //Arrendondar botoes
         private void Form1_Load(object sender, EventArgs e)
         {
-            ArredondarBotao(btnPessoas, 20);
-            ArredondarBotao(btnCatalogo, 20);
-            ArredondarBotao(btnDashboard, 20);
-            ArredondarBotao(btnFinanceiro, 20);
-            ArredondarBotao(btnMensagens, 20);
-            ArredondarBotao(btnOperacional, 20);
+            
         }
         #endregion
 
@@ -76,7 +77,17 @@ namespace MusicStation_Pablo
         private void btnPessoas_Click(object sender, EventArgs e)
         {
             ucTabelasPessoas ucTabelas = new ucTabelasPessoas();
+
+            // Conectamos a Action do UserControl ao método do Form1
+            // "Quando o ucTabelas pedir para abrir algo, use o ExibirUserControl no panelConteudo"
+            ucTabelas.SolicitarAbertura = (proximaTela) =>
+            {
+                ExibirUserControl(proximaTela, panelConteudo); // panelConteudo é o painel principal do CRUD
+            };
+
+            // Exibe o menu de botões (Usuários, Admins) no painel de tabelas
             ExibirUserControl(ucTabelas, panelTabelas);
+
         }
 
         private void btnCatalogo_Click(object sender, EventArgs e)

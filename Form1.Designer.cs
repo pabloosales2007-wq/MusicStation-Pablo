@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelTabelas = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.panelAbrirTabelas = new System.Windows.Forms.Panel();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnMensagens = new System.Windows.Forms.Button();
             this.btnFinanceiro = new System.Windows.Forms.Button();
@@ -40,10 +39,25 @@
             this.btnPessoas = new System.Windows.Forms.Button();
             this.panelConteudo = new System.Windows.Forms.Panel();
             this.pboLogo = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            this.panelAbrirTabelas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,7 +73,8 @@
             // 
             // panelTabelas
             // 
-            this.panelTabelas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTabelas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTabelas.Location = new System.Drawing.Point(0, 100);
             this.panelTabelas.Name = "panelTabelas";
             this.panelTabelas.Size = new System.Drawing.Size(200, 536);
@@ -74,31 +89,16 @@
             this.panelLogo.Size = new System.Drawing.Size(200, 100);
             this.panelLogo.TabIndex = 0;
             // 
-            // panelAbrirTabelas
-            // 
-            this.panelAbrirTabelas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelAbrirTabelas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(26)))));
-            this.panelAbrirTabelas.Controls.Add(this.btnDashboard);
-            this.panelAbrirTabelas.Controls.Add(this.btnMensagens);
-            this.panelAbrirTabelas.Controls.Add(this.btnFinanceiro);
-            this.panelAbrirTabelas.Controls.Add(this.btnOperacional);
-            this.panelAbrirTabelas.Controls.Add(this.btnCatalogo);
-            this.panelAbrirTabelas.Controls.Add(this.btnPessoas);
-            this.panelAbrirTabelas.Location = new System.Drawing.Point(200, 0);
-            this.panelAbrirTabelas.Name = "panelAbrirTabelas";
-            this.panelAbrirTabelas.Size = new System.Drawing.Size(976, 100);
-            this.panelAbrirTabelas.TabIndex = 1;
-            // 
             // btnDashboard
             // 
-            this.btnDashboard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDashboard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(33)))), ((int)(((byte)(111)))));
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.btnDashboard.Location = new System.Drawing.Point(813, 16);
+            this.btnDashboard.Location = new System.Drawing.Point(3, 10);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(151, 70);
             this.btnDashboard.TabIndex = 5;
@@ -108,13 +108,14 @@
             // 
             // btnMensagens
             // 
-            this.btnMensagens.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMensagens.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMensagens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(33)))), ((int)(((byte)(111)))));
             this.btnMensagens.FlatAppearance.BorderSize = 0;
             this.btnMensagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMensagens.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.btnMensagens.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.btnMensagens.Location = new System.Drawing.Point(652, 16);
+            this.btnMensagens.Location = new System.Drawing.Point(3, 9);
             this.btnMensagens.Name = "btnMensagens";
             this.btnMensagens.Size = new System.Drawing.Size(151, 70);
             this.btnMensagens.TabIndex = 4;
@@ -124,13 +125,14 @@
             // 
             // btnFinanceiro
             // 
-            this.btnFinanceiro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFinanceiro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(33)))), ((int)(((byte)(111)))));
             this.btnFinanceiro.FlatAppearance.BorderSize = 0;
             this.btnFinanceiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinanceiro.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.btnFinanceiro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.btnFinanceiro.Location = new System.Drawing.Point(491, 16);
+            this.btnFinanceiro.Location = new System.Drawing.Point(5, 10);
             this.btnFinanceiro.Name = "btnFinanceiro";
             this.btnFinanceiro.Size = new System.Drawing.Size(151, 70);
             this.btnFinanceiro.TabIndex = 3;
@@ -140,13 +142,14 @@
             // 
             // btnOperacional
             // 
-            this.btnOperacional.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOperacional.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOperacional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(33)))), ((int)(((byte)(111)))));
             this.btnOperacional.FlatAppearance.BorderSize = 0;
             this.btnOperacional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOperacional.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOperacional.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.btnOperacional.Location = new System.Drawing.Point(330, 15);
+            this.btnOperacional.Location = new System.Drawing.Point(5, 10);
             this.btnOperacional.Name = "btnOperacional";
             this.btnOperacional.Size = new System.Drawing.Size(151, 70);
             this.btnOperacional.TabIndex = 2;
@@ -156,13 +159,14 @@
             // 
             // btnCatalogo
             // 
-            this.btnCatalogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCatalogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(33)))), ((int)(((byte)(111)))));
             this.btnCatalogo.FlatAppearance.BorderSize = 0;
             this.btnCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCatalogo.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.btnCatalogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.btnCatalogo.Location = new System.Drawing.Point(169, 15);
+            this.btnCatalogo.Location = new System.Drawing.Point(5, 9);
             this.btnCatalogo.Name = "btnCatalogo";
             this.btnCatalogo.Size = new System.Drawing.Size(151, 70);
             this.btnCatalogo.TabIndex = 1;
@@ -172,13 +176,14 @@
             // 
             // btnPessoas
             // 
-            this.btnPessoas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPessoas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPessoas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(33)))), ((int)(((byte)(111)))));
             this.btnPessoas.FlatAppearance.BorderSize = 0;
             this.btnPessoas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPessoas.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.btnPessoas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.btnPessoas.Location = new System.Drawing.Point(8, 15);
+            this.btnPessoas.Location = new System.Drawing.Point(3, 9);
             this.btnPessoas.Name = "btnPessoas";
             this.btnPessoas.Size = new System.Drawing.Size(151, 70);
             this.btnPessoas.TabIndex = 0;
@@ -188,6 +193,8 @@
             // 
             // panelConteudo
             // 
+            this.panelConteudo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelConteudo.Location = new System.Drawing.Point(200, 100);
             this.panelConteudo.Name = "panelConteudo";
             this.panelConteudo.Size = new System.Drawing.Size(976, 536);
@@ -204,21 +211,125 @@
             this.pboLogo.TabIndex = 0;
             this.pboLogo.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(26)))));
+            this.panel2.Controls.Add(this.tableLayoutPanel1);
+            this.panel2.Location = new System.Drawing.Point(200, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(976, 100);
+            this.panel2.TabIndex = 3;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(26)))));
+            this.tableLayoutPanel1.ColumnCount = 6;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Controls.Add(this.panel8, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel7, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel6, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(976, 99);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.btnPessoas);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(156, 93);
+            this.panel3.TabIndex = 6;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.btnCatalogo);
+            this.panel4.Location = new System.Drawing.Point(165, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(156, 93);
+            this.panel4.TabIndex = 7;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.Controls.Add(this.btnOperacional);
+            this.panel5.Location = new System.Drawing.Point(327, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(156, 93);
+            this.panel5.TabIndex = 8;
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.Controls.Add(this.btnFinanceiro);
+            this.panel6.Location = new System.Drawing.Point(489, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(156, 93);
+            this.panel6.TabIndex = 9;
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.Controls.Add(this.btnMensagens);
+            this.panel7.Location = new System.Drawing.Point(651, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(156, 93);
+            this.panel7.TabIndex = 10;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.Controls.Add(this.btnDashboard);
+            this.panel8.Location = new System.Drawing.Point(813, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(160, 93);
+            this.panel8.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 636);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelConteudo);
-            this.Controls.Add(this.panelAbrirTabelas);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormBase";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            this.panelAbrirTabelas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -228,7 +339,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pboLogo;
-        private System.Windows.Forms.Panel panelAbrirTabelas;
         private System.Windows.Forms.Panel panelTabelas;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnMensagens;
@@ -237,6 +347,14 @@
         private System.Windows.Forms.Button btnCatalogo;
         private System.Windows.Forms.Button btnPessoas;
         private System.Windows.Forms.Panel panelConteudo;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

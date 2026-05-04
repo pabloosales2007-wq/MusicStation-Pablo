@@ -41,10 +41,10 @@ namespace MusicStation_Pablo
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Form1 formPrincipal = new Form1();
-            formPrincipal.ShowDialog();
-            Close(); 
-            
+            Form1 principal = new Form1();
+            principal.FormClosed += (s, args) => Application.Exit();
+            principal.Show();
+            this.Hide();
         }
     }
 }

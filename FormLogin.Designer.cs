@@ -30,26 +30,26 @@
         {
             this.panelFundo = new System.Windows.Forms.Panel();
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.btnEntrar = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.pboSenha = new System.Windows.Forms.PictureBox();
+            this.pboUsuario = new System.Windows.Forms.PictureBox();
             this.pboLogo = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblSenha = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btnEntrar = new System.Windows.Forms.Button();
-            this.pboUsuario = new System.Windows.Forms.PictureBox();
-            this.pboSenha = new System.Windows.Forms.PictureBox();
             this.panelFundo.SuspendLayout();
             this.panelLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboSenha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboSenha)).BeginInit();
             this.SuspendLayout();
             // 
             // panelFundo
             // 
-            this.panelFundo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.panelFundo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.panelFundo.Controls.Add(this.panelLogin);
             this.panelFundo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFundo.Location = new System.Drawing.Point(0, 0);
@@ -59,7 +59,6 @@
             // 
             // panelLogin
             // 
-            this.panelLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(26)))));
             this.panelLogin.Controls.Add(this.pboSenha);
             this.panelLogin.Controls.Add(this.pboUsuario);
@@ -75,6 +74,76 @@
             this.panelLogin.Size = new System.Drawing.Size(835, 403);
             this.panelLogin.TabIndex = 0;
             this.panelLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogin_Paint);
+            // 
+            // btnEntrar
+            // 
+            this.btnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEntrar.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnEntrar.Location = new System.Drawing.Point(298, 299);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(239, 53);
+            this.btnEntrar.TabIndex = 6;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.BackColor = System.Drawing.Color.White;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.textBox2.Location = new System.Drawing.Point(83, 207);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(640, 33);
+            this.textBox2.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.textBox1.Location = new System.Drawing.Point(83, 140);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(640, 33);
+            this.textBox1.TabIndex = 4;
+            // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.ForeColor = System.Drawing.Color.White;
+            this.lblSenha.Location = new System.Drawing.Point(39, 179);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(64, 25);
+            this.lblSenha.TabIndex = 3;
+            this.lblSenha.Text = "Senha";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(39, 111);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(77, 25);
+            this.lblUsuario.TabIndex = 2;
+            this.lblUsuario.Text = "Usuario";
+            // 
+            // pboSenha
+            // 
+            this.pboSenha.Location = new System.Drawing.Point(44, 207);
+            this.pboSenha.Name = "pboSenha";
+            this.pboSenha.Size = new System.Drawing.Size(33, 33);
+            this.pboSenha.TabIndex = 8;
+            this.pboSenha.TabStop = false;
+            // 
+            // pboUsuario
+            // 
+            this.pboUsuario.Location = new System.Drawing.Point(44, 140);
+            this.pboUsuario.Name = "pboUsuario";
+            this.pboUsuario.Size = new System.Drawing.Size(33, 33);
+            this.pboUsuario.TabIndex = 7;
+            this.pboUsuario.TabStop = false;
             // 
             // pboLogo
             // 
@@ -95,73 +164,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(39, 111);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(77, 25);
-            this.lblUsuario.TabIndex = 2;
-            this.lblUsuario.Text = "Usuario";
-            // 
-            // lblSenha
-            // 
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.ForeColor = System.Drawing.Color.White;
-            this.lblSenha.Location = new System.Drawing.Point(39, 179);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(64, 25);
-            this.lblSenha.TabIndex = 3;
-            this.lblSenha.Text = "Senha";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.textBox1.Location = new System.Drawing.Point(83, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(640, 33);
-            this.textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.textBox2.Location = new System.Drawing.Point(83, 207);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(640, 33);
-            this.textBox2.TabIndex = 5;
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.btnEntrar.Location = new System.Drawing.Point(298, 299);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(239, 53);
-            this.btnEntrar.TabIndex = 6;
-            this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = true;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
-            // 
-            // pboUsuario
-            // 
-            this.pboUsuario.Location = new System.Drawing.Point(44, 140);
-            this.pboUsuario.Name = "pboUsuario";
-            this.pboUsuario.Size = new System.Drawing.Size(33, 33);
-            this.pboUsuario.TabIndex = 7;
-            this.pboUsuario.TabStop = false;
-            // 
-            // pboSenha
-            // 
-            this.pboSenha.Location = new System.Drawing.Point(44, 207);
-            this.pboSenha.Name = "pboSenha";
-            this.pboSenha.Size = new System.Drawing.Size(33, 33);
-            this.pboSenha.TabIndex = 8;
-            this.pboSenha.TabStop = false;
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,14 +172,15 @@
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.panelFundo);
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
             this.panelFundo.ResumeLayout(false);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboSenha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboSenha)).EndInit();
             this.ResumeLayout(false);
 
         }

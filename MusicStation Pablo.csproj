@@ -96,6 +96,48 @@
     <Compile Include="ucTabelasPessoas.Designer.cs">
       <DependentUpon>ucTabelasPessoas.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC De CRUD Pessoas\UC_CrudAdms.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC De CRUD Pessoas\UC_CrudAdms.Designer.cs">
+      <DependentUpon>UC_CrudAdms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC De CRUD Pessoas\UC_CrudCargos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC De CRUD Pessoas\UC_CrudCargos.Designer.cs">
+      <DependentUpon>UC_CrudCargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC De CRUD Pessoas\UC_CrudClientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC De CRUD Pessoas\UC_CrudClientes.Designer.cs">
+      <DependentUpon>UC_CrudClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC De CRUD Pessoas\UC_CrudEmpresa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC De CRUD Pessoas\UC_CrudEmpresa.Designer.cs">
+      <DependentUpon>UC_CrudEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC De CRUD Pessoas\UC_CrudProfCargo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC De CRUD Pessoas\UC_CrudProfCargo.Designer.cs">
+      <DependentUpon>UC_CrudProfCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC De CRUD Pessoas\UC_CrudProfissionais.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC De CRUD Pessoas\UC_CrudProfissionais.Designer.cs">
+      <DependentUpon>UC_CrudProfissionais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC De CRUD Pessoas\UC_CrudUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC De CRUD Pessoas\UC_CrudUsuarios.Designer.cs">
+      <DependentUpon>UC_CrudUsuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +172,27 @@
     <EmbeddedResource Include="ucTabelasPessoas.resx">
       <DependentUpon>ucTabelasPessoas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC De CRUD Pessoas\UC_CrudAdms.resx">
+      <DependentUpon>UC_CrudAdms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC De CRUD Pessoas\UC_CrudCargos.resx">
+      <DependentUpon>UC_CrudCargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC De CRUD Pessoas\UC_CrudClientes.resx">
+      <DependentUpon>UC_CrudClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC De CRUD Pessoas\UC_CrudEmpresa.resx">
+      <DependentUpon>UC_CrudEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC De CRUD Pessoas\UC_CrudProfCargo.resx">
+      <DependentUpon>UC_CrudProfCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC De CRUD Pessoas\UC_CrudProfissionais.resx">
+      <DependentUpon>UC_CrudProfissionais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC De CRUD Pessoas\UC_CrudUsuarios.resx">
+      <DependentUpon>UC_CrudUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -146,5 +209,6 @@
   <ItemGroup>
     <None Include="Resources\music-station-vetorizada 1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

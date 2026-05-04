@@ -85,6 +85,7 @@
             this.btnEmpresa.TabIndex = 9;
             this.btnEmpresa.Text = "Empresa";
             this.btnEmpresa.UseVisualStyleBackColor = false;
+            this.btnEmpresa.Click += new System.EventHandler(this.btnEmpresa_Click);
             // 
             // btnAdministradores
             // 
@@ -100,6 +101,7 @@
             this.btnAdministradores.TabIndex = 8;
             this.btnAdministradores.Text = "Administradores";
             this.btnAdministradores.UseVisualStyleBackColor = false;
+            this.btnAdministradores.Click += new System.EventHandler(this.btnAdministradores_Click);
             // 
             // btnClientes
             // 
@@ -115,6 +117,7 @@
             this.btnClientes.TabIndex = 7;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnProfissionalCargo
             // 
@@ -130,6 +133,7 @@
             this.btnProfissionalCargo.TabIndex = 6;
             this.btnProfissionalCargo.Text = "Profissional Cargo";
             this.btnProfissionalCargo.UseVisualStyleBackColor = false;
+            this.btnProfissionalCargo.Click += new System.EventHandler(this.btnProfissionalCargo_Click);
             // 
             // btnProfissionais
             // 
@@ -145,6 +149,7 @@
             this.btnProfissionais.TabIndex = 5;
             this.btnProfissionais.Text = "Profissionais";
             this.btnProfissionais.UseVisualStyleBackColor = false;
+            this.btnProfissionais.Click += new System.EventHandler(this.btnProfissionais_Click);
             // 
             // btnCargos
             // 
@@ -160,6 +165,7 @@
             this.btnCargos.TabIndex = 4;
             this.btnCargos.Text = "Cargos";
             this.btnCargos.UseVisualStyleBackColor = false;
+            this.btnCargos.Click += new System.EventHandler(this.btnCargos_Click);
             // 
             // btnUsuarios
             // 
@@ -175,6 +181,7 @@
             this.btnUsuarios.TabIndex = 3;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // ucTabelasPessoas
             // 

@@ -14,6 +14,7 @@ namespace MusicStation_Pablo
 {
     public partial class ucTabelasPessoas : UserControl
     {
+        public Action<UserControl> SolicitarAbertura;
         public ucTabelasPessoas()
         {
             InitializeComponent();
@@ -42,6 +43,48 @@ namespace MusicStation_Pablo
             ArredondarBotao(btnProfissionais, 20);
             ArredondarBotao(btnProfissionalCargo, 20);
             ArredondarBotao(btnUsuarios, 20);
+        }
+
+        private void btnAdministradores_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de ADMs 
+            SolicitarAbertura?.Invoke(new UC_CrudAdms());
+        }
+
+        private void btnCargos_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de Cargos 
+            SolicitarAbertura?.Invoke(new UC_CrudCargos());
+        }
+
+        private void btnProfissionais_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de Profissionais 
+            SolicitarAbertura?.Invoke(new UC_CrudProfissionais());
+        }
+
+        private void btnProfissionalCargo_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de ProfissionalCargo
+            SolicitarAbertura?.Invoke(new UC_CrudProfCargo());
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de Clientes
+            SolicitarAbertura?.Invoke(new UC_CrudClientes());
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de Usuarios
+            SolicitarAbertura?.Invoke(new UC_CrudUsuarios());
+        }
+
+        private void btnEmpresa_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de Empresa
+            SolicitarAbertura?.Invoke(new UC_CrudEmpresa());
         }
     }
 }
