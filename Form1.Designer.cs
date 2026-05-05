@@ -38,31 +38,31 @@
             this.btnCatalogo = new System.Windows.Forms.Button();
             this.btnPessoas = new System.Windows.Forms.Button();
             this.panelConteudo = new System.Windows.Forms.Panel();
-            this.pboLogo = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.panelDashBoard = new System.Windows.Forms.Panel();
+            this.panelMensagens = new System.Windows.Forms.Panel();
+            this.panelFinanceiro = new System.Windows.Forms.Panel();
+            this.panelOperacional = new System.Windows.Forms.Panel();
+            this.panelCatalogo = new System.Windows.Forms.Panel();
+            this.panelPessoas = new System.Windows.Forms.Panel();
+            this.pboLogo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.panelDashBoard.SuspendLayout();
+            this.panelMensagens.SuspendLayout();
+            this.panelFinanceiro.SuspendLayout();
+            this.panelOperacional.SuspendLayout();
+            this.panelCatalogo.SuspendLayout();
+            this.panelPessoas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(26)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(24)))), ((int)(((byte)(22)))));
             this.panel1.Controls.Add(this.panelTabelas);
             this.panel1.Controls.Add(this.panelLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -75,6 +75,7 @@
             // 
             this.panelTabelas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTabelas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(24)))), ((int)(((byte)(22)))));
             this.panelTabelas.Location = new System.Drawing.Point(0, 100);
             this.panelTabelas.Name = "panelTabelas";
             this.panelTabelas.Size = new System.Drawing.Size(200, 536);
@@ -200,22 +201,11 @@
             this.panelConteudo.Size = new System.Drawing.Size(976, 536);
             this.panelConteudo.TabIndex = 2;
             // 
-            // pboLogo
-            // 
-            this.pboLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pboLogo.Image = global::MusicStation_Pablo.Properties.Resources.music_station_vetorizada_1;
-            this.pboLogo.Location = new System.Drawing.Point(0, 0);
-            this.pboLogo.Name = "pboLogo";
-            this.pboLogo.Size = new System.Drawing.Size(200, 100);
-            this.pboLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pboLogo.TabIndex = 0;
-            this.pboLogo.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(26)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(24)))), ((int)(((byte)(22)))));
             this.panel2.Controls.Add(this.tableLayoutPanel1);
             this.panel2.Location = new System.Drawing.Point(200, 0);
             this.panel2.Name = "panel2";
@@ -226,7 +216,7 @@
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(26)))));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(24)))), ((int)(((byte)(22)))));
             this.tableLayoutPanel1.ColumnCount = 6;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -234,12 +224,12 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Controls.Add(this.panel8, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel7, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel6, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel5, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelDashBoard, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelMensagens, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelFinanceiro, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelOperacional, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelCatalogo, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelPessoas, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -247,65 +237,82 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(976, 99);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // panel3
+            // panelDashBoard
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelDashBoard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.btnPessoas);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(156, 93);
-            this.panel3.TabIndex = 6;
+            this.panelDashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(24)))), ((int)(((byte)(22)))));
+            this.panelDashBoard.Controls.Add(this.btnDashboard);
+            this.panelDashBoard.Location = new System.Drawing.Point(813, 3);
+            this.panelDashBoard.Name = "panelDashBoard";
+            this.panelDashBoard.Size = new System.Drawing.Size(160, 93);
+            this.panelDashBoard.TabIndex = 11;
             // 
-            // panel4
+            // panelMensagens
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelMensagens.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.btnCatalogo);
-            this.panel4.Location = new System.Drawing.Point(165, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(156, 93);
-            this.panel4.TabIndex = 7;
+            this.panelMensagens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(24)))), ((int)(((byte)(22)))));
+            this.panelMensagens.Controls.Add(this.btnMensagens);
+            this.panelMensagens.Location = new System.Drawing.Point(651, 3);
+            this.panelMensagens.Name = "panelMensagens";
+            this.panelMensagens.Size = new System.Drawing.Size(156, 93);
+            this.panelMensagens.TabIndex = 10;
             // 
-            // panel5
+            // panelFinanceiro
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelFinanceiro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.Controls.Add(this.btnOperacional);
-            this.panel5.Location = new System.Drawing.Point(327, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(156, 93);
-            this.panel5.TabIndex = 8;
+            this.panelFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(24)))), ((int)(((byte)(22)))));
+            this.panelFinanceiro.Controls.Add(this.btnFinanceiro);
+            this.panelFinanceiro.Location = new System.Drawing.Point(489, 3);
+            this.panelFinanceiro.Name = "panelFinanceiro";
+            this.panelFinanceiro.Size = new System.Drawing.Size(156, 93);
+            this.panelFinanceiro.TabIndex = 9;
             // 
-            // panel6
+            // panelOperacional
             // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelOperacional.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel6.Controls.Add(this.btnFinanceiro);
-            this.panel6.Location = new System.Drawing.Point(489, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(156, 93);
-            this.panel6.TabIndex = 9;
+            this.panelOperacional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(24)))), ((int)(((byte)(22)))));
+            this.panelOperacional.Controls.Add(this.btnOperacional);
+            this.panelOperacional.Location = new System.Drawing.Point(327, 3);
+            this.panelOperacional.Name = "panelOperacional";
+            this.panelOperacional.Size = new System.Drawing.Size(156, 93);
+            this.panelOperacional.TabIndex = 8;
             // 
-            // panel7
+            // panelCatalogo
             // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelCatalogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel7.Controls.Add(this.btnMensagens);
-            this.panel7.Location = new System.Drawing.Point(651, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(156, 93);
-            this.panel7.TabIndex = 10;
+            this.panelCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(24)))), ((int)(((byte)(22)))));
+            this.panelCatalogo.Controls.Add(this.btnCatalogo);
+            this.panelCatalogo.Location = new System.Drawing.Point(165, 3);
+            this.panelCatalogo.Name = "panelCatalogo";
+            this.panelCatalogo.Size = new System.Drawing.Size(156, 93);
+            this.panelCatalogo.TabIndex = 7;
             // 
-            // panel8
+            // panelPessoas
             // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelPessoas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.Controls.Add(this.btnDashboard);
-            this.panel8.Location = new System.Drawing.Point(813, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(160, 93);
-            this.panel8.TabIndex = 11;
+            this.panelPessoas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(24)))), ((int)(((byte)(22)))));
+            this.panelPessoas.Controls.Add(this.btnPessoas);
+            this.panelPessoas.Location = new System.Drawing.Point(3, 3);
+            this.panelPessoas.Name = "panelPessoas";
+            this.panelPessoas.Size = new System.Drawing.Size(156, 93);
+            this.panelPessoas.TabIndex = 6;
+            // 
+            // pboLogo
+            // 
+            this.pboLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pboLogo.Image = global::MusicStation_Pablo.Properties.Resources.music_station_vetorizada_1;
+            this.pboLogo.Location = new System.Drawing.Point(0, 0);
+            this.pboLogo.Name = "pboLogo";
+            this.pboLogo.Size = new System.Drawing.Size(200, 100);
+            this.pboLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboLogo.TabIndex = 0;
+            this.pboLogo.TabStop = false;
             // 
             // Form1
             // 
@@ -321,15 +328,15 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
+            this.panelDashBoard.ResumeLayout(false);
+            this.panelMensagens.ResumeLayout(false);
+            this.panelFinanceiro.ResumeLayout(false);
+            this.panelOperacional.ResumeLayout(false);
+            this.panelCatalogo.ResumeLayout(false);
+            this.panelPessoas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,12 +356,12 @@
         private System.Windows.Forms.Panel panelConteudo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelDashBoard;
+        private System.Windows.Forms.Panel panelMensagens;
+        private System.Windows.Forms.Panel panelFinanceiro;
+        private System.Windows.Forms.Panel panelOperacional;
+        private System.Windows.Forms.Panel panelCatalogo;
+        private System.Windows.Forms.Panel panelPessoas;
     }
 }
 

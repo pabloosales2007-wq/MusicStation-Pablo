@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAvaliacoes = new System.Windows.Forms.Button();
             this.btnNotificacoes = new System.Windows.Forms.Button();
             this.btnMensagens = new System.Windows.Forms.Button();
             this.btnChats = new System.Windows.Forms.Button();
-            this.btnAvaliacoes = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,21 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 536);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // btnAvaliacoes
+            // 
+            this.btnAvaliacoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(33)))), ((int)(((byte)(111)))));
+            this.btnAvaliacoes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAvaliacoes.FlatAppearance.BorderSize = 0;
+            this.btnAvaliacoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAvaliacoes.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.btnAvaliacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
+            this.btnAvaliacoes.Location = new System.Drawing.Point(3, 210);
+            this.btnAvaliacoes.Name = "btnAvaliacoes";
+            this.btnAvaliacoes.Size = new System.Drawing.Size(194, 36);
+            this.btnAvaliacoes.TabIndex = 7;
+            this.btnAvaliacoes.Text = "Avaliações";
+            this.btnAvaliacoes.UseVisualStyleBackColor = false;
             // 
             // btnNotificacoes
             // 
@@ -109,21 +124,6 @@
             this.btnChats.TabIndex = 3;
             this.btnChats.Text = "Chats";
             this.btnChats.UseVisualStyleBackColor = false;
-            // 
-            // btnAvaliacoes
-            // 
-            this.btnAvaliacoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(33)))), ((int)(((byte)(111)))));
-            this.btnAvaliacoes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAvaliacoes.FlatAppearance.BorderSize = 0;
-            this.btnAvaliacoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAvaliacoes.Font = new System.Drawing.Font("Segoe UI", 15.75F);
-            this.btnAvaliacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.btnAvaliacoes.Location = new System.Drawing.Point(3, 210);
-            this.btnAvaliacoes.Name = "btnAvaliacoes";
-            this.btnAvaliacoes.Size = new System.Drawing.Size(194, 36);
-            this.btnAvaliacoes.TabIndex = 7;
-            this.btnAvaliacoes.Text = "Avaliações";
-            this.btnAvaliacoes.UseVisualStyleBackColor = false;
             // 
             // ucTabelaMensagens
             // 

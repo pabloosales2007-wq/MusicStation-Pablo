@@ -209,6 +209,8 @@
   <ItemGroup>
     <None Include="Resources\music-station-vetorizada 1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\FUNDO CRUD.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

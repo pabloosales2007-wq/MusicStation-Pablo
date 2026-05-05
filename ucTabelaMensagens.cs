@@ -40,6 +40,7 @@ namespace MusicStation_Pablo
             ArredondarBotao(btnNotificacoes, 20);
 
         }
-    
+
+
     }
 }
