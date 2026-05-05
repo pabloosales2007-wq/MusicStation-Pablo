@@ -138,6 +138,18 @@
     <Compile Include="UC De CRUD Pessoas\UC_CrudUsuarios.Designer.cs">
       <DependentUpon>UC_CrudUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC de CRUD Catalogo\UC_CrudInstrumentos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC de CRUD Catalogo\UC_CrudInstrumentos.Designer.cs">
+      <DependentUpon>UC_CrudInstrumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC de CRUD Catalogo\UC_CrudServicos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC de CRUD Catalogo\UC_CrudServicos.Designer.cs">
+      <DependentUpon>UC_CrudServicos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,5 +224,6 @@
   <ItemGroup>
     <None Include="Resources\FUNDO CRUD.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

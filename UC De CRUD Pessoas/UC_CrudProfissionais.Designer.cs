@@ -46,6 +46,7 @@
             this.btnAtualizarUsuarios = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.panelCRUD.SuspendLayout();
             this.panelNomeTop.SuspendLayout();
             this.panelListBox.SuspendLayout();
@@ -103,6 +104,7 @@
             this.panelCRUD.ColumnCount = 2;
             this.panelCRUD.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.panelCRUD.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.panelCRUD.Controls.Add(this.btnLimpar, 1, 1);
             this.panelCRUD.Controls.Add(this.btnAtualizarUsuarios, 0, 1);
             this.panelCRUD.Controls.Add(this.btnDeletarUsuarios, 1, 0);
             this.panelCRUD.Controls.Add(this.btnCadastrarUsuarios, 0, 0);
@@ -276,6 +278,21 @@
             this.label2.TabIndex = 54;
             this.label2.Text = "Pesquisar:";
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnLimpar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimpar.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnLimpar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLimpar.Location = new System.Drawing.Point(210, 64);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(198, 56);
+            this.btnLimpar.TabIndex = 25;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            // 
             // UC_CrudProfissionais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,5 +342,6 @@
         private System.Windows.Forms.Button btnDeletarUsuarios;
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

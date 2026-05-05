@@ -75,6 +75,7 @@
             this.btnServicos.TabIndex = 4;
             this.btnServicos.Text = "Serviços";
             this.btnServicos.UseVisualStyleBackColor = false;
+            this.btnServicos.Click += new System.EventHandler(this.btnServicos_Click);
             // 
             // btnInstrumentos
             // 
@@ -90,6 +91,7 @@
             this.btnInstrumentos.TabIndex = 3;
             this.btnInstrumentos.Text = "Instrumentos";
             this.btnInstrumentos.UseVisualStyleBackColor = false;
+            this.btnInstrumentos.Click += new System.EventHandler(this.btnInstrumentos_Click);
             // 
             // ucTabelaCatalogo
             // 

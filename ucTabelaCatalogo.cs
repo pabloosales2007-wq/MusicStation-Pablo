@@ -13,6 +13,7 @@ namespace MusicStation_Pablo
 {
     public partial class ucTabelaCatalogo : UserControl
     {
+        public Action<UserControl> SolicitarAbertura;
         public ucTabelaCatalogo()
         {
             InitializeComponent();
@@ -42,5 +43,17 @@ namespace MusicStation_Pablo
             ArredondarBotao(btnInstrumentos, 20);
         }
         #endregion
+
+        private void btnServicos_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de Servicos 
+            SolicitarAbertura?.Invoke(new UC_CrudServicos());
+        }
+
+        private void btnInstrumentos_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de Instrumentos 
+            SolicitarAbertura?.Invoke(new UC_CrudInstrumentos());
+        }
     }
 }
