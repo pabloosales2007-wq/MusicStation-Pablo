@@ -166,6 +166,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UC de CRUD Catalogo\UC_CrudInstrumentos.resx">
+      <DependentUpon>UC_CrudInstrumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC de CRUD Catalogo\UC_CrudServicos.resx">
+      <DependentUpon>UC_CrudServicos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucTabelaDashBoard.resx">
       <DependentUpon>ucTabelaDashBoard.cs</DependentUpon>
     </EmbeddedResource>
