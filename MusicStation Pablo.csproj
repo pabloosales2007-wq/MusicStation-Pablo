@@ -150,6 +150,30 @@
     <Compile Include="UC de CRUD Catalogo\UC_CrudServicos.Designer.cs">
       <DependentUpon>UC_CrudServicos.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_CrudLocacoes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CrudLocacoes.Designer.cs">
+      <DependentUpon>UC_CrudLocacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_CrudLocacoesItens.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CrudLocacoesItens.Designer.cs">
+      <DependentUpon>UC_CrudLocacoesItens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_CrudPedidos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CrudPedidos.Designer.cs">
+      <DependentUpon>UC_CrudPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_CrudServicoPedido.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CrudServicoPedido.Designer.cs">
+      <DependentUpon>UC_CrudServicoPedido.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +234,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC De CRUD Pessoas\UC_CrudUsuarios.resx">
       <DependentUpon>UC_CrudUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CrudLocacoes.resx">
+      <DependentUpon>UC_CrudLocacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CrudLocacoesItens.resx">
+      <DependentUpon>UC_CrudLocacoesItens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CrudPedidos.resx">
+      <DependentUpon>UC_CrudPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_CrudServicoPedido.resx">
+      <DependentUpon>UC_CrudServicoPedido.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

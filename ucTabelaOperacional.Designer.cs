@@ -79,6 +79,7 @@
             this.btnLocacoesItens.TabIndex = 6;
             this.btnLocacoesItens.Text = "Locações Itens\r\n";
             this.btnLocacoesItens.UseVisualStyleBackColor = false;
+            this.btnLocacoesItens.Click += new System.EventHandler(this.btnLocacoesItens_Click);
             // 
             // btnLocacoes
             // 
@@ -94,6 +95,7 @@
             this.btnLocacoes.TabIndex = 5;
             this.btnLocacoes.Text = "Locações";
             this.btnLocacoes.UseVisualStyleBackColor = false;
+            this.btnLocacoes.Click += new System.EventHandler(this.btnLocacoes_Click);
             // 
             // btnServicoPedido
             // 
@@ -109,6 +111,7 @@
             this.btnServicoPedido.TabIndex = 4;
             this.btnServicoPedido.Text = "Serviço Pedido";
             this.btnServicoPedido.UseVisualStyleBackColor = false;
+            this.btnServicoPedido.Click += new System.EventHandler(this.btnServicoPedido_Click);
             // 
             // btnPedidos
             // 
@@ -124,6 +127,7 @@
             this.btnPedidos.TabIndex = 3;
             this.btnPedidos.Text = "Pedidos";
             this.btnPedidos.UseVisualStyleBackColor = false;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // ucTabelaOperacional
             // 

@@ -1,6 +1,6 @@
 ﻿namespace MusicStation_Pablo
 {
-    partial class UC_CrudInstrumentos
+    partial class UC_CrudPedidos
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -38,17 +38,18 @@
             this.btnAtualizarUsuarios = new System.Windows.Forms.Button();
             this.btnDeletarUsuarios = new System.Windows.Forms.Button();
             this.btnCadastrarUsuarios = new System.Windows.Forms.Button();
-            this.lblPrecoLocacao = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.panelListBox = new System.Windows.Forms.Panel();
-            this.lboInstrumentos = new System.Windows.Forms.ListBox();
-            this.lblDescricao = new System.Windows.Forms.Label();
-            this.lblNome = new System.Windows.Forms.Label();
+            this.lboPedidos = new System.Windows.Forms.ListBox();
+            this.lblDataPedido = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblEmpresa = new System.Windows.Forms.Label();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.txtDataCadastro = new System.Windows.Forms.TextBox();
-            this.cboEmpresa = new System.Windows.Forms.ComboBox();
-            this.checkBoxDisponivel = new System.Windows.Forms.CheckBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.cboAcompanhamento = new System.Windows.Forms.ComboBox();
+            this.lblAcompanhamento = new System.Windows.Forms.Label();
+            this.dtpDataPedido = new System.Windows.Forms.DateTimePicker();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -63,7 +64,6 @@
             this.panelNomeTop.Name = "panelNomeTop";
             this.panelNomeTop.Size = new System.Drawing.Size(976, 82);
             this.panelNomeTop.TabIndex = 38;
-            this.panelNomeTop.TabStop = true;
             // 
             // lblUsuarios
             // 
@@ -73,33 +73,33 @@
             this.lblUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
             this.lblUsuarios.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
-            this.lblUsuarios.Location = new System.Drawing.Point(376, 18);
+            this.lblUsuarios.Location = new System.Drawing.Point(412, 18);
             this.lblUsuarios.Name = "lblUsuarios";
-            this.lblUsuarios.Size = new System.Drawing.Size(224, 47);
+            this.lblUsuarios.Size = new System.Drawing.Size(143, 47);
             this.lblUsuarios.TabIndex = 17;
-            this.lblUsuarios.Text = "Instrumentos";
+            this.lblUsuarios.Text = "Pedidos";
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.checkBoxDisponivel);
-            this.panel2.Controls.Add(this.cboEmpresa);
+            this.panel2.Controls.Add(this.dtpDataPedido);
+            this.panel2.Controls.Add(this.lblAcompanhamento);
+            this.panel2.Controls.Add(this.cboAcompanhamento);
             this.panel2.Controls.Add(this.txtPesquisa);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panelCRUD);
-            this.panel2.Controls.Add(this.lblPrecoLocacao);
+            this.panel2.Controls.Add(this.lblTotal);
             this.panel2.Controls.Add(this.panelListBox);
-            this.panel2.Controls.Add(this.lblDescricao);
-            this.panel2.Controls.Add(this.lblNome);
+            this.panel2.Controls.Add(this.lblDataPedido);
             this.panel2.Controls.Add(this.txtNome);
-            this.panel2.Controls.Add(this.lblEmpresa);
-            this.panel2.Controls.Add(this.txtDescricao);
-            this.panel2.Controls.Add(this.txtDataCadastro);
+            this.panel2.Controls.Add(this.lblEmail);
+            this.panel2.Controls.Add(this.txtEmail);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txtTotal);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(976, 536);
             this.panel2.TabIndex = 39;
-            this.panel2.TabStop = true;
             // 
             // txtPesquisa
             // 
@@ -202,66 +202,54 @@
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
             // 
-            // lblPrecoLocacao
+            // lblTotal
             // 
-            this.lblPrecoLocacao.AutoSize = true;
-            this.lblPrecoLocacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblPrecoLocacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblPrecoLocacao.ForeColor = System.Drawing.Color.White;
-            this.lblPrecoLocacao.Location = new System.Drawing.Point(31, 275);
-            this.lblPrecoLocacao.Name = "lblPrecoLocacao";
-            this.lblPrecoLocacao.Size = new System.Drawing.Size(138, 25);
-            this.lblPrecoLocacao.TabIndex = 32;
-            this.lblPrecoLocacao.Text = "Preco Locação:";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblTotal.ForeColor = System.Drawing.Color.White;
+            this.lblTotal.Location = new System.Drawing.Point(34, 207);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(56, 25);
+            this.lblTotal.TabIndex = 32;
+            this.lblTotal.Text = "Total:";
             // 
             // panelListBox
             // 
             this.panelListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panelListBox.Controls.Add(this.lboInstrumentos);
+            this.panelListBox.Controls.Add(this.lboPedidos);
             this.panelListBox.Location = new System.Drawing.Point(34, 368);
             this.panelListBox.Name = "panelListBox";
             this.panelListBox.Size = new System.Drawing.Size(904, 154);
             this.panelListBox.TabIndex = 36;
             // 
-            // lboInstrumentos
+            // lboPedidos
             // 
-            this.lboInstrumentos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lboPedidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lboInstrumentos.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lboInstrumentos.FormattingEnabled = true;
-            this.lboInstrumentos.HorizontalScrollbar = true;
-            this.lboInstrumentos.ItemHeight = 25;
-            this.lboInstrumentos.Location = new System.Drawing.Point(3, 3);
-            this.lboInstrumentos.Name = "lboInstrumentos";
-            this.lboInstrumentos.ScrollAlwaysVisible = true;
-            this.lboInstrumentos.Size = new System.Drawing.Size(897, 129);
-            this.lboInstrumentos.TabIndex = 35;
+            this.lboPedidos.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lboPedidos.FormattingEnabled = true;
+            this.lboPedidos.HorizontalScrollbar = true;
+            this.lboPedidos.ItemHeight = 25;
+            this.lboPedidos.Location = new System.Drawing.Point(3, 3);
+            this.lboPedidos.Name = "lboPedidos";
+            this.lboPedidos.ScrollAlwaysVisible = true;
+            this.lboPedidos.Size = new System.Drawing.Size(897, 129);
+            this.lboPedidos.TabIndex = 35;
             // 
-            // lblDescricao
+            // lblDataPedido
             // 
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblDescricao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblDescricao.ForeColor = System.Drawing.Color.White;
-            this.lblDescricao.Location = new System.Drawing.Point(31, 211);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(98, 25);
-            this.lblDescricao.TabIndex = 31;
-            this.lblDescricao.Text = "Descrição:";
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblNome.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblNome.ForeColor = System.Drawing.Color.White;
-            this.lblNome.Location = new System.Drawing.Point(31, 147);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(67, 25);
-            this.lblNome.TabIndex = 30;
-            this.lblNome.Text = "Nome:";
+            this.lblDataPedido.AutoSize = true;
+            this.lblDataPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblDataPedido.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblDataPedido.ForeColor = System.Drawing.Color.White;
+            this.lblDataPedido.Location = new System.Drawing.Point(34, 271);
+            this.lblDataPedido.Name = "lblDataPedido";
+            this.lblDataPedido.Size = new System.Drawing.Size(118, 25);
+            this.lblDataPedido.TabIndex = 31;
+            this.lblDataPedido.Text = "Data Pedido:";
             // 
             // txtNome
             // 
@@ -269,75 +257,94 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.txtNome.ForeColor = System.Drawing.Color.Black;
-            this.txtNome.Location = new System.Drawing.Point(31, 175);
+            this.txtNome.Location = new System.Drawing.Point(31, 113);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(342, 33);
-            this.txtNome.TabIndex = 25;
+            this.txtNome.Size = new System.Drawing.Size(207, 33);
+            this.txtNome.TabIndex = 24;
             // 
-            // lblEmpresa
+            // lblEmail
             // 
-            this.lblEmpresa.AutoSize = true;
-            this.lblEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblEmpresa.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblEmpresa.ForeColor = System.Drawing.Color.White;
-            this.lblEmpresa.Location = new System.Drawing.Point(32, 85);
-            this.lblEmpresa.Name = "lblEmpresa";
-            this.lblEmpresa.Size = new System.Drawing.Size(88, 25);
-            this.lblEmpresa.TabIndex = 29;
-            this.lblEmpresa.Text = "Empresa:";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(31, 147);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(62, 25);
+            this.lblEmail.TabIndex = 30;
+            this.lblEmail.Text = "Email:";
             // 
-            // txtDescricao
+            // txtEmail
             // 
-            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescricao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtDescricao.ForeColor = System.Drawing.Color.Black;
-            this.txtDescricao.Location = new System.Drawing.Point(31, 239);
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(342, 33);
-            this.txtDescricao.TabIndex = 26;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
+            this.txtEmail.Location = new System.Drawing.Point(31, 175);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(207, 33);
+            this.txtEmail.TabIndex = 25;
             // 
-            // txtDataCadastro
+            // label1
             // 
-            this.txtDataCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(32, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 25);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Nome:";
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDataCadastro.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtDataCadastro.ForeColor = System.Drawing.Color.Black;
-            this.txtDataCadastro.Location = new System.Drawing.Point(31, 303);
-            this.txtDataCadastro.Name = "txtDataCadastro";
-            this.txtDataCadastro.Size = new System.Drawing.Size(138, 33);
-            this.txtDataCadastro.TabIndex = 27;
+            this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtTotal.ForeColor = System.Drawing.Color.Black;
+            this.txtTotal.Location = new System.Drawing.Point(34, 235);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(207, 33);
+            this.txtTotal.TabIndex = 27;
             // 
-            // cboEmpresa
+            // cboAcompanhamento
             // 
-            this.cboEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEmpresa.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.cboEmpresa.FormattingEnabled = true;
-            this.cboEmpresa.Location = new System.Drawing.Point(31, 114);
-            this.cboEmpresa.Name = "cboEmpresa";
-            this.cboEmpresa.Size = new System.Drawing.Size(342, 33);
-            this.cboEmpresa.TabIndex = 50;
+            this.cboAcompanhamento.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboAcompanhamento.FormattingEnabled = true;
+            this.cboAcompanhamento.Location = new System.Drawing.Point(272, 113);
+            this.cboAcompanhamento.Name = "cboAcompanhamento";
+            this.cboAcompanhamento.Size = new System.Drawing.Size(207, 33);
+            this.cboAcompanhamento.TabIndex = 50;
             // 
-            // checkBoxDisponivel
+            // lblAcompanhamento
             // 
-            this.checkBoxDisponivel.AutoSize = true;
-            this.checkBoxDisponivel.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.checkBoxDisponivel.ForeColor = System.Drawing.Color.White;
-            this.checkBoxDisponivel.Location = new System.Drawing.Point(225, 305);
-            this.checkBoxDisponivel.Name = "checkBoxDisponivel";
-            this.checkBoxDisponivel.Size = new System.Drawing.Size(119, 29);
-            this.checkBoxDisponivel.TabIndex = 51;
-            this.checkBoxDisponivel.Text = "Disponivel";
-            this.checkBoxDisponivel.UseVisualStyleBackColor = true;
+            this.lblAcompanhamento.AutoSize = true;
+            this.lblAcompanhamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblAcompanhamento.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblAcompanhamento.ForeColor = System.Drawing.Color.White;
+            this.lblAcompanhamento.Location = new System.Drawing.Point(275, 86);
+            this.lblAcompanhamento.Name = "lblAcompanhamento";
+            this.lblAcompanhamento.Size = new System.Drawing.Size(171, 25);
+            this.lblAcompanhamento.TabIndex = 51;
+            this.lblAcompanhamento.Text = "Acompanhamento:";
             // 
-            // UC_CrudInstrumentos
+            // dtpDataPedido
+            // 
+            this.dtpDataPedido.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.dtpDataPedido.Location = new System.Drawing.Point(34, 299);
+            this.dtpDataPedido.Name = "dtpDataPedido";
+            this.dtpDataPedido.Size = new System.Drawing.Size(445, 33);
+            this.dtpDataPedido.TabIndex = 52;
+            // 
+            // UC_CrudPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(26)))));
             this.Controls.Add(this.panelNomeTop);
             this.Controls.Add(this.panel2);
-            this.Name = "UC_CrudInstrumentos";
+            this.Name = "UC_CrudPedidos";
             this.Size = new System.Drawing.Size(976, 536);
             this.panelNomeTop.ResumeLayout(false);
             this.panelNomeTop.PerformLayout();
@@ -361,16 +368,17 @@
         private System.Windows.Forms.Button btnAtualizarUsuarios;
         private System.Windows.Forms.Button btnDeletarUsuarios;
         private System.Windows.Forms.Button btnCadastrarUsuarios;
-        private System.Windows.Forms.Label lblPrecoLocacao;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Panel panelListBox;
-        private System.Windows.Forms.ListBox lboInstrumentos;
-        private System.Windows.Forms.Label lblDescricao;
-        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.ListBox lboPedidos;
+        private System.Windows.Forms.Label lblDataPedido;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label lblEmpresa;
-        private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.TextBox txtDataCadastro;
-        private System.Windows.Forms.ComboBox cboEmpresa;
-        private System.Windows.Forms.CheckBox checkBoxDisponivel;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label lblAcompanhamento;
+        private System.Windows.Forms.ComboBox cboAcompanhamento;
+        private System.Windows.Forms.DateTimePicker dtpDataPedido;
     }
 }

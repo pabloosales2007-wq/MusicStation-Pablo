@@ -13,6 +13,7 @@ namespace MusicStation_Pablo
 {
     public partial class ucTabelaOperacional : UserControl
     {
+        public Action<UserControl> SolicitarAbertura;
         public ucTabelaOperacional()
         {
             InitializeComponent();
@@ -47,5 +48,29 @@ namespace MusicStation_Pablo
 
         }
         #endregion
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de Pedidos 
+            SolicitarAbertura?.Invoke(new UC_CrudPedidos());
+        }
+
+        private void btnServicoPedido_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de Serviço Pedido
+            SolicitarAbertura?.Invoke(new UC_CrudServicoPedido());
+        }
+
+        private void btnLocacoes_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de Locações
+            SolicitarAbertura?.Invoke(new UC_CrudLocacoes());
+        }
+
+        private void btnLocacoesItens_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de Locações Itens 
+            SolicitarAbertura?.Invoke(new UC_CrudLocacoesItens());
+        }
     }
 }
