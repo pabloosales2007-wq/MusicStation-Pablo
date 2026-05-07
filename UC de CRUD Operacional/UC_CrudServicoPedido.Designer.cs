@@ -38,16 +38,17 @@
             this.btnAtualizarUsuarios = new System.Windows.Forms.Button();
             this.btnDeletarUsuarios = new System.Windows.Forms.Button();
             this.btnCadastrarUsuarios = new System.Windows.Forms.Button();
-            this.lblDataCadastro = new System.Windows.Forms.Label();
+            this.lblValorServico = new System.Windows.Forms.Label();
             this.panelListBox = new System.Windows.Forms.Panel();
             this.lboServicosPedidos = new System.Windows.Forms.ListBox();
-            this.lblSenha = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.txtDataCadastro = new System.Windows.Forms.TextBox();
+            this.lblServico = new System.Windows.Forms.Label();
+            this.lblPedidoInfo = new System.Windows.Forms.Label();
+            this.txtValorServico = new System.Windows.Forms.TextBox();
+            this.cboServico = new System.Windows.Forms.ComboBox();
+            this.cboProfissional = new System.Windows.Forms.ComboBox();
+            this.lblProfissional = new System.Windows.Forms.Label();
+            this.lblObservacao = new System.Windows.Forms.Label();
+            this.txtObs = new System.Windows.Forms.TextBox();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -79,18 +80,19 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblObservacao);
+            this.panel2.Controls.Add(this.txtObs);
+            this.panel2.Controls.Add(this.cboProfissional);
+            this.panel2.Controls.Add(this.lblProfissional);
+            this.panel2.Controls.Add(this.cboServico);
             this.panel2.Controls.Add(this.txtPesquisa);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panelCRUD);
-            this.panel2.Controls.Add(this.lblDataCadastro);
+            this.panel2.Controls.Add(this.lblValorServico);
             this.panel2.Controls.Add(this.panelListBox);
-            this.panel2.Controls.Add(this.lblSenha);
-            this.panel2.Controls.Add(this.txtNome);
-            this.panel2.Controls.Add(this.lblEmail);
-            this.panel2.Controls.Add(this.txtEmail);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.txtSenha);
-            this.panel2.Controls.Add(this.txtDataCadastro);
+            this.panel2.Controls.Add(this.lblServico);
+            this.panel2.Controls.Add(this.lblPedidoInfo);
+            this.panel2.Controls.Add(this.txtValorServico);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -198,17 +200,17 @@
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
             // 
-            // lblDataCadastro
+            // lblValorServico
             // 
-            this.lblDataCadastro.AutoSize = true;
-            this.lblDataCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblDataCadastro.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblDataCadastro.ForeColor = System.Drawing.Color.White;
-            this.lblDataCadastro.Location = new System.Drawing.Point(31, 275);
-            this.lblDataCadastro.Name = "lblDataCadastro";
-            this.lblDataCadastro.Size = new System.Drawing.Size(135, 25);
-            this.lblDataCadastro.TabIndex = 32;
-            this.lblDataCadastro.Text = "Data Cadastro:";
+            this.lblValorServico.AutoSize = true;
+            this.lblValorServico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblValorServico.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblValorServico.ForeColor = System.Drawing.Color.White;
+            this.lblValorServico.Location = new System.Drawing.Point(31, 275);
+            this.lblValorServico.Name = "lblValorServico";
+            this.lblValorServico.Size = new System.Drawing.Size(126, 25);
+            this.lblValorServico.TabIndex = 32;
+            this.lblValorServico.Text = "Valor Serviço:";
             // 
             // panelListBox
             // 
@@ -235,85 +237,93 @@
             this.lboServicosPedidos.Size = new System.Drawing.Size(897, 129);
             this.lboServicosPedidos.TabIndex = 35;
             // 
-            // lblSenha
+            // lblServico
             // 
-            this.lblSenha.AutoSize = true;
-            this.lblSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblSenha.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblSenha.ForeColor = System.Drawing.Color.White;
-            this.lblSenha.Location = new System.Drawing.Point(31, 211);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(68, 25);
-            this.lblSenha.TabIndex = 31;
-            this.lblSenha.Text = "Senha:";
+            this.lblServico.AutoSize = true;
+            this.lblServico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblServico.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblServico.ForeColor = System.Drawing.Color.White;
+            this.lblServico.Location = new System.Drawing.Point(32, 123);
+            this.lblServico.Name = "lblServico";
+            this.lblServico.Size = new System.Drawing.Size(77, 25);
+            this.lblServico.TabIndex = 30;
+            this.lblServico.Text = "Serviço:";
             // 
-            // txtNome
+            // lblPedidoInfo
             // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblPedidoInfo.AutoSize = true;
+            this.lblPedidoInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblPedidoInfo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblPedidoInfo.ForeColor = System.Drawing.Color.White;
+            this.lblPedidoInfo.Location = new System.Drawing.Point(32, 85);
+            this.lblPedidoInfo.Name = "lblPedidoInfo";
+            this.lblPedidoInfo.Size = new System.Drawing.Size(446, 25);
+            this.lblPedidoInfo.TabIndex = 29;
+            this.lblPedidoInfo.Text = "Itens do Pedido: Cliente [Nome] - Data [00/00/0000]";
+            // 
+            // txtValorServico
+            // 
+            this.txtValorServico.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNome.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtNome.ForeColor = System.Drawing.Color.Black;
-            this.txtNome.Location = new System.Drawing.Point(31, 113);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(415, 33);
-            this.txtNome.TabIndex = 24;
+            this.txtValorServico.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtValorServico.ForeColor = System.Drawing.Color.Black;
+            this.txtValorServico.Location = new System.Drawing.Point(31, 303);
+            this.txtValorServico.Name = "txtValorServico";
+            this.txtValorServico.Size = new System.Drawing.Size(207, 33);
+            this.txtValorServico.TabIndex = 27;
             // 
-            // lblEmail
+            // cboServico
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(31, 147);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(62, 25);
-            this.lblEmail.TabIndex = 30;
-            this.lblEmail.Text = "Email:";
+            this.cboServico.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboServico.FormattingEnabled = true;
+            this.cboServico.Location = new System.Drawing.Point(31, 151);
+            this.cboServico.Name = "cboServico";
+            this.cboServico.Size = new System.Drawing.Size(207, 33);
+            this.cboServico.TabIndex = 50;
             // 
-            // txtEmail
+            // cboProfissional
             // 
-            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cboProfissional.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboProfissional.FormattingEnabled = true;
+            this.cboProfissional.Location = new System.Drawing.Point(31, 225);
+            this.cboProfissional.Name = "cboProfissional";
+            this.cboProfissional.Size = new System.Drawing.Size(207, 33);
+            this.cboProfissional.TabIndex = 52;
+            // 
+            // lblProfissional
+            // 
+            this.lblProfissional.AutoSize = true;
+            this.lblProfissional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblProfissional.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblProfissional.ForeColor = System.Drawing.Color.White;
+            this.lblProfissional.Location = new System.Drawing.Point(32, 197);
+            this.lblProfissional.Name = "lblProfissional";
+            this.lblProfissional.Size = new System.Drawing.Size(114, 25);
+            this.lblProfissional.TabIndex = 51;
+            this.lblProfissional.Text = "Profissional:";
+            // 
+            // lblObservacao
+            // 
+            this.lblObservacao.AutoSize = true;
+            this.lblObservacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblObservacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblObservacao.ForeColor = System.Drawing.Color.White;
+            this.lblObservacao.Location = new System.Drawing.Point(276, 123);
+            this.lblObservacao.Name = "lblObservacao";
+            this.lblObservacao.Size = new System.Drawing.Size(115, 25);
+            this.lblObservacao.TabIndex = 54;
+            this.lblObservacao.Text = "Observação:";
+            // 
+            // txtObs
+            // 
+            this.txtObs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.Location = new System.Drawing.Point(31, 175);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(415, 33);
-            this.txtEmail.TabIndex = 25;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(32, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 25);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Nome:";
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtSenha.ForeColor = System.Drawing.Color.Black;
-            this.txtSenha.Location = new System.Drawing.Point(31, 239);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(415, 33);
-            this.txtSenha.TabIndex = 26;
-            // 
-            // txtDataCadastro
-            // 
-            this.txtDataCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDataCadastro.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtDataCadastro.ForeColor = System.Drawing.Color.Black;
-            this.txtDataCadastro.Location = new System.Drawing.Point(31, 303);
-            this.txtDataCadastro.Name = "txtDataCadastro";
-            this.txtDataCadastro.Size = new System.Drawing.Size(412, 33);
-            this.txtDataCadastro.TabIndex = 27;
+            this.txtObs.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtObs.ForeColor = System.Drawing.Color.Black;
+            this.txtObs.Location = new System.Drawing.Point(276, 151);
+            this.txtObs.Name = "txtObs";
+            this.txtObs.Size = new System.Drawing.Size(207, 33);
+            this.txtObs.TabIndex = 53;
             // 
             // UC_CrudServicoPedido
             // 
@@ -346,15 +356,16 @@
         private System.Windows.Forms.Button btnAtualizarUsuarios;
         private System.Windows.Forms.Button btnDeletarUsuarios;
         private System.Windows.Forms.Button btnCadastrarUsuarios;
-        private System.Windows.Forms.Label lblDataCadastro;
+        private System.Windows.Forms.Label lblValorServico;
         private System.Windows.Forms.Panel panelListBox;
         private System.Windows.Forms.ListBox lboServicosPedidos;
-        private System.Windows.Forms.Label lblSenha;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.TextBox txtDataCadastro;
+        private System.Windows.Forms.Label lblServico;
+        private System.Windows.Forms.Label lblPedidoInfo;
+        private System.Windows.Forms.TextBox txtValorServico;
+        private System.Windows.Forms.ComboBox cboServico;
+        private System.Windows.Forms.ComboBox cboProfissional;
+        private System.Windows.Forms.Label lblProfissional;
+        private System.Windows.Forms.Label lblObservacao;
+        private System.Windows.Forms.TextBox txtObs;
     }
 }

@@ -93,12 +93,25 @@ namespace MusicStation_Pablo
         private void btnCatalogo_Click(object sender, EventArgs e)
         {
             ucTabelaCatalogo ucTabelaCatalogo = new ucTabelaCatalogo();
+
+            ucTabelaCatalogo.SolicitarAbertura = (proximaTela) =>
+            {
+                ExibirUserControl(proximaTela, panelConteudo); // panelConteudo é o painel principal do CRUD
+            };
+
             ExibirUserControl(ucTabelaCatalogo, panelTabelas);
         }
 
         private void btnOperacional_Click(object sender, EventArgs e)
         {
             ucTabelaOperacional ucTabelaOperacional = new ucTabelaOperacional();
+
+            ucTabelaOperacional.SolicitarAbertura = (proximaTela) =>
+            { 
+                ExibirUserControl(proximaTela, panelConteudo); // panelConteudo é o painel principal do CRUD
+            };
+
+
             ExibirUserControl(ucTabelaOperacional, panelTabelas);
         }
 

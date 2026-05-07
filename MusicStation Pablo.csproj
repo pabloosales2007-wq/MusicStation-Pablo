@@ -150,28 +150,28 @@
     <Compile Include="UC de CRUD Catalogo\UC_CrudServicos.Designer.cs">
       <DependentUpon>UC_CrudServicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_CrudLocacoes.cs">
+    <Compile Include="UC de CRUD Operacional\UC_CrudLocacoes.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_CrudLocacoes.Designer.cs">
+    <Compile Include="UC de CRUD Operacional\UC_CrudLocacoes.Designer.cs">
       <DependentUpon>UC_CrudLocacoes.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_CrudLocacoesItens.cs">
+    <Compile Include="UC de CRUD Operacional\UC_CrudLocacoesItens.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_CrudLocacoesItens.Designer.cs">
+    <Compile Include="UC de CRUD Operacional\UC_CrudLocacoesItens.Designer.cs">
       <DependentUpon>UC_CrudLocacoesItens.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_CrudPedidos.cs">
+    <Compile Include="UC de CRUD Operacional\UC_CrudPedidos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_CrudPedidos.Designer.cs">
+    <Compile Include="UC de CRUD Operacional\UC_CrudPedidos.Designer.cs">
       <DependentUpon>UC_CrudPedidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_CrudServicoPedido.cs">
+    <Compile Include="UC de CRUD Operacional\UC_CrudServicoPedido.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_CrudServicoPedido.Designer.cs">
+    <Compile Include="UC de CRUD Operacional\UC_CrudServicoPedido.Designer.cs">
       <DependentUpon>UC_CrudServicoPedido.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
@@ -235,16 +235,16 @@
     <EmbeddedResource Include="UC De CRUD Pessoas\UC_CrudUsuarios.resx">
       <DependentUpon>UC_CrudUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_CrudLocacoes.resx">
+    <EmbeddedResource Include="UC de CRUD Operacional\UC_CrudLocacoes.resx">
       <DependentUpon>UC_CrudLocacoes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_CrudLocacoesItens.resx">
+    <EmbeddedResource Include="UC de CRUD Operacional\UC_CrudLocacoesItens.resx">
       <DependentUpon>UC_CrudLocacoesItens.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_CrudPedidos.resx">
+    <EmbeddedResource Include="UC de CRUD Operacional\UC_CrudPedidos.resx">
       <DependentUpon>UC_CrudPedidos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_CrudServicoPedido.resx">
+    <EmbeddedResource Include="UC de CRUD Operacional\UC_CrudServicoPedido.resx">
       <DependentUpon>UC_CrudServicoPedido.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
