@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnProfissionais = new System.Windows.Forms.Button();
+            this.btnFormasPagamentos = new System.Windows.Forms.Button();
             this.btnTransacoesPagamentos = new System.Windows.Forms.Button();
             this.btnPagamentos = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
@@ -39,7 +39,7 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.btnProfissionais, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnFormasPagamentos, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnTransacoesPagamentos, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnPagamentos, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -63,20 +63,21 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 536);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // btnProfissionais
+            // btnFormasPagamentos
             // 
-            this.btnProfissionais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(33)))), ((int)(((byte)(111)))));
-            this.btnProfissionais.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnProfissionais.FlatAppearance.BorderSize = 0;
-            this.btnProfissionais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfissionais.Font = new System.Drawing.Font("Segoe UI", 15.75F);
-            this.btnProfissionais.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.btnProfissionais.Location = new System.Drawing.Point(3, 168);
-            this.btnProfissionais.Name = "btnProfissionais";
-            this.btnProfissionais.Size = new System.Drawing.Size(194, 36);
-            this.btnProfissionais.TabIndex = 5;
-            this.btnProfissionais.Text = "Profissionais";
-            this.btnProfissionais.UseVisualStyleBackColor = false;
+            this.btnFormasPagamentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(33)))), ((int)(((byte)(111)))));
+            this.btnFormasPagamentos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFormasPagamentos.FlatAppearance.BorderSize = 0;
+            this.btnFormasPagamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFormasPagamentos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFormasPagamentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
+            this.btnFormasPagamentos.Location = new System.Drawing.Point(3, 168);
+            this.btnFormasPagamentos.Name = "btnFormasPagamentos";
+            this.btnFormasPagamentos.Size = new System.Drawing.Size(194, 36);
+            this.btnFormasPagamentos.TabIndex = 5;
+            this.btnFormasPagamentos.Text = "Formas Pagamentos";
+            this.btnFormasPagamentos.UseVisualStyleBackColor = false;
+            this.btnFormasPagamentos.Click += new System.EventHandler(this.btnFormasPagamentos_Click);
             // 
             // btnTransacoesPagamentos
             // 
@@ -92,6 +93,7 @@
             this.btnTransacoesPagamentos.TabIndex = 4;
             this.btnTransacoesPagamentos.Text = "Transações Pagamentos\r\n";
             this.btnTransacoesPagamentos.UseVisualStyleBackColor = false;
+            this.btnTransacoesPagamentos.Click += new System.EventHandler(this.btnTransacoesPagamentos_Click);
             // 
             // btnPagamentos
             // 
@@ -107,13 +109,14 @@
             this.btnPagamentos.TabIndex = 3;
             this.btnPagamentos.Text = "Pagamentos";
             this.btnPagamentos.UseVisualStyleBackColor = false;
+            this.btnPagamentos.Click += new System.EventHandler(this.btnPagamentos_Click);
             // 
-            // ucFinanceiro
+            // ucTabelaFinanceiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "ucFinanceiro";
+            this.Name = "ucTabelaFinanceiro";
             this.Size = new System.Drawing.Size(200, 536);
             this.Load += new System.EventHandler(this.ucFinanceiro_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -124,7 +127,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnProfissionais;
+        private System.Windows.Forms.Button btnFormasPagamentos;
         private System.Windows.Forms.Button btnTransacoesPagamentos;
         private System.Windows.Forms.Button btnPagamentos;
     }

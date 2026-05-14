@@ -11,8 +11,10 @@ using System.Windows.Forms;
 
 namespace MusicStation_Pablo
 {
+    
     public partial class ucTabelaMensagens : UserControl
     {
+        public Action<UserControl> SolicitarAbertura;
         public ucTabelaMensagens()
         {
             InitializeComponent();
@@ -41,6 +43,28 @@ namespace MusicStation_Pablo
 
         }
 
+        private void btnMensagens_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de Mensagens
+            SolicitarAbertura?.Invoke(new UC_CrudMensagens());
+        }
 
+        private void btnAvaliacoes_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de Avaliações
+            SolicitarAbertura?.Invoke(new UC_CrudAvaliacoes());
+        }
+
+        private void btnNotificacoes_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de Notificações
+            SolicitarAbertura?.Invoke(new UC_CrudNotificacoes());
+        }
+
+        private void btnChats_Click(object sender, EventArgs e)
+        {
+            // Quando clicar, vai abrir a tela de CRUD de Chats
+            SolicitarAbertura?.Invoke(new UC_CrudChats());
+        }
     }
 }

@@ -79,6 +79,7 @@
             this.btnAvaliacoes.TabIndex = 7;
             this.btnAvaliacoes.Text = "Avaliações";
             this.btnAvaliacoes.UseVisualStyleBackColor = false;
+            this.btnAvaliacoes.Click += new System.EventHandler(this.btnAvaliacoes_Click);
             // 
             // btnNotificacoes
             // 
@@ -94,6 +95,7 @@
             this.btnNotificacoes.TabIndex = 5;
             this.btnNotificacoes.Text = "Notificações";
             this.btnNotificacoes.UseVisualStyleBackColor = false;
+            this.btnNotificacoes.Click += new System.EventHandler(this.btnNotificacoes_Click);
             // 
             // btnMensagens
             // 
@@ -109,6 +111,7 @@
             this.btnMensagens.TabIndex = 4;
             this.btnMensagens.Text = "Mensagens";
             this.btnMensagens.UseVisualStyleBackColor = false;
+            this.btnMensagens.Click += new System.EventHandler(this.btnMensagens_Click);
             // 
             // btnChats
             // 
@@ -124,6 +127,7 @@
             this.btnChats.TabIndex = 3;
             this.btnChats.Text = "Chats";
             this.btnChats.UseVisualStyleBackColor = false;
+            this.btnChats.Click += new System.EventHandler(this.btnChats_Click);
             // 
             // ucTabelaMensagens
             // 

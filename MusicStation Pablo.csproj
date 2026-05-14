@@ -174,6 +174,48 @@
     <Compile Include="UC de CRUD Operacional\UC_CrudServicoPedido.Designer.cs">
       <DependentUpon>UC_CrudServicoPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC de CRUD Financeiro\UC_CrudFormasPagamentos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC de CRUD Financeiro\UC_CrudFormasPagamentos.Designer.cs">
+      <DependentUpon>UC_CrudFormasPagamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC de CRUD Financeiro\UC_CrudPagamentos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC de CRUD Financeiro\UC_CrudPagamentos.Designer.cs">
+      <DependentUpon>UC_CrudPagamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC de CRUD Financeiro\UC_CrudTranPagamentos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC de CRUD Financeiro\UC_CrudTranPagamentos.Designer.cs">
+      <DependentUpon>UC_CrudTranPagamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC de CRUD Mensagens\UC_CrudAvaliacoes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC de CRUD Mensagens\UC_CrudAvaliacoes.Designer.cs">
+      <DependentUpon>UC_CrudAvaliacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC de CRUD Mensagens\UC_CrudChats.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC de CRUD Mensagens\UC_CrudChats.Designer.cs">
+      <DependentUpon>UC_CrudChats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC de CRUD Mensagens\UC_CrudMensagens.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC de CRUD Mensagens\UC_CrudMensagens.Designer.cs">
+      <DependentUpon>UC_CrudMensagens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC de CRUD Mensagens\UC_CrudNotificacoes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC de CRUD Mensagens\UC_CrudNotificacoes.Designer.cs">
+      <DependentUpon>UC_CrudNotificacoes.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +237,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC de CRUD Catalogo\UC_CrudServicos.resx">
       <DependentUpon>UC_CrudServicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC de CRUD Mensagens\UC_CrudAvaliacoes.resx">
+      <DependentUpon>UC_CrudAvaliacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC de CRUD Mensagens\UC_CrudChats.resx">
+      <DependentUpon>UC_CrudChats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC de CRUD Mensagens\UC_CrudMensagens.resx">
+      <DependentUpon>UC_CrudMensagens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC de CRUD Mensagens\UC_CrudNotificacoes.resx">
+      <DependentUpon>UC_CrudNotificacoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucTabelaDashBoard.resx">
       <DependentUpon>ucTabelaDashBoard.cs</DependentUpon>
@@ -246,6 +300,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC de CRUD Operacional\UC_CrudServicoPedido.resx">
       <DependentUpon>UC_CrudServicoPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC de CRUD Financeiro\UC_CrudFormasPagamentos.resx">
+      <DependentUpon>UC_CrudFormasPagamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC de CRUD Financeiro\UC_CrudPagamentos.resx">
+      <DependentUpon>UC_CrudPagamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC de CRUD Financeiro\UC_CrudTranPagamentos.resx">
+      <DependentUpon>UC_CrudTranPagamentos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
