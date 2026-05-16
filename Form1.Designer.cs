@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelTabelas = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pboLogo = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnMensagens = new System.Windows.Forms.Button();
             this.btnFinanceiro = new System.Windows.Forms.Button();
@@ -46,9 +47,9 @@
             this.panelOperacional = new System.Windows.Forms.Panel();
             this.panelCatalogo = new System.Windows.Forms.Panel();
             this.panelPessoas = new System.Windows.Forms.Panel();
-            this.pboLogo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelDashBoard.SuspendLayout();
@@ -57,7 +58,6 @@
             this.panelOperacional.SuspendLayout();
             this.panelCatalogo.SuspendLayout();
             this.panelPessoas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,6 +89,17 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(200, 100);
             this.panelLogo.TabIndex = 0;
+            // 
+            // pboLogo
+            // 
+            this.pboLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pboLogo.Image = global::MusicStation_Pablo.Properties.Resources.music_station_vetorizada_1;
+            this.pboLogo.Location = new System.Drawing.Point(0, 0);
+            this.pboLogo.Name = "pboLogo";
+            this.pboLogo.Size = new System.Drawing.Size(200, 100);
+            this.pboLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboLogo.TabIndex = 0;
+            this.pboLogo.TabStop = false;
             // 
             // btnDashboard
             // 
@@ -194,7 +205,8 @@
             // 
             // panelConteudo
             // 
-            this.panelConteudo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelConteudo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelConteudo.Location = new System.Drawing.Point(200, 100);
             this.panelConteudo.Name = "panelConteudo";
@@ -303,17 +315,6 @@
             this.panelPessoas.Size = new System.Drawing.Size(156, 93);
             this.panelPessoas.TabIndex = 6;
             // 
-            // pboLogo
-            // 
-            this.pboLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pboLogo.Image = global::MusicStation_Pablo.Properties.Resources.music_station_vetorizada_1;
-            this.pboLogo.Location = new System.Drawing.Point(0, 0);
-            this.pboLogo.Name = "pboLogo";
-            this.pboLogo.Size = new System.Drawing.Size(200, 100);
-            this.pboLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pboLogo.TabIndex = 0;
-            this.pboLogo.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,6 +329,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelDashBoard.ResumeLayout(false);
@@ -336,7 +338,6 @@
             this.panelOperacional.ResumeLayout(false);
             this.panelCatalogo.ResumeLayout(false);
             this.panelPessoas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

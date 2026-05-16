@@ -32,7 +32,12 @@
             this.lblUsuarios = new System.Windows.Forms.Label();
             this.lboUsuarios = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelCRUD = new System.Windows.Forms.TableLayoutPanel();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnAtualizarUsuarios = new System.Windows.Forms.Button();
+            this.btnDeletarUsuarios = new System.Windows.Forms.Button();
             this.btnCadastrarUsuarios = new System.Windows.Forms.Button();
             this.lblDataCadastro = new System.Windows.Forms.Label();
             this.panelListBox = new System.Windows.Forms.Panel();
@@ -43,11 +48,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtDataCadastro = new System.Windows.Forms.TextBox();
-            this.btnDeletarUsuarios = new System.Windows.Forms.Button();
-            this.btnAtualizarUsuarios = new System.Windows.Forms.Button();
-            this.txtPesquisa = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -56,8 +56,8 @@
             // 
             // panelNomeTop
             // 
-            this.panelNomeTop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelNomeTop.Controls.Add(this.lblUsuarios);
+            this.panelNomeTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNomeTop.Location = new System.Drawing.Point(0, 0);
             this.panelNomeTop.Name = "panelNomeTop";
             this.panelNomeTop.Size = new System.Drawing.Size(976, 82);
@@ -79,7 +79,8 @@
             // 
             // lboUsuarios
             // 
-            this.lboUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lboUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lboUsuarios.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.lboUsuarios.FormattingEnabled = true;
@@ -88,8 +89,9 @@
             this.lboUsuarios.Location = new System.Drawing.Point(3, 3);
             this.lboUsuarios.Name = "lboUsuarios";
             this.lboUsuarios.ScrollAlwaysVisible = true;
-            this.lboUsuarios.Size = new System.Drawing.Size(897, 129);
+            this.lboUsuarios.Size = new System.Drawing.Size(899, 129);
             this.lboUsuarios.TabIndex = 35;
+            this.lboUsuarios.SelectedIndexChanged += new System.EventHandler(this.lboUsuarios_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -111,6 +113,30 @@
             this.panel2.Size = new System.Drawing.Size(976, 536);
             this.panel2.TabIndex = 37;
             // 
+            // txtPesquisa
+            // 
+            this.txtPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPesquisa.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtPesquisa.ForeColor = System.Drawing.Color.Black;
+            this.txtPesquisa.Location = new System.Drawing.Point(527, 303);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(409, 33);
+            this.txtPesquisa.TabIndex = 49;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(523, 275);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 25);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Pesquisar:";
+            // 
             // panelCRUD
             // 
             this.panelCRUD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -129,6 +155,54 @@
             this.panelCRUD.Size = new System.Drawing.Size(412, 123);
             this.panelCRUD.TabIndex = 34;
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnLimpar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimpar.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnLimpar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLimpar.Location = new System.Drawing.Point(210, 64);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(198, 56);
+            this.btnLimpar.TabIndex = 25;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // btnAtualizarUsuarios
+            // 
+            this.btnAtualizarUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnAtualizarUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAtualizarUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAtualizarUsuarios.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnAtualizarUsuarios.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAtualizarUsuarios.Location = new System.Drawing.Point(4, 64);
+            this.btnAtualizarUsuarios.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAtualizarUsuarios.Name = "btnAtualizarUsuarios";
+            this.btnAtualizarUsuarios.Size = new System.Drawing.Size(198, 56);
+            this.btnAtualizarUsuarios.TabIndex = 23;
+            this.btnAtualizarUsuarios.Text = "Atualizar";
+            this.btnAtualizarUsuarios.UseVisualStyleBackColor = false;
+            this.btnAtualizarUsuarios.Click += new System.EventHandler(this.btnAtualizarUsuarios_Click);
+            // 
+            // btnDeletarUsuarios
+            // 
+            this.btnDeletarUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnDeletarUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDeletarUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeletarUsuarios.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnDeletarUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnDeletarUsuarios.Location = new System.Drawing.Point(210, 3);
+            this.btnDeletarUsuarios.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnDeletarUsuarios.Name = "btnDeletarUsuarios";
+            this.btnDeletarUsuarios.Size = new System.Drawing.Size(198, 55);
+            this.btnDeletarUsuarios.TabIndex = 22;
+            this.btnDeletarUsuarios.Text = "Deletar";
+            this.btnDeletarUsuarios.UseVisualStyleBackColor = false;
+            this.btnDeletarUsuarios.Click += new System.EventHandler(this.btnDeletarUsuarios_Click);
+            // 
             // btnCadastrarUsuarios
             // 
             this.btnCadastrarUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
@@ -143,6 +217,7 @@
             this.btnCadastrarUsuarios.TabIndex = 18;
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuarios.Click += new System.EventHandler(this.btnCadastrarUsuarios_Click);
             // 
             // lblDataCadastro
             // 
@@ -158,7 +233,8 @@
             // 
             // panelListBox
             // 
-            this.panelListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.panelListBox.Controls.Add(this.lboUsuarios);
@@ -246,74 +322,6 @@
             this.txtDataCadastro.Name = "txtDataCadastro";
             this.txtDataCadastro.Size = new System.Drawing.Size(412, 33);
             this.txtDataCadastro.TabIndex = 27;
-            // 
-            // btnDeletarUsuarios
-            // 
-            this.btnDeletarUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.btnDeletarUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDeletarUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDeletarUsuarios.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.btnDeletarUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnDeletarUsuarios.Location = new System.Drawing.Point(210, 3);
-            this.btnDeletarUsuarios.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnDeletarUsuarios.Name = "btnDeletarUsuarios";
-            this.btnDeletarUsuarios.Size = new System.Drawing.Size(198, 55);
-            this.btnDeletarUsuarios.TabIndex = 22;
-            this.btnDeletarUsuarios.Text = "Deletar";
-            this.btnDeletarUsuarios.UseVisualStyleBackColor = false;
-            // 
-            // btnAtualizarUsuarios
-            // 
-            this.btnAtualizarUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.btnAtualizarUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAtualizarUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAtualizarUsuarios.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.btnAtualizarUsuarios.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAtualizarUsuarios.Location = new System.Drawing.Point(4, 64);
-            this.btnAtualizarUsuarios.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnAtualizarUsuarios.Name = "btnAtualizarUsuarios";
-            this.btnAtualizarUsuarios.Size = new System.Drawing.Size(198, 56);
-            this.btnAtualizarUsuarios.TabIndex = 23;
-            this.btnAtualizarUsuarios.Text = "Atualizar";
-            this.btnAtualizarUsuarios.UseVisualStyleBackColor = false;
-            // 
-            // txtPesquisa
-            // 
-            this.txtPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPesquisa.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtPesquisa.ForeColor = System.Drawing.Color.Black;
-            this.txtPesquisa.Location = new System.Drawing.Point(527, 303);
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(409, 33);
-            this.txtPesquisa.TabIndex = 49;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(523, 275);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 25);
-            this.label2.TabIndex = 48;
-            this.label2.Text = "Pesquisar:";
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.btnLimpar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLimpar.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.btnLimpar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLimpar.Location = new System.Drawing.Point(210, 64);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(198, 56);
-            this.btnLimpar.TabIndex = 25;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = false;
             // 
             // UC_CrudUsuarios
             // 
