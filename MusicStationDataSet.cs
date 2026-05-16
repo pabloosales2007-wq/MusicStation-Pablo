@@ -20,5 +20,14 @@
                 return $"{nome}  |  {email}  |  {telefone}";
             }
         }
+
+        partial class CargosRow
+        {
+            public override string ToString()
+            {
+                
+                return $"{nome}  |  {descricao}";
+            }
+        }
     }
 }
