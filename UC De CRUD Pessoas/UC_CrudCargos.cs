@@ -22,7 +22,12 @@ namespace MusicStation_Pablo
 
         private void lboCargos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (lboCargos.SelectedItem == null) return;
+            CargosRow usuarios = lboCargos.SelectedItem as CargosRow;
+            if (usuarios == null) return;
 
+            txtNome.Text = usuarios.nome;
+            txtDescricao.Text = usuarios.descricao;
         }
 
         private void btnCadastrarUsuarios_Click(object sender, EventArgs e)

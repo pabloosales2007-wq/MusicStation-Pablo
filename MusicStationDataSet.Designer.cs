@@ -6113,6 +6113,10 @@ namespace MusicStation_Pablo {
             
             private global::System.Data.DataColumn columnid_cargo;
             
+            private global::System.Data.DataColumn columnNomeProfissional;
+            
+            private global::System.Data.DataColumn columnNomeCargo;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Profissional_CargoDataTable() {
@@ -6164,6 +6168,22 @@ namespace MusicStation_Pablo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NomeProfissionalColumn {
+                get {
+                    return this.columnNomeProfissional;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NomeCargoColumn {
+                get {
+                    return this.columnNomeCargo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -6199,11 +6219,13 @@ namespace MusicStation_Pablo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Profissional_CargoRow AddProfissional_CargoRow(ProfissionaisRow parentProfissionaisRowByFK__Profissio__id_pr__17F790F9, CargosRow parentCargosRowByFK__Profissio__id_ca__18EBB532) {
+            public Profissional_CargoRow AddProfissional_CargoRow(ProfissionaisRow parentProfissionaisRowByFK__Profissio__id_pr__17F790F9, CargosRow parentCargosRowByFK__Profissio__id_ca__18EBB532, string NomeProfissional, string NomeCargo) {
                 Profissional_CargoRow rowProfissional_CargoRow = ((Profissional_CargoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null};
+                        null,
+                        NomeProfissional,
+                        NomeCargo};
                 if ((parentProfissionaisRowByFK__Profissio__id_pr__17F790F9 != null)) {
                     columnValuesArray[0] = parentProfissionaisRowByFK__Profissio__id_pr__17F790F9[0];
                 }
@@ -6242,6 +6264,8 @@ namespace MusicStation_Pablo {
             internal void InitVars() {
                 this.columnid_profissional = base.Columns["id_profissional"];
                 this.columnid_cargo = base.Columns["id_cargo"];
+                this.columnNomeProfissional = base.Columns["NomeProfissional"];
+                this.columnNomeCargo = base.Columns["NomeCargo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6251,11 +6275,19 @@ namespace MusicStation_Pablo {
                 base.Columns.Add(this.columnid_profissional);
                 this.columnid_cargo = new global::System.Data.DataColumn("id_cargo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_cargo);
+                this.columnNomeProfissional = new global::System.Data.DataColumn("NomeProfissional", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNomeProfissional);
+                this.columnNomeCargo = new global::System.Data.DataColumn("NomeCargo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNomeCargo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_profissional,
                                 this.columnid_cargo}, true));
                 this.columnid_profissional.AllowDBNull = false;
                 this.columnid_cargo.AllowDBNull = false;
+                this.columnNomeProfissional.AllowDBNull = false;
+                this.columnNomeProfissional.MaxLength = 200;
+                this.columnNomeCargo.AllowDBNull = false;
+                this.columnNomeCargo.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9258,6 +9290,28 @@ namespace MusicStation_Pablo {
                 }
                 set {
                     this[this.tableProfissional_Cargo.id_cargoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NomeProfissional {
+                get {
+                    return ((string)(this[this.tableProfissional_Cargo.NomeProfissionalColumn]));
+                }
+                set {
+                    this[this.tableProfissional_Cargo.NomeProfissionalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NomeCargo {
+                get {
+                    return ((string)(this[this.tableProfissional_Cargo.NomeCargoColumn]));
+                }
+                set {
+                    this[this.tableProfissional_Cargo.NomeCargoColumn] = value;
                 }
             }
             
@@ -15985,31 +16039,32 @@ SELECT id_pedido, cliente_id, data_pedido, total, acompanhamento FROM Pedidos WH
             tableMapping.DataSetTable = "Profissional_Cargo";
             tableMapping.ColumnMappings.Add("id_profissional", "id_profissional");
             tableMapping.ColumnMappings.Add("id_cargo", "id_cargo");
+            tableMapping.ColumnMappings.Add("NomeProfissional", "NomeProfissional");
+            tableMapping.ColumnMappings.Add("NomeCargo", "NomeCargo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Profissional_Cargo] WHERE (([id_profissional] = @Original_id_p" +
-                "rofissional) AND ([id_cargo] = @Original_id_cargo))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_profissional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_profissional", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_cargo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_cargo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.CommandText = "dbo.DeletarProfissionalCargo";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_profissional", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_profissional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_cargo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_cargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Profissional_Cargo] ([id_profissional], [id_cargo]) VALUES (@i" +
-                "d_profissional, @id_cargo);\r\nSELECT id_profissional, id_cargo FROM Profissional_" +
-                "Cargo WHERE (id_cargo = @id_cargo) AND (id_profissional = @id_profissional)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_profissional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_profissional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_cargo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_cargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.CommandText = "dbo.InserirProfissionalCargo";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_profissional", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_profissional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_cargo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_cargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Profissional_Cargo] SET [id_profissional] = @id_profissional, [id_cargo] = @id_cargo WHERE (([id_profissional] = @Original_id_profissional) AND ([id_cargo] = @Original_id_cargo));
-SELECT id_profissional, id_cargo FROM Profissional_Cargo WHERE (id_cargo = @id_cargo) AND (id_profissional = @id_profissional)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_profissional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_profissional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_cargo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_cargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_profissional", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_profissional", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_cargo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_cargo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.CommandText = "dbo.AtualizarProfissionalCargo";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_prof_antigo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_profissional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_cargo_antigo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_cargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_prof_novo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_profissional", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_cargo_novo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_cargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16025,8 +16080,9 @@ SELECT id_profissional, id_cargo FROM Profissional_Cargo WHERE (id_cargo = @id_c
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_profissional, id_cargo FROM dbo.Profissional_Cargo";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].CommandText = "dbo.ObterProfissionalCargo";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16086,9 +16142,19 @@ SELECT id_profissional, id_cargo FROM Profissional_Cargo WHERE (id_cargo = @id_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_profissional, int Original_id_cargo) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_profissional));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_id_cargo));
+        public virtual int Delete(global::System.Nullable<int> id_profissional, global::System.Nullable<int> id_cargo) {
+            if ((id_profissional.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(id_profissional.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((id_cargo.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(id_cargo.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16109,9 +16175,19 @@ SELECT id_profissional, id_cargo FROM Profissional_Cargo WHERE (id_cargo = @id_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_profissional, int id_cargo) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_profissional));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(id_cargo));
+        public virtual int Insert(global::System.Nullable<int> id_profissional, global::System.Nullable<int> id_cargo) {
+            if ((id_profissional.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(id_profissional.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((id_cargo.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(id_cargo.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16132,11 +16208,31 @@ SELECT id_profissional, id_cargo FROM Profissional_Cargo WHERE (id_cargo = @id_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int id_profissional, int id_cargo, int Original_id_profissional, int Original_id_cargo) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_profissional));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(id_cargo));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_id_profissional));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_id_cargo));
+        public virtual int Update(global::System.Nullable<int> id_prof_antigo, global::System.Nullable<int> id_cargo_antigo, global::System.Nullable<int> id_prof_novo, global::System.Nullable<int> id_cargo_novo) {
+            if ((id_prof_antigo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(id_prof_antigo.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((id_cargo_antigo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(id_cargo_antigo.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((id_prof_novo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(id_prof_novo.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((id_cargo_novo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(id_cargo_novo.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16151,14 +16247,6 @@ SELECT id_profissional, id_cargo FROM Profissional_Cargo WHERE (id_cargo = @id_c
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Original_id_profissional, int Original_id_cargo) {
-            return this.Update(Original_id_profissional, Original_id_cargo, Original_id_profissional, Original_id_cargo);
         }
     }
     
