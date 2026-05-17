@@ -21,7 +21,7 @@ namespace MusicStation_Pablo
             EmpresasTableAdapter empresas = new EmpresasTableAdapter();
             var obterEmpresas = from linha in empresas.GetData() select linha;
             foreach (var empresa in obterEmpresas) cboEmpresa.Items.Add(empresa);
-            cboEmpresa.SelectedIndex = 0;
+            cboEmpresa.SelectedIndex = -1;
 
 
             AtualizarLista();
@@ -43,7 +43,7 @@ namespace MusicStation_Pablo
         private void btnDeletarUsuarios_Click(object sender, EventArgs e)
         {
             if (lboInstrumentos.SelectedItem == null) return;
-            InstrumentosRow instrumento = lboInstrumentos.SelectedItem as InstrumentosRow;
+            var instrumento = lboInstrumentos.SelectedItem as InstrumentosRow;
             if (instrumento == null) return;
 
             try
@@ -53,6 +53,7 @@ namespace MusicStation_Pablo
 
                 LimparElementos();
                 AtualizarLista();
+
                 MessageBox.Show("Instrumento removido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -63,11 +64,13 @@ namespace MusicStation_Pablo
 
         private void btnAtualizarUsuarios_Click(object sender, EventArgs e)
         {
-            if (lboInstrumentos.SelectedItem == null || cboEmpresa.SelectedValue == null) return;
-            InstrumentosRow instrumento = lboInstrumentos.SelectedItem as InstrumentosRow;
-            if (instrumento == null) return;
+            if (lboInstrumentos.SelectedItem == null) return;
+            var instrumento = lboInstrumentos.SelectedItem as InstrumentosRow;
+            var empresaSelecionada = cboEmpresa.SelectedItem as EmpresasRow;
+            if (instrumento == null || empresaSelecionada == null) return;
 
-            int idEmpresa = (int)cboEmpresa.SelectedValue;
+            int idInstrumento = instrumento.id_instrumento;
+            int idEmpresa = empresaSelecionada.id_empresa;
             string nome = txtNome.Text;
             string descricao = txtDescricao.Text;
             decimal preco = decimal.Parse(txtPrecoLocacao.Text);
@@ -76,10 +79,11 @@ namespace MusicStation_Pablo
             try
             {
                 InstrumentosTableAdapter instrumentos = new InstrumentosTableAdapter();
-                instrumentos.Update(instrumento.id_instrumento, idEmpresa, nome, descricao, preco, disponivel);
+                instrumentos.Update(idInstrumento, idEmpresa, nome, descricao, preco, disponivel);
 
                 LimparElementos();
                 AtualizarLista();
+
                 MessageBox.Show("Instrumento atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -127,9 +131,10 @@ namespace MusicStation_Pablo
 
         private void btnCadastrarUsuarios_Click(object sender, EventArgs e)
         {
-            if (cboEmpresa.SelectedValue == null) return;
+            var empresaSelecionada = cboEmpresa.SelectedItem as EmpresasRow;
+            if (empresaSelecionada == null) return;
 
-            int idEmpresa = (int)cboEmpresa.SelectedValue;
+            int idEmpresa = empresaSelecionada.id_empresa;
             string nome = txtNome.Text;
             string descricao = txtDescricao.Text;
             decimal preco = decimal.Parse(txtPrecoLocacao.Text);
@@ -142,14 +147,13 @@ namespace MusicStation_Pablo
 
                 LimparElementos();
                 AtualizarLista();
+
                 MessageBox.Show("Instrumento cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, ex.GetType().Name);
             }
-
-
         }
 
         private void AtualizarLista()
