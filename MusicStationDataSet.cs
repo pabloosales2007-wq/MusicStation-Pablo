@@ -32,8 +32,40 @@
         {
             public override string ToString()
             {
-                // Se você fez o INNER JOIN, use os nomes das colunas da própria linha diretamente!
+
                 return $"{NomeProfissional}  |  {NomeCargo}";
+            }
+        }
+
+        public partial class ClientesRow
+        {
+            public override string ToString()
+            {
+                return $"{NomeCliente}  |  {EmailCliente}  |  {telefone}  |  {rua}  |  {numero}  ";
+            }
+        }
+
+        public partial class AdministradoresRow
+        {
+            public override string ToString()
+            {
+                return $"{NomeAdmin}  |  {EmailAdmin}  |  {nivel_acesso}  |  {observacoes}";
+            }
+        }
+
+        public partial class EmpresasRow
+        {
+            public override string ToString()
+            {
+                return $"{nome_fantasia}  |  {razao_social}  |  {cnpj}  |  {email}  |  {telefone}  |  {descricao}";
+            }
+        }
+
+        partial class InstrumentosRow
+        {
+            public override string ToString()
+            {
+                return $"{nome} ({NomeEmpresa})  |  {descricao}  |  {preco_locacao:F2}  |  {disponivel}";
             }
         }
     }

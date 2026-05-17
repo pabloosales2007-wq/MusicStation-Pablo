@@ -39,6 +39,7 @@
             this.txtRazao_social = new System.Windows.Forms.TextBox();
             this.txtNomeEmpresa = new System.Windows.Forms.TextBox();
             this.panelCRUD = new System.Windows.Forms.TableLayoutPanel();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.btnAtualizarUsuarios = new System.Windows.Forms.Button();
             this.btnDeletarUsuarios = new System.Windows.Forms.Button();
             this.btnCadastrarUsuarios = new System.Windows.Forms.Button();
@@ -46,11 +47,12 @@
             this.lblEmpresa = new System.Windows.Forms.Label();
             this.panelListBox = new System.Windows.Forms.Panel();
             this.lboEmpresa = new System.Windows.Forms.ListBox();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.lblSenha = new System.Windows.Forms.Label();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.panelCRUD.SuspendLayout();
             this.panelNomeTop.SuspendLayout();
             this.panelListBox.SuspendLayout();
@@ -66,6 +68,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(409, 33);
             this.txtPesquisa.TabIndex = 68;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // label2
             // 
@@ -85,7 +88,7 @@
             this.lblEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(31, 275);
+            this.lblEmail.Location = new System.Drawing.Point(31, 147);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(62, 25);
             this.lblEmail.TabIndex = 66;
@@ -97,7 +100,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.Location = new System.Drawing.Point(31, 303);
+            this.txtEmail.Location = new System.Drawing.Point(31, 175);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(199, 33);
             this.txtEmail.TabIndex = 65;
@@ -108,7 +111,7 @@
             this.lblcnpj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblcnpj.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.lblcnpj.ForeColor = System.Drawing.Color.White;
-            this.lblcnpj.Location = new System.Drawing.Point(31, 211);
+            this.lblcnpj.Location = new System.Drawing.Point(258, 216);
             this.lblcnpj.Name = "lblcnpj";
             this.lblcnpj.Size = new System.Drawing.Size(59, 25);
             this.lblcnpj.TabIndex = 64;
@@ -120,7 +123,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCNPJ.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.txtCNPJ.ForeColor = System.Drawing.Color.Black;
-            this.txtCNPJ.Location = new System.Drawing.Point(31, 239);
+            this.txtCNPJ.Location = new System.Drawing.Point(258, 244);
             this.txtCNPJ.Name = "txtCNPJ";
             this.txtCNPJ.Size = new System.Drawing.Size(199, 33);
             this.txtCNPJ.TabIndex = 63;
@@ -131,7 +134,7 @@
             this.lblRazao_social.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblRazao_social.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.lblRazao_social.ForeColor = System.Drawing.Color.White;
-            this.lblRazao_social.Location = new System.Drawing.Point(31, 147);
+            this.lblRazao_social.Location = new System.Drawing.Point(31, 277);
             this.lblRazao_social.Name = "lblRazao_social";
             this.lblRazao_social.Size = new System.Drawing.Size(122, 25);
             this.lblRazao_social.TabIndex = 62;
@@ -155,7 +158,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRazao_social.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.txtRazao_social.ForeColor = System.Drawing.Color.Black;
-            this.txtRazao_social.Location = new System.Drawing.Point(31, 175);
+            this.txtRazao_social.Location = new System.Drawing.Point(31, 305);
             this.txtRazao_social.Name = "txtRazao_social";
             this.txtRazao_social.Size = new System.Drawing.Size(199, 33);
             this.txtRazao_social.TabIndex = 59;
@@ -189,6 +192,22 @@
             this.panelCRUD.Size = new System.Drawing.Size(412, 123);
             this.panelCRUD.TabIndex = 56;
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnLimpar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimpar.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.btnLimpar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLimpar.Location = new System.Drawing.Point(210, 64);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(198, 56);
+            this.btnLimpar.TabIndex = 25;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // btnAtualizarUsuarios
             // 
             this.btnAtualizarUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
@@ -203,6 +222,7 @@
             this.btnAtualizarUsuarios.TabIndex = 23;
             this.btnAtualizarUsuarios.Text = "Atualizar";
             this.btnAtualizarUsuarios.UseVisualStyleBackColor = false;
+            this.btnAtualizarUsuarios.Click += new System.EventHandler(this.btnAtualizarUsuarios_Click);
             // 
             // btnDeletarUsuarios
             // 
@@ -218,6 +238,7 @@
             this.btnDeletarUsuarios.TabIndex = 22;
             this.btnDeletarUsuarios.Text = "Deletar";
             this.btnDeletarUsuarios.UseVisualStyleBackColor = false;
+            this.btnDeletarUsuarios.Click += new System.EventHandler(this.btnDeletarUsuarios_Click);
             // 
             // btnCadastrarUsuarios
             // 
@@ -233,6 +254,7 @@
             this.btnCadastrarUsuarios.TabIndex = 18;
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuarios.Click += new System.EventHandler(this.btnCadastrarUsuarios_Click);
             // 
             // panelNomeTop
             // 
@@ -281,21 +303,7 @@
             this.lboEmpresa.ScrollAlwaysVisible = true;
             this.lboEmpresa.Size = new System.Drawing.Size(897, 129);
             this.lboEmpresa.TabIndex = 36;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.btnLimpar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLimpar.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.btnLimpar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLimpar.Location = new System.Drawing.Point(210, 64);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(198, 56);
-            this.btnLimpar.TabIndex = 25;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.lboEmpresa.SelectedIndexChanged += new System.EventHandler(this.lboEmpresa_SelectedIndexChanged);
             // 
             // lblTelefone
             // 
@@ -303,7 +311,7 @@
             this.lblTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblTelefone.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.lblTelefone.ForeColor = System.Drawing.Color.White;
-            this.lblTelefone.Location = new System.Drawing.Point(259, 85);
+            this.lblTelefone.Location = new System.Drawing.Point(259, 83);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(87, 25);
             this.lblTelefone.TabIndex = 70;
@@ -315,7 +323,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTelefone.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.txtTelefone.ForeColor = System.Drawing.Color.Black;
-            this.txtTelefone.Location = new System.Drawing.Point(258, 113);
+            this.txtTelefone.Location = new System.Drawing.Point(258, 111);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(199, 33);
             this.txtTelefone.TabIndex = 69;
@@ -343,11 +351,36 @@
             this.txtDescricao.Size = new System.Drawing.Size(199, 33);
             this.txtDescricao.TabIndex = 71;
             // 
+            // lblSenha
+            // 
+            this.lblSenha.AutoSize = true;
+            this.lblSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblSenha.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblSenha.ForeColor = System.Drawing.Color.White;
+            this.lblSenha.Location = new System.Drawing.Point(31, 213);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(68, 25);
+            this.lblSenha.TabIndex = 74;
+            this.lblSenha.Text = "Senha:";
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtSenha.ForeColor = System.Drawing.Color.Black;
+            this.txtSenha.Location = new System.Drawing.Point(31, 241);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(199, 33);
+            this.txtSenha.TabIndex = 73;
+            // 
             // UC_CrudEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(26)))));
+            this.Controls.Add(this.lblSenha);
+            this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lblTelefone);
@@ -401,5 +434,7 @@
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Label lblSenha;
+        private System.Windows.Forms.TextBox txtSenha;
     }
 }

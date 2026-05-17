@@ -43,8 +43,6 @@ namespace MusicStation_Pablo
             txtNome.Text = profCargo.NomeProfissional;
             cboCargo.Text = profCargo.NomeCargo;
 
-
-
         }
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)

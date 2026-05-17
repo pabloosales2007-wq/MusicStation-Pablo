@@ -31,6 +31,8 @@
             this.panelNomeTop = new System.Windows.Forms.Panel();
             this.lblUsuarios = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.chkDisponivel = new System.Windows.Forms.CheckBox();
+            this.cboEmpresa = new System.Windows.Forms.ComboBox();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelCRUD = new System.Windows.Forms.TableLayoutPanel();
@@ -46,9 +48,7 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblEmpresa = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.txtDataCadastro = new System.Windows.Forms.TextBox();
-            this.cboEmpresa = new System.Windows.Forms.ComboBox();
-            this.checkBoxDisponivel = new System.Windows.Forms.CheckBox();
+            this.txtPrecoLocacao = new System.Windows.Forms.TextBox();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -81,7 +81,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.checkBoxDisponivel);
+            this.panel2.Controls.Add(this.chkDisponivel);
             this.panel2.Controls.Add(this.cboEmpresa);
             this.panel2.Controls.Add(this.txtPesquisa);
             this.panel2.Controls.Add(this.label2);
@@ -93,13 +93,35 @@
             this.panel2.Controls.Add(this.txtNome);
             this.panel2.Controls.Add(this.lblEmpresa);
             this.panel2.Controls.Add(this.txtDescricao);
-            this.panel2.Controls.Add(this.txtDataCadastro);
+            this.panel2.Controls.Add(this.txtPrecoLocacao);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(976, 536);
             this.panel2.TabIndex = 39;
             this.panel2.TabStop = true;
+            // 
+            // chkDisponivel
+            // 
+            this.chkDisponivel.AutoSize = true;
+            this.chkDisponivel.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.chkDisponivel.ForeColor = System.Drawing.Color.White;
+            this.chkDisponivel.Location = new System.Drawing.Point(225, 305);
+            this.chkDisponivel.Name = "chkDisponivel";
+            this.chkDisponivel.Size = new System.Drawing.Size(119, 29);
+            this.chkDisponivel.TabIndex = 51;
+            this.chkDisponivel.Text = "Disponivel";
+            this.chkDisponivel.UseVisualStyleBackColor = true;
+            // 
+            // cboEmpresa
+            // 
+            this.cboEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEmpresa.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboEmpresa.FormattingEnabled = true;
+            this.cboEmpresa.Location = new System.Drawing.Point(31, 114);
+            this.cboEmpresa.Name = "cboEmpresa";
+            this.cboEmpresa.Size = new System.Drawing.Size(342, 33);
+            this.cboEmpresa.TabIndex = 50;
             // 
             // txtPesquisa
             // 
@@ -111,6 +133,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(409, 33);
             this.txtPesquisa.TabIndex = 49;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // label2
             // 
@@ -156,6 +179,7 @@
             this.btnLimpar.TabIndex = 25;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnAtualizarUsuarios
             // 
@@ -171,6 +195,7 @@
             this.btnAtualizarUsuarios.TabIndex = 23;
             this.btnAtualizarUsuarios.Text = "Atualizar";
             this.btnAtualizarUsuarios.UseVisualStyleBackColor = false;
+            this.btnAtualizarUsuarios.Click += new System.EventHandler(this.btnAtualizarUsuarios_Click);
             // 
             // btnDeletarUsuarios
             // 
@@ -186,6 +211,7 @@
             this.btnDeletarUsuarios.TabIndex = 22;
             this.btnDeletarUsuarios.Text = "Deletar";
             this.btnDeletarUsuarios.UseVisualStyleBackColor = false;
+            this.btnDeletarUsuarios.Click += new System.EventHandler(this.btnDeletarUsuarios_Click);
             // 
             // btnCadastrarUsuarios
             // 
@@ -201,6 +227,7 @@
             this.btnCadastrarUsuarios.TabIndex = 18;
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuarios.Click += new System.EventHandler(this.btnCadastrarUsuarios_Click);
             // 
             // lblPrecoLocacao
             // 
@@ -238,6 +265,7 @@
             this.lboInstrumentos.ScrollAlwaysVisible = true;
             this.lboInstrumentos.Size = new System.Drawing.Size(897, 129);
             this.lboInstrumentos.TabIndex = 35;
+            this.lboInstrumentos.SelectedIndexChanged += new System.EventHandler(this.lboInstrumentos_SelectedIndexChanged);
             // 
             // lblDescricao
             // 
@@ -297,38 +325,16 @@
             this.txtDescricao.Size = new System.Drawing.Size(342, 33);
             this.txtDescricao.TabIndex = 26;
             // 
-            // txtDataCadastro
+            // txtPrecoLocacao
             // 
-            this.txtDataCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtPrecoLocacao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDataCadastro.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtDataCadastro.ForeColor = System.Drawing.Color.Black;
-            this.txtDataCadastro.Location = new System.Drawing.Point(31, 303);
-            this.txtDataCadastro.Name = "txtDataCadastro";
-            this.txtDataCadastro.Size = new System.Drawing.Size(138, 33);
-            this.txtDataCadastro.TabIndex = 27;
-            // 
-            // cboEmpresa
-            // 
-            this.cboEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEmpresa.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.cboEmpresa.FormattingEnabled = true;
-            this.cboEmpresa.Location = new System.Drawing.Point(31, 114);
-            this.cboEmpresa.Name = "cboEmpresa";
-            this.cboEmpresa.Size = new System.Drawing.Size(342, 33);
-            this.cboEmpresa.TabIndex = 50;
-            // 
-            // checkBoxDisponivel
-            // 
-            this.checkBoxDisponivel.AutoSize = true;
-            this.checkBoxDisponivel.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.checkBoxDisponivel.ForeColor = System.Drawing.Color.White;
-            this.checkBoxDisponivel.Location = new System.Drawing.Point(225, 305);
-            this.checkBoxDisponivel.Name = "checkBoxDisponivel";
-            this.checkBoxDisponivel.Size = new System.Drawing.Size(119, 29);
-            this.checkBoxDisponivel.TabIndex = 51;
-            this.checkBoxDisponivel.Text = "Disponivel";
-            this.checkBoxDisponivel.UseVisualStyleBackColor = true;
+            this.txtPrecoLocacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtPrecoLocacao.ForeColor = System.Drawing.Color.Black;
+            this.txtPrecoLocacao.Location = new System.Drawing.Point(31, 303);
+            this.txtPrecoLocacao.Name = "txtPrecoLocacao";
+            this.txtPrecoLocacao.Size = new System.Drawing.Size(138, 33);
+            this.txtPrecoLocacao.TabIndex = 27;
             // 
             // UC_CrudInstrumentos
             // 
@@ -369,8 +375,8 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblEmpresa;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.TextBox txtDataCadastro;
+        private System.Windows.Forms.TextBox txtPrecoLocacao;
         private System.Windows.Forms.ComboBox cboEmpresa;
-        private System.Windows.Forms.CheckBox checkBoxDisponivel;
+        private System.Windows.Forms.CheckBox chkDisponivel;
     }
 }
