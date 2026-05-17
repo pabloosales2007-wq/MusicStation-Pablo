@@ -46,6 +46,7 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPreco = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -87,6 +88,7 @@
             this.panel2.Controls.Add(this.txtDescricao);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txtPreco);
+            this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -103,6 +105,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(409, 33);
             this.txtPesquisa.TabIndex = 49;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // label2
             // 
@@ -148,6 +151,7 @@
             this.btnLimpar.TabIndex = 25;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnAtualizarUsuarios
             // 
@@ -163,6 +167,7 @@
             this.btnAtualizarUsuarios.TabIndex = 23;
             this.btnAtualizarUsuarios.Text = "Atualizar";
             this.btnAtualizarUsuarios.UseVisualStyleBackColor = false;
+            this.btnAtualizarUsuarios.Click += new System.EventHandler(this.btnAtualizarUsuarios_Click);
             // 
             // btnDeletarUsuarios
             // 
@@ -178,6 +183,7 @@
             this.btnDeletarUsuarios.TabIndex = 22;
             this.btnDeletarUsuarios.Text = "Deletar";
             this.btnDeletarUsuarios.UseVisualStyleBackColor = false;
+            this.btnDeletarUsuarios.Click += new System.EventHandler(this.btnDeletarUsuarios_Click);
             // 
             // btnCadastrarUsuarios
             // 
@@ -193,10 +199,12 @@
             this.btnCadastrarUsuarios.TabIndex = 18;
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuarios.Click += new System.EventHandler(this.btnCadastrarUsuarios_Click);
             // 
             // panelListBox
             // 
-            this.panelListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.panelListBox.Controls.Add(this.lboServicos);
@@ -207,7 +215,8 @@
             // 
             // lboServicos
             // 
-            this.lboServicos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lboServicos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lboServicos.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.lboServicos.FormattingEnabled = true;
@@ -218,6 +227,7 @@
             this.lboServicos.ScrollAlwaysVisible = true;
             this.lboServicos.Size = new System.Drawing.Size(897, 129);
             this.lboServicos.TabIndex = 35;
+            this.lboServicos.SelectedIndexChanged += new System.EventHandler(this.lboServicos_SelectedIndexChanged);
             // 
             // lblPreco
             // 
@@ -288,6 +298,14 @@
             this.txtPreco.Size = new System.Drawing.Size(207, 33);
             this.txtPreco.TabIndex = 26;
             // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(976, 536);
+            this.panel1.TabIndex = 50;
+            // 
             // UC_CrudServicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,5 +345,6 @@
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPreco;
+        private System.Windows.Forms.Panel panel1;
     }
 }

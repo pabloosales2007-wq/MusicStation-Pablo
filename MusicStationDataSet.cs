@@ -61,12 +61,22 @@
             }
         }
 
-        partial class InstrumentosRow
+        public partial class InstrumentosRow
         {
             public override string ToString()
             {
                 return $"{nome} ({NomeEmpresa})  |  {descricao}  |  {preco_locacao:F2}  |  {disponivel}";
             }
         }
+
+        partial class ServicosRow
+        {
+            public override string ToString()
+            {
+                return $"{nome}  |  {descricao} R$ {preco:F2}  ";
+            }
+        }
+
+
     }
 }
