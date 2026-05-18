@@ -73,7 +73,7 @@
         {
             public override string ToString()
             {
-                return $"{nome}  |  {descricao} R$ {preco:F2}  ";
+                return $"{nome}  |  {descricao} R$ {preco:F2} ";
             }
         }
 
