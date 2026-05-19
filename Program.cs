@@ -14,9 +14,23 @@ namespace MusicStation_Pablo
         [STAThread]
         static void Main()
         {
+
+            //ID Funcionario
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            //Criando o login da biblioteca
+            FormLogin entrando = new FormLogin();
+            entrando.saida = false;
+            Application.Run(entrando);
+            if (entrando.saida)
+            {
+                entrando.Dispose();
+                entrando.Close();
+                Application.Run(new Form1());
+            }
+
+
+
         }
     }
 }

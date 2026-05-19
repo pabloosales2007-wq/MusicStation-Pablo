@@ -31,8 +31,8 @@
             this.panelFundo = new System.Windows.Forms.Panel();
             this.panelLogin = new System.Windows.Forms.Panel();
             this.btnEntrar = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pboSenha = new System.Windows.Forms.PictureBox();
@@ -63,8 +63,8 @@
             this.panelLogin.Controls.Add(this.pboSenha);
             this.panelLogin.Controls.Add(this.pboUsuario);
             this.panelLogin.Controls.Add(this.btnEntrar);
-            this.panelLogin.Controls.Add(this.textBox2);
-            this.panelLogin.Controls.Add(this.textBox1);
+            this.panelLogin.Controls.Add(this.txtSenha);
+            this.panelLogin.Controls.Add(this.txtUsuario);
             this.panelLogin.Controls.Add(this.lblSenha);
             this.panelLogin.Controls.Add(this.lblUsuario);
             this.panelLogin.Controls.Add(this.pboLogo);
@@ -87,25 +87,26 @@
             this.btnEntrar.UseVisualStyleBackColor = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
-            // textBox2
+            // txtSenha
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.textBox2.Location = new System.Drawing.Point(83, 207);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(640, 33);
-            this.textBox2.TabIndex = 5;
+            this.txtSenha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSenha.BackColor = System.Drawing.Color.White;
+            this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtSenha.Location = new System.Drawing.Point(83, 207);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(640, 33);
+            this.txtSenha.TabIndex = 5;
             // 
-            // textBox1
+            // txtUsuario
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.textBox1.Location = new System.Drawing.Point(83, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(640, 33);
-            this.textBox1.TabIndex = 4;
+            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUsuario.BackColor = System.Drawing.Color.White;
+            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtUsuario.Location = new System.Drawing.Point(83, 140);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(640, 33);
+            this.txtUsuario.TabIndex = 4;
             // 
             // lblSenha
             // 
@@ -131,17 +132,21 @@
             // 
             // pboSenha
             // 
+            this.pboSenha.Image = global::MusicStation_Pablo.Properties.Resources.senha;
             this.pboSenha.Location = new System.Drawing.Point(44, 207);
             this.pboSenha.Name = "pboSenha";
             this.pboSenha.Size = new System.Drawing.Size(33, 33);
+            this.pboSenha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboSenha.TabIndex = 8;
             this.pboSenha.TabStop = false;
             // 
             // pboUsuario
             // 
+            this.pboUsuario.Image = global::MusicStation_Pablo.Properties.Resources.admin1;
             this.pboUsuario.Location = new System.Drawing.Point(44, 140);
             this.pboUsuario.Name = "pboUsuario";
             this.pboUsuario.Size = new System.Drawing.Size(33, 33);
+            this.pboUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pboUsuario.TabIndex = 7;
             this.pboUsuario.TabStop = false;
             // 
@@ -191,8 +196,8 @@
         private System.Windows.Forms.Panel panelLogin;
         private System.Windows.Forms.PictureBox pboLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Button btnEntrar;
