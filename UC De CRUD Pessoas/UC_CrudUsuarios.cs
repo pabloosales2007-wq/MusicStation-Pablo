@@ -125,8 +125,8 @@ namespace MusicStation_Pablo
         private void AtualizarLista()
         {
             lboUsuarios.Items.Clear();
-            UsuariosTableAdapter funcionariosDados = new UsuariosTableAdapter();
-            var dados = from linha in funcionariosDados.GetData()
+            UsuariosTableAdapter usuarios = new UsuariosTableAdapter();
+            var dados = from linha in usuarios.GetData()
                         select linha;
             foreach (UsuariosRow dado in dados) lboUsuarios.Items.Add(dado);
 
