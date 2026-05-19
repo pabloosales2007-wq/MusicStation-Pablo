@@ -25,6 +25,7 @@
             public override string ToString()
             {
                 return $"{nome}  |  {descricao}";
+
             }
         }
 
