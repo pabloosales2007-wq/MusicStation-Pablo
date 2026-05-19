@@ -26,6 +26,7 @@ namespace MusicStation_Pablo
             {
                 entrando.Dispose();
                 entrando.Close();
+
                 Application.Run(new Form1());
             }
 
