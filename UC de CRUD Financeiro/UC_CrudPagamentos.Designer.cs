@@ -31,6 +31,9 @@
             this.panelNomeTop = new System.Windows.Forms.Panel();
             this.lblPagamentos = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cboStatusPagamento = new System.Windows.Forms.ComboBox();
+            this.lblAcompanhamento = new System.Windows.Forms.Label();
+            this.txtPedido = new System.Windows.Forms.TextBox();
             this.lblValorPago = new System.Windows.Forms.Label();
             this.txtValorPago = new System.Windows.Forms.TextBox();
             this.lblDataPagamento = new System.Windows.Forms.Label();
@@ -47,9 +50,6 @@
             this.panelListBox = new System.Windows.Forms.Panel();
             this.lboPagamentos = new System.Windows.Forms.ListBox();
             this.lblPedido = new System.Windows.Forms.Label();
-            this.txtPedido = new System.Windows.Forms.TextBox();
-            this.cboStatusPagamento = new System.Windows.Forms.ComboBox();
-            this.lblAcompanhamento = new System.Windows.Forms.Label();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -71,7 +71,7 @@
             this.lblPagamentos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPagamentos.AutoSize = true;
-            this.lblPagamentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.lblPagamentos.BackColor = System.Drawing.Color.Transparent;
             this.lblPagamentos.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPagamentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.lblPagamentos.Location = new System.Drawing.Point(412, 18);
@@ -102,6 +102,38 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(976, 536);
             this.panel2.TabIndex = 39;
+            // 
+            // cboStatusPagamento
+            // 
+            this.cboStatusPagamento.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboStatusPagamento.FormattingEnabled = true;
+            this.cboStatusPagamento.Location = new System.Drawing.Point(278, 111);
+            this.cboStatusPagamento.Name = "cboStatusPagamento";
+            this.cboStatusPagamento.Size = new System.Drawing.Size(207, 33);
+            this.cboStatusPagamento.TabIndex = 60;
+            // 
+            // lblAcompanhamento
+            // 
+            this.lblAcompanhamento.AutoSize = true;
+            this.lblAcompanhamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblAcompanhamento.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblAcompanhamento.ForeColor = System.Drawing.Color.White;
+            this.lblAcompanhamento.Location = new System.Drawing.Point(276, 83);
+            this.lblAcompanhamento.Name = "lblAcompanhamento";
+            this.lblAcompanhamento.Size = new System.Drawing.Size(171, 25);
+            this.lblAcompanhamento.TabIndex = 59;
+            this.lblAcompanhamento.Text = "Acompanhamento:";
+            // 
+            // txtPedido
+            // 
+            this.txtPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPedido.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtPedido.ForeColor = System.Drawing.Color.Black;
+            this.txtPedido.Location = new System.Drawing.Point(33, 111);
+            this.txtPedido.Name = "txtPedido";
+            this.txtPedido.Size = new System.Drawing.Size(207, 33);
+            this.txtPedido.TabIndex = 58;
             // 
             // lblValorPago
             // 
@@ -304,38 +336,6 @@
             this.lblPedido.Size = new System.Drawing.Size(74, 25);
             this.lblPedido.TabIndex = 29;
             this.lblPedido.Text = "Pedido:";
-            // 
-            // txtPedido
-            // 
-            this.txtPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPedido.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtPedido.ForeColor = System.Drawing.Color.Black;
-            this.txtPedido.Location = new System.Drawing.Point(33, 111);
-            this.txtPedido.Name = "txtPedido";
-            this.txtPedido.Size = new System.Drawing.Size(207, 33);
-            this.txtPedido.TabIndex = 58;
-            // 
-            // cboStatusPagamento
-            // 
-            this.cboStatusPagamento.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.cboStatusPagamento.FormattingEnabled = true;
-            this.cboStatusPagamento.Location = new System.Drawing.Point(278, 111);
-            this.cboStatusPagamento.Name = "cboStatusPagamento";
-            this.cboStatusPagamento.Size = new System.Drawing.Size(207, 33);
-            this.cboStatusPagamento.TabIndex = 60;
-            // 
-            // lblAcompanhamento
-            // 
-            this.lblAcompanhamento.AutoSize = true;
-            this.lblAcompanhamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblAcompanhamento.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblAcompanhamento.ForeColor = System.Drawing.Color.White;
-            this.lblAcompanhamento.Location = new System.Drawing.Point(276, 83);
-            this.lblAcompanhamento.Name = "lblAcompanhamento";
-            this.lblAcompanhamento.Size = new System.Drawing.Size(171, 25);
-            this.lblAcompanhamento.TabIndex = 59;
-            this.lblAcompanhamento.Text = "Acompanhamento:";
             // 
             // UC_CrudPagamentos
             // 

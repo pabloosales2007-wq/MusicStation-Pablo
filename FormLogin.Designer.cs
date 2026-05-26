@@ -112,8 +112,8 @@
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.ForeColor = System.Drawing.Color.White;
-            this.lblSenha.Location = new System.Drawing.Point(39, 179);
+            this.lblSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
+            this.lblSenha.Location = new System.Drawing.Point(79, 179);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(64, 25);
             this.lblSenha.TabIndex = 3;
@@ -123,8 +123,8 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(39, 111);
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
+            this.lblUsuario.Location = new System.Drawing.Point(78, 112);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(77, 25);
             this.lblUsuario.TabIndex = 2;
@@ -132,7 +132,7 @@
             // 
             // pboSenha
             // 
-            this.pboSenha.Image = global::MusicStation_Pablo.Properties.Resources.senha;
+            this.pboSenha.Image = global::MusicStation_Pablo.Properties.Resources.icons8_senha_30;
             this.pboSenha.Location = new System.Drawing.Point(44, 207);
             this.pboSenha.Name = "pboSenha";
             this.pboSenha.Size = new System.Drawing.Size(33, 33);
@@ -142,7 +142,7 @@
             // 
             // pboUsuario
             // 
-            this.pboUsuario.Image = global::MusicStation_Pablo.Properties.Resources.admin1;
+            this.pboUsuario.Image = global::MusicStation_Pablo.Properties.Resources.icons8_usuário_50;
             this.pboUsuario.Location = new System.Drawing.Point(44, 140);
             this.pboUsuario.Name = "pboUsuario";
             this.pboUsuario.Size = new System.Drawing.Size(33, 33);

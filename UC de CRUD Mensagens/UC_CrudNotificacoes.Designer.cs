@@ -31,6 +31,8 @@
             this.panelNomeTop = new System.Windows.Forms.Panel();
             this.lblNotificacoes = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cboTipo = new System.Windows.Forms.ComboBox();
+            this.chkLida = new System.Windows.Forms.CheckBox();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelCRUD = new System.Windows.Forms.TableLayoutPanel();
@@ -38,6 +40,7 @@
             this.btnAtualizarUsuarios = new System.Windows.Forms.Button();
             this.btnDeletarUsuarios = new System.Windows.Forms.Button();
             this.btnCadastrarUsuarios = new System.Windows.Forms.Button();
+            this.lblTipo = new System.Windows.Forms.Label();
             this.panelListBox = new System.Windows.Forms.Panel();
             this.lboNotificacoes = new System.Windows.Forms.ListBox();
             this.lblMensagem = new System.Windows.Forms.Label();
@@ -46,9 +49,6 @@
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.lblDestinatario = new System.Windows.Forms.Label();
             this.txtMensagem = new System.Windows.Forms.TextBox();
-            this.chkLida = new System.Windows.Forms.CheckBox();
-            this.lblTipo = new System.Windows.Forms.Label();
-            this.cboTipo = new System.Windows.Forms.ComboBox();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -69,7 +69,7 @@
             this.lblNotificacoes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNotificacoes.AutoSize = true;
-            this.lblNotificacoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.lblNotificacoes.BackColor = System.Drawing.Color.Transparent;
             this.lblNotificacoes.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNotificacoes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.lblNotificacoes.Location = new System.Drawing.Point(383, 18);
@@ -98,6 +98,32 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(976, 536);
             this.panel2.TabIndex = 39;
+            // 
+            // cboTipo
+            // 
+            this.cboTipo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboTipo.FormattingEnabled = true;
+            this.cboTipo.Items.AddRange(new object[] {
+            "sistema",
+            "agendamento",
+            "mensagem",
+            "promocao"});
+            this.cboTipo.Location = new System.Drawing.Point(34, 304);
+            this.cboTipo.Name = "cboTipo";
+            this.cboTipo.Size = new System.Drawing.Size(204, 33);
+            this.cboTipo.TabIndex = 52;
+            // 
+            // chkLida
+            // 
+            this.chkLida.AutoSize = true;
+            this.chkLida.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.chkLida.ForeColor = System.Drawing.Color.White;
+            this.chkLida.Location = new System.Drawing.Point(291, 115);
+            this.chkLida.Name = "chkLida";
+            this.chkLida.Size = new System.Drawing.Size(66, 29);
+            this.chkLida.TabIndex = 51;
+            this.chkLida.Text = "Lida";
+            this.chkLida.UseVisualStyleBackColor = true;
             // 
             // txtPesquisa
             // 
@@ -200,6 +226,18 @@
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
             // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblTipo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblTipo.ForeColor = System.Drawing.Color.White;
+            this.lblTipo.Location = new System.Drawing.Point(31, 275);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(135, 25);
+            this.lblTipo.TabIndex = 32;
+            this.lblTipo.Text = "Data Cadastro:";
+            // 
             // panelListBox
             // 
             this.panelListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -293,44 +331,6 @@
             this.txtMensagem.Name = "txtMensagem";
             this.txtMensagem.Size = new System.Drawing.Size(207, 33);
             this.txtMensagem.TabIndex = 26;
-            // 
-            // chkLida
-            // 
-            this.chkLida.AutoSize = true;
-            this.chkLida.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.chkLida.ForeColor = System.Drawing.Color.White;
-            this.chkLida.Location = new System.Drawing.Point(291, 115);
-            this.chkLida.Name = "chkLida";
-            this.chkLida.Size = new System.Drawing.Size(66, 29);
-            this.chkLida.TabIndex = 51;
-            this.chkLida.Text = "Lida";
-            this.chkLida.UseVisualStyleBackColor = true;
-            // 
-            // lblTipo
-            // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblTipo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblTipo.ForeColor = System.Drawing.Color.White;
-            this.lblTipo.Location = new System.Drawing.Point(31, 275);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(135, 25);
-            this.lblTipo.TabIndex = 32;
-            this.lblTipo.Text = "Data Cadastro:";
-            // 
-            // cboTipo
-            // 
-            this.cboTipo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Items.AddRange(new object[] {
-            "sistema",
-            "agendamento",
-            "mensagem",
-            "promocao"});
-            this.cboTipo.Location = new System.Drawing.Point(34, 304);
-            this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(204, 33);
-            this.cboTipo.TabIndex = 52;
             // 
             // UC_CrudNotificacoes
             // 

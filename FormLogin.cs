@@ -21,7 +21,7 @@ namespace MusicStation_Pablo
 
         private void panelLogin_Paint(object sender, PaintEventArgs e)
         {
-            int raio = 20; // Ajuste aqui o nível do arredondamento
+            int raio = 40; // Ajuste aqui o nível do arredondamento
             Rectangle bordas = new Rectangle(0, 0, panelLogin.Width, panelLogin.Height);
             System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
 

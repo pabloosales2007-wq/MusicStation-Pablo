@@ -31,6 +31,8 @@
             this.panelNomeTop = new System.Windows.Forms.Panel();
             this.lblMensagens = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblDataHora = new System.Windows.Forms.Label();
+            this.chkLida = new System.Windows.Forms.CheckBox();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelCRUD = new System.Windows.Forms.TableLayoutPanel();
@@ -45,8 +47,6 @@
             this.lblConteudo = new System.Windows.Forms.Label();
             this.txtMensagem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.chkLida = new System.Windows.Forms.CheckBox();
-            this.lblDataHora = new System.Windows.Forms.Label();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -67,7 +67,7 @@
             this.lblMensagens.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMensagens.AutoSize = true;
-            this.lblMensagens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.lblMensagens.BackColor = System.Drawing.Color.Transparent;
             this.lblMensagens.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensagens.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.lblMensagens.Location = new System.Drawing.Point(390, 18);
@@ -94,6 +94,30 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(976, 536);
             this.panel2.TabIndex = 39;
+            // 
+            // lblDataHora
+            // 
+            this.lblDataHora.AutoSize = true;
+            this.lblDataHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblDataHora.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblDataHora.ForeColor = System.Drawing.Color.White;
+            this.lblDataHora.Location = new System.Drawing.Point(26, 266);
+            this.lblDataHora.Name = "lblDataHora";
+            this.lblDataHora.Size = new System.Drawing.Size(128, 25);
+            this.lblDataHora.TabIndex = 51;
+            this.lblDataHora.Text = "Data de Envio";
+            // 
+            // chkLida
+            // 
+            this.chkLida.AutoSize = true;
+            this.chkLida.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.chkLida.ForeColor = System.Drawing.Color.White;
+            this.chkLida.Location = new System.Drawing.Point(273, 117);
+            this.chkLida.Name = "chkLida";
+            this.chkLida.Size = new System.Drawing.Size(66, 29);
+            this.chkLida.TabIndex = 50;
+            this.chkLida.Text = "Lida";
+            this.chkLida.UseVisualStyleBackColor = true;
             // 
             // txtPesquisa
             // 
@@ -278,30 +302,6 @@
             this.label1.Size = new System.Drawing.Size(67, 25);
             this.label1.TabIndex = 29;
             this.label1.Text = "Nome:";
-            // 
-            // chkLida
-            // 
-            this.chkLida.AutoSize = true;
-            this.chkLida.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.chkLida.ForeColor = System.Drawing.Color.White;
-            this.chkLida.Location = new System.Drawing.Point(273, 117);
-            this.chkLida.Name = "chkLida";
-            this.chkLida.Size = new System.Drawing.Size(66, 29);
-            this.chkLida.TabIndex = 50;
-            this.chkLida.Text = "Lida";
-            this.chkLida.UseVisualStyleBackColor = true;
-            // 
-            // lblDataHora
-            // 
-            this.lblDataHora.AutoSize = true;
-            this.lblDataHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblDataHora.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblDataHora.ForeColor = System.Drawing.Color.White;
-            this.lblDataHora.Location = new System.Drawing.Point(26, 266);
-            this.lblDataHora.Name = "lblDataHora";
-            this.lblDataHora.Size = new System.Drawing.Size(128, 25);
-            this.lblDataHora.TabIndex = 51;
-            this.lblDataHora.Text = "Data de Envio";
             // 
             // UC_CrudMensagens
             // 

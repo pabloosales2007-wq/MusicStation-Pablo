@@ -32,19 +32,19 @@
             this.panelNomeTop = new System.Windows.Forms.Panel();
             this.lblProfissionalCargo = new System.Windows.Forms.Label();
             this.panelFundo = new System.Windows.Forms.Panel();
+            this.cboCargo = new System.Windows.Forms.ComboBox();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelListBox = new System.Windows.Forms.Panel();
             this.lboProfCargos = new System.Windows.Forms.ListBox();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblCargo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelCRUD = new System.Windows.Forms.TableLayoutPanel();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnAtualizarUsuarios = new System.Windows.Forms.Button();
             this.btnDeletarUsuarios = new System.Windows.Forms.Button();
             this.btnCadastrarUsuarios = new System.Windows.Forms.Button();
-            this.lblCargo = new System.Windows.Forms.Label();
-            this.cboCargo = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panelNomeTop.SuspendLayout();
             this.panelFundo.SuspendLayout();
@@ -77,7 +77,7 @@
             this.lblProfissionalCargo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblProfissionalCargo.AutoSize = true;
-            this.lblProfissionalCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.lblProfissionalCargo.BackColor = System.Drawing.Color.Transparent;
             this.lblProfissionalCargo.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfissionalCargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.lblProfissionalCargo.Location = new System.Drawing.Point(338, 18);
@@ -102,6 +102,15 @@
             this.panelFundo.Name = "panelFundo";
             this.panelFundo.Size = new System.Drawing.Size(976, 536);
             this.panelFundo.TabIndex = 51;
+            // 
+            // cboCargo
+            // 
+            this.cboCargo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboCargo.FormattingEnabled = true;
+            this.cboCargo.Location = new System.Drawing.Point(31, 177);
+            this.cboCargo.Name = "cboCargo";
+            this.cboCargo.Size = new System.Drawing.Size(411, 33);
+            this.cboCargo.TabIndex = 48;
             // 
             // txtPesquisa
             // 
@@ -165,6 +174,18 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(415, 33);
             this.txtNome.TabIndex = 37;
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblCargo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblCargo.ForeColor = System.Drawing.Color.White;
+            this.lblCargo.Location = new System.Drawing.Point(31, 149);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(67, 25);
+            this.lblCargo.TabIndex = 42;
+            this.lblCargo.Text = "Cargo:";
             // 
             // label1
             // 
@@ -263,27 +284,6 @@
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
             this.btnCadastrarUsuarios.Click += new System.EventHandler(this.btnCadastrarUsuarios_Click);
-            // 
-            // lblCargo
-            // 
-            this.lblCargo.AutoSize = true;
-            this.lblCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblCargo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblCargo.ForeColor = System.Drawing.Color.White;
-            this.lblCargo.Location = new System.Drawing.Point(31, 149);
-            this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(67, 25);
-            this.lblCargo.TabIndex = 42;
-            this.lblCargo.Text = "Cargo:";
-            // 
-            // cboCargo
-            // 
-            this.cboCargo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.cboCargo.FormattingEnabled = true;
-            this.cboCargo.Location = new System.Drawing.Point(31, 177);
-            this.cboCargo.Name = "cboCargo";
-            this.cboCargo.Size = new System.Drawing.Size(411, 33);
-            this.cboCargo.TabIndex = 48;
             // 
             // UC_CrudProfCargo
             // 

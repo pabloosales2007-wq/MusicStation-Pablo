@@ -31,6 +31,8 @@
             this.panelNomeTop = new System.Windows.Forms.Panel();
             this.lblLocacoesItens = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblNomeItem = new System.Windows.Forms.Label();
             this.txtInstrumentos = new System.Windows.Forms.TextBox();
             this.lblNomeInstrumentos = new System.Windows.Forms.Label();
             this.txtNomeLocacao = new System.Windows.Forms.TextBox();
@@ -50,8 +52,6 @@
             this.btnCadastrarUsuarios = new System.Windows.Forms.Button();
             this.panelListBox = new System.Windows.Forms.Panel();
             this.lboLocacoesItens = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblNomeItem = new System.Windows.Forms.Label();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -72,7 +72,7 @@
             this.lblLocacoesItens.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLocacoesItens.AutoSize = true;
-            this.lblLocacoesItens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.lblLocacoesItens.BackColor = System.Drawing.Color.Transparent;
             this.lblLocacoesItens.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocacoesItens.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.lblLocacoesItens.Location = new System.Drawing.Point(366, 18);
@@ -104,6 +104,29 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(976, 536);
             this.panel2.TabIndex = 39;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(33, 111);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(207, 33);
+            this.textBox1.TabIndex = 75;
+            // 
+            // lblNomeItem
+            // 
+            this.lblNomeItem.AutoSize = true;
+            this.lblNomeItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblNomeItem.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblNomeItem.ForeColor = System.Drawing.Color.White;
+            this.lblNomeItem.Location = new System.Drawing.Point(34, 83);
+            this.lblNomeItem.Name = "lblNomeItem";
+            this.lblNomeItem.Size = new System.Drawing.Size(167, 25);
+            this.lblNomeItem.TabIndex = 74;
+            this.lblNomeItem.Text = "Nome da Locação:";
             // 
             // txtInstrumentos
             // 
@@ -345,29 +368,6 @@
             this.lboLocacoesItens.ScrollAlwaysVisible = true;
             this.lboLocacoesItens.Size = new System.Drawing.Size(897, 129);
             this.lboLocacoesItens.TabIndex = 35;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(33, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 33);
-            this.textBox1.TabIndex = 75;
-            // 
-            // lblNomeItem
-            // 
-            this.lblNomeItem.AutoSize = true;
-            this.lblNomeItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblNomeItem.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblNomeItem.ForeColor = System.Drawing.Color.White;
-            this.lblNomeItem.Location = new System.Drawing.Point(34, 83);
-            this.lblNomeItem.Name = "lblNomeItem";
-            this.lblNomeItem.Size = new System.Drawing.Size(167, 25);
-            this.lblNomeItem.TabIndex = 74;
-            this.lblNomeItem.Text = "Nome da Locação:";
             // 
             // UC_CrudLocacoesItens
             // 

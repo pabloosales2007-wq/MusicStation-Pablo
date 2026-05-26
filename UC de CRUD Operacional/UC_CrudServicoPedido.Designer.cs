@@ -31,6 +31,11 @@
             this.panelNomeTop = new System.Windows.Forms.Panel();
             this.lblUsuarios = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblObservacao = new System.Windows.Forms.Label();
+            this.txtObs = new System.Windows.Forms.TextBox();
+            this.cboProfissional = new System.Windows.Forms.ComboBox();
+            this.lblProfissional = new System.Windows.Forms.Label();
+            this.cboServico = new System.Windows.Forms.ComboBox();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelCRUD = new System.Windows.Forms.TableLayoutPanel();
@@ -44,11 +49,6 @@
             this.lblServico = new System.Windows.Forms.Label();
             this.lblPedidoInfo = new System.Windows.Forms.Label();
             this.txtValorServico = new System.Windows.Forms.TextBox();
-            this.cboServico = new System.Windows.Forms.ComboBox();
-            this.cboProfissional = new System.Windows.Forms.ComboBox();
-            this.lblProfissional = new System.Windows.Forms.Label();
-            this.lblObservacao = new System.Windows.Forms.Label();
-            this.txtObs = new System.Windows.Forms.TextBox();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -69,7 +69,7 @@
             this.lblUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsuarios.AutoSize = true;
-            this.lblUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.lblUsuarios.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuarios.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.lblUsuarios.Location = new System.Drawing.Point(349, 18);
@@ -98,6 +98,59 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(976, 536);
             this.panel2.TabIndex = 39;
+            // 
+            // lblObservacao
+            // 
+            this.lblObservacao.AutoSize = true;
+            this.lblObservacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblObservacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblObservacao.ForeColor = System.Drawing.Color.White;
+            this.lblObservacao.Location = new System.Drawing.Point(276, 123);
+            this.lblObservacao.Name = "lblObservacao";
+            this.lblObservacao.Size = new System.Drawing.Size(115, 25);
+            this.lblObservacao.TabIndex = 54;
+            this.lblObservacao.Text = "Observação:";
+            // 
+            // txtObs
+            // 
+            this.txtObs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtObs.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtObs.ForeColor = System.Drawing.Color.Black;
+            this.txtObs.Location = new System.Drawing.Point(276, 151);
+            this.txtObs.Name = "txtObs";
+            this.txtObs.Size = new System.Drawing.Size(207, 33);
+            this.txtObs.TabIndex = 53;
+            // 
+            // cboProfissional
+            // 
+            this.cboProfissional.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboProfissional.FormattingEnabled = true;
+            this.cboProfissional.Location = new System.Drawing.Point(31, 225);
+            this.cboProfissional.Name = "cboProfissional";
+            this.cboProfissional.Size = new System.Drawing.Size(207, 33);
+            this.cboProfissional.TabIndex = 52;
+            // 
+            // lblProfissional
+            // 
+            this.lblProfissional.AutoSize = true;
+            this.lblProfissional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblProfissional.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblProfissional.ForeColor = System.Drawing.Color.White;
+            this.lblProfissional.Location = new System.Drawing.Point(32, 197);
+            this.lblProfissional.Name = "lblProfissional";
+            this.lblProfissional.Size = new System.Drawing.Size(114, 25);
+            this.lblProfissional.TabIndex = 51;
+            this.lblProfissional.Text = "Profissional:";
+            // 
+            // cboServico
+            // 
+            this.cboServico.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboServico.FormattingEnabled = true;
+            this.cboServico.Location = new System.Drawing.Point(31, 151);
+            this.cboServico.Name = "cboServico";
+            this.cboServico.Size = new System.Drawing.Size(207, 33);
+            this.cboServico.TabIndex = 50;
             // 
             // txtPesquisa
             // 
@@ -271,59 +324,6 @@
             this.txtValorServico.Name = "txtValorServico";
             this.txtValorServico.Size = new System.Drawing.Size(207, 33);
             this.txtValorServico.TabIndex = 27;
-            // 
-            // cboServico
-            // 
-            this.cboServico.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.cboServico.FormattingEnabled = true;
-            this.cboServico.Location = new System.Drawing.Point(31, 151);
-            this.cboServico.Name = "cboServico";
-            this.cboServico.Size = new System.Drawing.Size(207, 33);
-            this.cboServico.TabIndex = 50;
-            // 
-            // cboProfissional
-            // 
-            this.cboProfissional.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.cboProfissional.FormattingEnabled = true;
-            this.cboProfissional.Location = new System.Drawing.Point(31, 225);
-            this.cboProfissional.Name = "cboProfissional";
-            this.cboProfissional.Size = new System.Drawing.Size(207, 33);
-            this.cboProfissional.TabIndex = 52;
-            // 
-            // lblProfissional
-            // 
-            this.lblProfissional.AutoSize = true;
-            this.lblProfissional.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblProfissional.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblProfissional.ForeColor = System.Drawing.Color.White;
-            this.lblProfissional.Location = new System.Drawing.Point(32, 197);
-            this.lblProfissional.Name = "lblProfissional";
-            this.lblProfissional.Size = new System.Drawing.Size(114, 25);
-            this.lblProfissional.TabIndex = 51;
-            this.lblProfissional.Text = "Profissional:";
-            // 
-            // lblObservacao
-            // 
-            this.lblObservacao.AutoSize = true;
-            this.lblObservacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblObservacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblObservacao.ForeColor = System.Drawing.Color.White;
-            this.lblObservacao.Location = new System.Drawing.Point(276, 123);
-            this.lblObservacao.Name = "lblObservacao";
-            this.lblObservacao.Size = new System.Drawing.Size(115, 25);
-            this.lblObservacao.TabIndex = 54;
-            this.lblObservacao.Text = "Observação:";
-            // 
-            // txtObs
-            // 
-            this.txtObs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtObs.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtObs.ForeColor = System.Drawing.Color.Black;
-            this.txtObs.Location = new System.Drawing.Point(276, 151);
-            this.txtObs.Name = "txtObs";
-            this.txtObs.Size = new System.Drawing.Size(207, 33);
-            this.txtObs.TabIndex = 53;
             // 
             // UC_CrudServicoPedido
             // 

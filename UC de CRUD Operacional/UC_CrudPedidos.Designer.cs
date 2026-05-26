@@ -31,6 +31,9 @@
             this.panelNomeTop = new System.Windows.Forms.Panel();
             this.lblUsuarios = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpDataPedido = new System.Windows.Forms.DateTimePicker();
+            this.lblAcompanhamento = new System.Windows.Forms.Label();
+            this.cboAcompanhamento = new System.Windows.Forms.ComboBox();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelCRUD = new System.Windows.Forms.TableLayoutPanel();
@@ -47,9 +50,6 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
-            this.cboAcompanhamento = new System.Windows.Forms.ComboBox();
-            this.lblAcompanhamento = new System.Windows.Forms.Label();
-            this.dtpDataPedido = new System.Windows.Forms.DateTimePicker();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -70,7 +70,7 @@
             this.lblUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsuarios.AutoSize = true;
-            this.lblUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.lblUsuarios.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuarios.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.lblUsuarios.Location = new System.Drawing.Point(412, 18);
@@ -100,6 +100,35 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(976, 536);
             this.panel2.TabIndex = 39;
+            // 
+            // dtpDataPedido
+            // 
+            this.dtpDataPedido.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.dtpDataPedido.Location = new System.Drawing.Point(34, 299);
+            this.dtpDataPedido.Name = "dtpDataPedido";
+            this.dtpDataPedido.Size = new System.Drawing.Size(445, 33);
+            this.dtpDataPedido.TabIndex = 52;
+            // 
+            // lblAcompanhamento
+            // 
+            this.lblAcompanhamento.AutoSize = true;
+            this.lblAcompanhamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblAcompanhamento.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblAcompanhamento.ForeColor = System.Drawing.Color.White;
+            this.lblAcompanhamento.Location = new System.Drawing.Point(275, 86);
+            this.lblAcompanhamento.Name = "lblAcompanhamento";
+            this.lblAcompanhamento.Size = new System.Drawing.Size(171, 25);
+            this.lblAcompanhamento.TabIndex = 51;
+            this.lblAcompanhamento.Text = "Acompanhamento:";
+            // 
+            // cboAcompanhamento
+            // 
+            this.cboAcompanhamento.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboAcompanhamento.FormattingEnabled = true;
+            this.cboAcompanhamento.Location = new System.Drawing.Point(272, 113);
+            this.cboAcompanhamento.Name = "cboAcompanhamento";
+            this.cboAcompanhamento.Size = new System.Drawing.Size(207, 33);
+            this.cboAcompanhamento.TabIndex = 50;
             // 
             // txtPesquisa
             // 
@@ -307,35 +336,6 @@
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(207, 33);
             this.txtTotal.TabIndex = 27;
-            // 
-            // cboAcompanhamento
-            // 
-            this.cboAcompanhamento.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.cboAcompanhamento.FormattingEnabled = true;
-            this.cboAcompanhamento.Location = new System.Drawing.Point(272, 113);
-            this.cboAcompanhamento.Name = "cboAcompanhamento";
-            this.cboAcompanhamento.Size = new System.Drawing.Size(207, 33);
-            this.cboAcompanhamento.TabIndex = 50;
-            // 
-            // lblAcompanhamento
-            // 
-            this.lblAcompanhamento.AutoSize = true;
-            this.lblAcompanhamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblAcompanhamento.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblAcompanhamento.ForeColor = System.Drawing.Color.White;
-            this.lblAcompanhamento.Location = new System.Drawing.Point(275, 86);
-            this.lblAcompanhamento.Name = "lblAcompanhamento";
-            this.lblAcompanhamento.Size = new System.Drawing.Size(171, 25);
-            this.lblAcompanhamento.TabIndex = 51;
-            this.lblAcompanhamento.Text = "Acompanhamento:";
-            // 
-            // dtpDataPedido
-            // 
-            this.dtpDataPedido.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.dtpDataPedido.Location = new System.Drawing.Point(34, 299);
-            this.dtpDataPedido.Name = "dtpDataPedido";
-            this.dtpDataPedido.Size = new System.Drawing.Size(445, 33);
-            this.dtpDataPedido.TabIndex = 52;
             // 
             // UC_CrudPedidos
             // 

@@ -31,6 +31,12 @@
             this.panelNomeTop = new System.Windows.Forms.Panel();
             this.lblTranPagamentos = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblAcompanhamento = new System.Windows.Forms.Label();
+            this.lbldata_transacao = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lblCodigoExterno = new System.Windows.Forms.Label();
+            this.txtCodigoExterno = new System.Windows.Forms.TextBox();
+            this.cboStatusTransacao = new System.Windows.Forms.ComboBox();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelCRUD = new System.Windows.Forms.TableLayoutPanel();
@@ -41,12 +47,6 @@
             this.panelListBox = new System.Windows.Forms.Panel();
             this.lboTranPagamentos = new System.Windows.Forms.ListBox();
             this.lblPagamentoRef = new System.Windows.Forms.Label();
-            this.cboStatusTransacao = new System.Windows.Forms.ComboBox();
-            this.lblCodigoExterno = new System.Windows.Forms.Label();
-            this.txtCodigoExterno = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.lbldata_transacao = new System.Windows.Forms.Label();
-            this.lblAcompanhamento = new System.Windows.Forms.Label();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -68,7 +68,7 @@
             this.lblTranPagamentos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTranPagamentos.AutoSize = true;
-            this.lblTranPagamentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(30)))), ((int)(((byte)(98)))));
+            this.lblTranPagamentos.BackColor = System.Drawing.Color.Transparent;
             this.lblTranPagamentos.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTranPagamentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(180)))), ((int)(((byte)(34)))));
             this.lblTranPagamentos.Location = new System.Drawing.Point(269, 18);
@@ -96,6 +96,75 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(976, 536);
             this.panel2.TabIndex = 39;
+            // 
+            // lblAcompanhamento
+            // 
+            this.lblAcompanhamento.AutoSize = true;
+            this.lblAcompanhamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblAcompanhamento.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblAcompanhamento.ForeColor = System.Drawing.Color.White;
+            this.lblAcompanhamento.Location = new System.Drawing.Point(32, 127);
+            this.lblAcompanhamento.Name = "lblAcompanhamento";
+            this.lblAcompanhamento.Size = new System.Drawing.Size(167, 25);
+            this.lblAcompanhamento.TabIndex = 55;
+            this.lblAcompanhamento.Text = "Acompanhamento";
+            // 
+            // lbldata_transacao
+            // 
+            this.lbldata_transacao.AutoSize = true;
+            this.lbldata_transacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lbldata_transacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lbldata_transacao.ForeColor = System.Drawing.Color.White;
+            this.lbldata_transacao.Location = new System.Drawing.Point(32, 261);
+            this.lbldata_transacao.Name = "lbldata_transacao";
+            this.lbldata_transacao.Size = new System.Drawing.Size(144, 25);
+            this.lbldata_transacao.TabIndex = 54;
+            this.lbldata_transacao.Text = "Data Transacao:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(34, 289);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(359, 33);
+            this.dateTimePicker1.TabIndex = 53;
+            // 
+            // lblCodigoExterno
+            // 
+            this.lblCodigoExterno.AutoSize = true;
+            this.lblCodigoExterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblCodigoExterno.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblCodigoExterno.ForeColor = System.Drawing.Color.White;
+            this.lblCodigoExterno.Location = new System.Drawing.Point(32, 191);
+            this.lblCodigoExterno.Name = "lblCodigoExterno";
+            this.lblCodigoExterno.Size = new System.Drawing.Size(146, 25);
+            this.lblCodigoExterno.TabIndex = 52;
+            this.lblCodigoExterno.Text = "Codigo Externo:";
+            // 
+            // txtCodigoExterno
+            // 
+            this.txtCodigoExterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCodigoExterno.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtCodigoExterno.ForeColor = System.Drawing.Color.Black;
+            this.txtCodigoExterno.Location = new System.Drawing.Point(34, 219);
+            this.txtCodigoExterno.Name = "txtCodigoExterno";
+            this.txtCodigoExterno.Size = new System.Drawing.Size(207, 33);
+            this.txtCodigoExterno.TabIndex = 51;
+            // 
+            // cboStatusTransacao
+            // 
+            this.cboStatusTransacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboStatusTransacao.FormattingEnabled = true;
+            this.cboStatusTransacao.Items.AddRange(new object[] {
+            "processando",
+            "aprovado",
+            "recusado",
+            "falha"});
+            this.cboStatusTransacao.Location = new System.Drawing.Point(34, 155);
+            this.cboStatusTransacao.Name = "cboStatusTransacao";
+            this.cboStatusTransacao.Size = new System.Drawing.Size(207, 33);
+            this.cboStatusTransacao.TabIndex = 50;
             // 
             // txtPesquisa
             // 
@@ -234,75 +303,6 @@
             this.lblPagamentoRef.Size = new System.Drawing.Size(107, 25);
             this.lblPagamentoRef.TabIndex = 29;
             this.lblPagamentoRef.Text = "Pagamento";
-            // 
-            // cboStatusTransacao
-            // 
-            this.cboStatusTransacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.cboStatusTransacao.FormattingEnabled = true;
-            this.cboStatusTransacao.Items.AddRange(new object[] {
-            "processando",
-            "aprovado",
-            "recusado",
-            "falha"});
-            this.cboStatusTransacao.Location = new System.Drawing.Point(34, 155);
-            this.cboStatusTransacao.Name = "cboStatusTransacao";
-            this.cboStatusTransacao.Size = new System.Drawing.Size(207, 33);
-            this.cboStatusTransacao.TabIndex = 50;
-            // 
-            // lblCodigoExterno
-            // 
-            this.lblCodigoExterno.AutoSize = true;
-            this.lblCodigoExterno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblCodigoExterno.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblCodigoExterno.ForeColor = System.Drawing.Color.White;
-            this.lblCodigoExterno.Location = new System.Drawing.Point(32, 191);
-            this.lblCodigoExterno.Name = "lblCodigoExterno";
-            this.lblCodigoExterno.Size = new System.Drawing.Size(146, 25);
-            this.lblCodigoExterno.TabIndex = 52;
-            this.lblCodigoExterno.Text = "Codigo Externo:";
-            // 
-            // txtCodigoExterno
-            // 
-            this.txtCodigoExterno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodigoExterno.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtCodigoExterno.ForeColor = System.Drawing.Color.Black;
-            this.txtCodigoExterno.Location = new System.Drawing.Point(34, 219);
-            this.txtCodigoExterno.Name = "txtCodigoExterno";
-            this.txtCodigoExterno.Size = new System.Drawing.Size(207, 33);
-            this.txtCodigoExterno.TabIndex = 51;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(34, 289);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(359, 33);
-            this.dateTimePicker1.TabIndex = 53;
-            // 
-            // lbldata_transacao
-            // 
-            this.lbldata_transacao.AutoSize = true;
-            this.lbldata_transacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lbldata_transacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lbldata_transacao.ForeColor = System.Drawing.Color.White;
-            this.lbldata_transacao.Location = new System.Drawing.Point(32, 261);
-            this.lbldata_transacao.Name = "lbldata_transacao";
-            this.lbldata_transacao.Size = new System.Drawing.Size(144, 25);
-            this.lbldata_transacao.TabIndex = 54;
-            this.lbldata_transacao.Text = "Data Transacao:";
-            // 
-            // lblAcompanhamento
-            // 
-            this.lblAcompanhamento.AutoSize = true;
-            this.lblAcompanhamento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblAcompanhamento.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblAcompanhamento.ForeColor = System.Drawing.Color.White;
-            this.lblAcompanhamento.Location = new System.Drawing.Point(32, 127);
-            this.lblAcompanhamento.Name = "lblAcompanhamento";
-            this.lblAcompanhamento.Size = new System.Drawing.Size(167, 25);
-            this.lblAcompanhamento.TabIndex = 55;
-            this.lblAcompanhamento.Text = "Acompanhamento";
             // 
             // UC_CrudTranPagamentos
             // 
