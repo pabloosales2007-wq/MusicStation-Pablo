@@ -16,6 +16,7 @@ namespace MusicStation_Pablo
         public Form1()
         {
             InitializeComponent();
+            AbrirTela(new ucDashboard()); // Abre o dashboard por padrão ao iniciar o Form1
         }
 
 
@@ -74,8 +75,32 @@ namespace MusicStation_Pablo
         }
         #endregion
 
+
+            private void AbrirTela(Control tela)
+            {
+                // Verifica se há algo para remover
+                if (panelConteudo.Controls.Count > 0)
+                {
+                    // Percorre os controles atuais e libera a memória de cada um
+                    foreach (Control c in panelConteudo.Controls)
+                    {
+                        c.Dispose();
+                    }
+                    panelConteudo.Controls.Clear();
+                }
+
+                // Configura e adiciona a nova tela
+
+                tela.Dock = DockStyle.Fill;
+
+                panelConteudo.Controls.Add(tela);
+                tela.Show();
+            }
+
         private void btnPessoas_Click(object sender, EventArgs e)
         {
+            panelConteudo.Controls.Clear();
+            panelTabelas.Controls.Clear();
             ucTabelasPessoas ucTabelas = new ucTabelasPessoas();
 
             // Conectamos a Action do UserControl ao método do Form1
@@ -92,6 +117,8 @@ namespace MusicStation_Pablo
 
         private void btnCatalogo_Click(object sender, EventArgs e)
         {
+            panelConteudo.Controls.Clear();
+            panelTabelas.Controls.Clear();
             ucTabelaCatalogo ucTabelaCatalogo = new ucTabelaCatalogo();
 
             ucTabelaCatalogo.SolicitarAbertura = (proximaTela) =>
@@ -104,6 +131,8 @@ namespace MusicStation_Pablo
 
         private void btnOperacional_Click(object sender, EventArgs e)
         {
+            panelConteudo.Controls.Clear();
+            panelTabelas.Controls.Clear();
             ucTabelaOperacional ucTabelaOperacional = new ucTabelaOperacional();
 
             ucTabelaOperacional.SolicitarAbertura = (proximaTela) =>
@@ -117,6 +146,8 @@ namespace MusicStation_Pablo
 
         private void btnFinanceiro_Click(object sender, EventArgs e)
         {
+            panelConteudo.Controls.Clear();
+            panelTabelas.Controls.Clear();
             ucTabelaFinanceiro ucTabelaFinanceiro = new ucTabelaFinanceiro();
 
             ucTabelaFinanceiro.SolicitarAbertura = (proximaTela) =>
@@ -130,6 +161,8 @@ namespace MusicStation_Pablo
 
         private void btnMensagens_Click(object sender, EventArgs e)
         {
+            panelConteudo.Controls.Clear();
+            panelTabelas.Controls.Clear();
             ucTabelaMensagens ucTabelaMensagens = new ucTabelaMensagens();
 
             ucTabelaMensagens.SolicitarAbertura = (proximaTela) =>
@@ -143,7 +176,10 @@ namespace MusicStation_Pablo
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            
+            panelConteudo.Controls.Clear();
+            panelTabelas.Controls.Clear();
+            ucDashboard ucDashboard = new ucDashboard();
+            AbrirTela(ucDashboard);
         }
 
         private void pboMenu_Click(object sender, EventArgs e)
@@ -159,7 +195,8 @@ namespace MusicStation_Pablo
         {
             panelConteudo.Controls.Clear();
             panelTabelas.Controls.Clear();
-
+            ucDashboard ucDashboard = new ucDashboard();
+            AbrirTela(ucDashboard);
         }
     }
 }

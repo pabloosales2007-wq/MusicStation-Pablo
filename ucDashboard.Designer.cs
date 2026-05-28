@@ -60,12 +60,19 @@
             this.lblNadmin = new System.Windows.Forms.Label();
             this.lblNempresas = new System.Windows.Forms.Label();
             this.lblNlocacoes = new System.Windows.Forms.Label();
+            this.panelValores = new System.Windows.Forms.Panel();
+            this.panelValorTotal = new System.Windows.Forms.Panel();
+            this.panelPedidos = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panelTotal = new System.Windows.Forms.Panel();
+            this.panelPedido = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelUsuarios.SuspendLayout();
             this.panelClientes.SuspendLayout();
             this.panelLocacoes.SuspendLayout();
             this.panelEmpresa.SuspendLayout();
             this.panelAdm.SuspendLayout();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -81,6 +88,9 @@
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.panelValores.SuspendLayout();
+            this.panelValorTotal.SuspendLayout();
+            this.panelPedidos.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,7 +108,7 @@
             // 
             // panelUsuarios
             // 
-            this.panelUsuarios.BackColor = System.Drawing.Color.Silver;
+            this.panelUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.panelUsuarios.Controls.Add(this.panel8);
             this.panelUsuarios.Controls.Add(this.panel2);
             this.panelUsuarios.Controls.Add(this.pictureBox1);
@@ -110,7 +120,7 @@
             // 
             // panelClientes
             // 
-            this.panelClientes.BackColor = System.Drawing.Color.LightGreen;
+            this.panelClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.panelClientes.Controls.Add(this.panel9);
             this.panelClientes.Controls.Add(this.panel3);
             this.panelClientes.Controls.Add(this.pictureBox2);
@@ -122,24 +132,24 @@
             // 
             // panelLocacoes
             // 
-            this.panelLocacoes.BackColor = System.Drawing.Color.IndianRed;
+            this.panelLocacoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.panelLocacoes.Controls.Add(this.panel12);
             this.panelLocacoes.Controls.Add(this.panel6);
             this.panelLocacoes.Controls.Add(this.pictureBox5);
             this.panelLocacoes.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLocacoes.Location = new System.Drawing.Point(780, 0);
+            this.panelLocacoes.Location = new System.Drawing.Point(786, 0);
             this.panelLocacoes.Name = "panelLocacoes";
             this.panelLocacoes.Size = new System.Drawing.Size(195, 128);
             this.panelLocacoes.TabIndex = 3;
             // 
             // panelEmpresa
             // 
-            this.panelEmpresa.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panelEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.panelEmpresa.Controls.Add(this.panel11);
             this.panelEmpresa.Controls.Add(this.panel5);
             this.panelEmpresa.Controls.Add(this.pictureBox4);
             this.panelEmpresa.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelEmpresa.Location = new System.Drawing.Point(585, 0);
+            this.panelEmpresa.Location = new System.Drawing.Point(591, 0);
             this.panelEmpresa.Name = "panelEmpresa";
             this.panelEmpresa.Size = new System.Drawing.Size(195, 128);
             this.panelEmpresa.TabIndex = 3;
@@ -153,11 +163,13 @@
             this.panelAdm.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelAdm.Location = new System.Drawing.Point(390, 0);
             this.panelAdm.Name = "panelAdm";
-            this.panelAdm.Size = new System.Drawing.Size(195, 128);
+            this.panelAdm.Size = new System.Drawing.Size(201, 128);
             this.panelAdm.TabIndex = 3;
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.panel15);
+            this.panel7.Controls.Add(this.panelValores);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(0, 128);
             this.panel7.Name = "panel7";
@@ -243,7 +255,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(68, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(127, 64);
+            this.panel4.Size = new System.Drawing.Size(133, 64);
             this.panel4.TabIndex = 3;
             // 
             // panel5
@@ -268,6 +280,7 @@
             // 
             this.lblUsuarios.AutoSize = true;
             this.lblUsuarios.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.lblUsuarios.ForeColor = System.Drawing.Color.White;
             this.lblUsuarios.Location = new System.Drawing.Point(18, 16);
             this.lblUsuarios.Name = "lblUsuarios";
             this.lblUsuarios.Size = new System.Drawing.Size(92, 30);
@@ -278,6 +291,7 @@
             // 
             this.lblClientes.AutoSize = true;
             this.lblClientes.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.lblClientes.ForeColor = System.Drawing.Color.White;
             this.lblClientes.Location = new System.Drawing.Point(18, 16);
             this.lblClientes.Name = "lblClientes";
             this.lblClientes.Size = new System.Drawing.Size(86, 30);
@@ -299,6 +313,7 @@
             // 
             this.lblEmpresas.AutoSize = true;
             this.lblEmpresas.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.lblEmpresas.ForeColor = System.Drawing.Color.White;
             this.lblEmpresas.Location = new System.Drawing.Point(14, 16);
             this.lblEmpresas.Name = "lblEmpresas";
             this.lblEmpresas.Size = new System.Drawing.Size(101, 30);
@@ -309,6 +324,7 @@
             // 
             this.lblLocacoes.AutoSize = true;
             this.lblLocacoes.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.lblLocacoes.ForeColor = System.Drawing.Color.White;
             this.lblLocacoes.Location = new System.Drawing.Point(16, 16);
             this.lblLocacoes.Name = "lblLocacoes";
             this.lblLocacoes.Size = new System.Drawing.Size(98, 30);
@@ -339,7 +355,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(68, 64);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(127, 64);
+            this.panel10.Size = new System.Drawing.Size(133, 64);
             this.panel10.TabIndex = 4;
             // 
             // panel11
@@ -364,6 +380,7 @@
             // 
             this.lblNusuarios.AutoSize = true;
             this.lblNusuarios.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.lblNusuarios.ForeColor = System.Drawing.Color.White;
             this.lblNusuarios.Location = new System.Drawing.Point(17, 17);
             this.lblNusuarios.Name = "lblNusuarios";
             this.lblNusuarios.Size = new System.Drawing.Size(24, 30);
@@ -374,6 +391,7 @@
             // 
             this.lblNclientes.AutoSize = true;
             this.lblNclientes.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.lblNclientes.ForeColor = System.Drawing.Color.White;
             this.lblNclientes.Location = new System.Drawing.Point(20, 17);
             this.lblNclientes.Name = "lblNclientes";
             this.lblNclientes.Size = new System.Drawing.Size(24, 30);
@@ -395,6 +413,7 @@
             // 
             this.lblNempresas.AutoSize = true;
             this.lblNempresas.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.lblNempresas.ForeColor = System.Drawing.Color.White;
             this.lblNempresas.Location = new System.Drawing.Point(13, 17);
             this.lblNempresas.Name = "lblNempresas";
             this.lblNempresas.Size = new System.Drawing.Size(24, 30);
@@ -405,11 +424,65 @@
             // 
             this.lblNlocacoes.AutoSize = true;
             this.lblNlocacoes.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.lblNlocacoes.ForeColor = System.Drawing.Color.White;
             this.lblNlocacoes.Location = new System.Drawing.Point(14, 17);
             this.lblNlocacoes.Name = "lblNlocacoes";
             this.lblNlocacoes.Size = new System.Drawing.Size(24, 30);
             this.lblNlocacoes.TabIndex = 2;
             this.lblNlocacoes.Text = "0";
+            // 
+            // panelValores
+            // 
+            this.panelValores.Controls.Add(this.panelPedidos);
+            this.panelValores.Controls.Add(this.panelValorTotal);
+            this.panelValores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelValores.Location = new System.Drawing.Point(0, 0);
+            this.panelValores.Name = "panelValores";
+            this.panelValores.Size = new System.Drawing.Size(976, 196);
+            this.panelValores.TabIndex = 0;
+            // 
+            // panelValorTotal
+            // 
+            this.panelValorTotal.Controls.Add(this.panelTotal);
+            this.panelValorTotal.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelValorTotal.Location = new System.Drawing.Point(0, 0);
+            this.panelValorTotal.Name = "panelValorTotal";
+            this.panelValorTotal.Size = new System.Drawing.Size(487, 196);
+            this.panelValorTotal.TabIndex = 0;
+            // 
+            // panelPedidos
+            // 
+            this.panelPedidos.Controls.Add(this.panelPedido);
+            this.panelPedidos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelPedidos.Location = new System.Drawing.Point(487, 0);
+            this.panelPedidos.Name = "panelPedidos";
+            this.panelPedidos.Size = new System.Drawing.Size(487, 196);
+            this.panelPedidos.TabIndex = 1;
+            // 
+            // panel15
+            // 
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.Location = new System.Drawing.Point(0, 196);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(976, 212);
+            this.panel15.TabIndex = 1;
+            // 
+            // panelTotal
+            // 
+            this.panelTotal.BackColor = System.Drawing.Color.SpringGreen;
+            this.panelTotal.ForeColor = System.Drawing.Color.Black;
+            this.panelTotal.Location = new System.Drawing.Point(4, 4);
+            this.panelTotal.Name = "panelTotal";
+            this.panelTotal.Size = new System.Drawing.Size(480, 189);
+            this.panelTotal.TabIndex = 0;
+            // 
+            // panelPedido
+            // 
+            this.panelPedido.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panelPedido.Location = new System.Drawing.Point(3, 4);
+            this.panelPedido.Name = "panelPedido";
+            this.panelPedido.Size = new System.Drawing.Size(480, 189);
+            this.panelPedido.TabIndex = 1;
             // 
             // ucDashboard
             // 
@@ -426,6 +499,7 @@
             this.panelLocacoes.ResumeLayout(false);
             this.panelEmpresa.ResumeLayout(false);
             this.panelAdm.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -451,6 +525,9 @@
             this.panel11.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            this.panelValores.ResumeLayout(false);
+            this.panelValorTotal.ResumeLayout(false);
+            this.panelPedidos.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -489,5 +566,11 @@
         private System.Windows.Forms.Label lblNclientes;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label lblNusuarios;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panelValores;
+        private System.Windows.Forms.Panel panelPedidos;
+        private System.Windows.Forms.Panel panelValorTotal;
+        private System.Windows.Forms.Panel panelPedido;
+        private System.Windows.Forms.Panel panelTotal;
     }
 }
