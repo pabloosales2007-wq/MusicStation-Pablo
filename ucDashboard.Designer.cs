@@ -366,9 +366,9 @@
             this.lblNusuarios.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.lblNusuarios.Location = new System.Drawing.Point(17, 17);
             this.lblNusuarios.Name = "lblNusuarios";
-            this.lblNusuarios.Size = new System.Drawing.Size(92, 30);
+            this.lblNusuarios.Size = new System.Drawing.Size(24, 30);
             this.lblNusuarios.TabIndex = 1;
-            this.lblNusuarios.Text = "Usuarios";
+            this.lblNusuarios.Text = "0";
             // 
             // lblNclientes
             // 
@@ -376,9 +376,9 @@
             this.lblNclientes.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.lblNclientes.Location = new System.Drawing.Point(20, 17);
             this.lblNclientes.Name = "lblNclientes";
-            this.lblNclientes.Size = new System.Drawing.Size(86, 30);
+            this.lblNclientes.Size = new System.Drawing.Size(24, 30);
             this.lblNclientes.TabIndex = 1;
-            this.lblNclientes.Text = "Clientes";
+            this.lblNclientes.Text = "0";
             // 
             // lblNadmin
             // 
@@ -387,9 +387,9 @@
             this.lblNadmin.ForeColor = System.Drawing.Color.White;
             this.lblNadmin.Location = new System.Drawing.Point(26, 17);
             this.lblNadmin.Name = "lblNadmin";
-            this.lblNadmin.Size = new System.Drawing.Size(74, 30);
+            this.lblNadmin.Size = new System.Drawing.Size(24, 30);
             this.lblNadmin.TabIndex = 2;
-            this.lblNadmin.Text = "Admin";
+            this.lblNadmin.Text = "0";
             // 
             // lblNempresas
             // 
@@ -397,9 +397,9 @@
             this.lblNempresas.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.lblNempresas.Location = new System.Drawing.Point(13, 17);
             this.lblNempresas.Name = "lblNempresas";
-            this.lblNempresas.Size = new System.Drawing.Size(101, 30);
+            this.lblNempresas.Size = new System.Drawing.Size(24, 30);
             this.lblNempresas.TabIndex = 2;
-            this.lblNempresas.Text = "Empresas";
+            this.lblNempresas.Text = "0";
             // 
             // lblNlocacoes
             // 
@@ -407,9 +407,9 @@
             this.lblNlocacoes.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.lblNlocacoes.Location = new System.Drawing.Point(14, 17);
             this.lblNlocacoes.Name = "lblNlocacoes";
-            this.lblNlocacoes.Size = new System.Drawing.Size(98, 30);
+            this.lblNlocacoes.Size = new System.Drawing.Size(24, 30);
             this.lblNlocacoes.TabIndex = 2;
-            this.lblNlocacoes.Text = "Locações";
+            this.lblNlocacoes.Text = "0";
             // 
             // ucDashboard
             // 
