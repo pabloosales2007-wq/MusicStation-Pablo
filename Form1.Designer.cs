@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelLogout = new System.Windows.Forms.Panel();
             this.panelTabelas = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.pboLogo = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnMensagens = new System.Windows.Forms.Button();
             this.btnFinanceiro = new System.Windows.Forms.Button();
@@ -47,9 +47,12 @@
             this.panelOperacional = new System.Windows.Forms.Panel();
             this.panelCatalogo = new System.Windows.Forms.Panel();
             this.panelPessoas = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pboLogout = new System.Windows.Forms.PictureBox();
+            this.pboLogo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.panelLogout.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelDashBoard.SuspendLayout();
@@ -58,11 +61,15 @@
             this.panelOperacional.SuspendLayout();
             this.panelCatalogo.SuspendLayout();
             this.panelPessoas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboLogout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(24)))), ((int)(((byte)(22)))));
+            this.panel1.Controls.Add(this.panelLogout);
             this.panel1.Controls.Add(this.panelTabelas);
             this.panel1.Controls.Add(this.panelLogo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -71,6 +78,15 @@
             this.panel1.Size = new System.Drawing.Size(200, 636);
             this.panel1.TabIndex = 0;
             // 
+            // panelLogout
+            // 
+            this.panelLogout.Controls.Add(this.pictureBox1);
+            this.panelLogout.Controls.Add(this.pboLogout);
+            this.panelLogout.Location = new System.Drawing.Point(4, 562);
+            this.panelLogout.Name = "panelLogout";
+            this.panelLogout.Size = new System.Drawing.Size(191, 69);
+            this.panelLogout.TabIndex = 2;
+            // 
             // panelTabelas
             // 
             this.panelTabelas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -78,7 +94,7 @@
             this.panelTabelas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(24)))), ((int)(((byte)(22)))));
             this.panelTabelas.Location = new System.Drawing.Point(0, 100);
             this.panelTabelas.Name = "panelTabelas";
-            this.panelTabelas.Size = new System.Drawing.Size(200, 536);
+            this.panelTabelas.Size = new System.Drawing.Size(200, 458);
             this.panelTabelas.TabIndex = 1;
             // 
             // panelLogo
@@ -89,17 +105,6 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(200, 100);
             this.panelLogo.TabIndex = 0;
-            // 
-            // pboLogo
-            // 
-            this.pboLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pboLogo.Image = global::MusicStation_Pablo.Properties.Resources.music_station_vetorizada_1;
-            this.pboLogo.Location = new System.Drawing.Point(0, 0);
-            this.pboLogo.Name = "pboLogo";
-            this.pboLogo.Size = new System.Drawing.Size(200, 100);
-            this.pboLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pboLogo.TabIndex = 0;
-            this.pboLogo.TabStop = false;
             // 
             // btnDashboard
             // 
@@ -208,6 +213,7 @@
             this.panelConteudo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelConteudo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(26)))));
             this.panelConteudo.Location = new System.Drawing.Point(200, 100);
             this.panelConteudo.Name = "panelConteudo";
             this.panelConteudo.Size = new System.Drawing.Size(976, 536);
@@ -315,6 +321,39 @@
             this.panelPessoas.Size = new System.Drawing.Size(156, 93);
             this.panelPessoas.TabIndex = 6;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MusicStation_Pablo.Properties.Resources.icons8_página_inicial_64;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pboLogout
+            // 
+            this.pboLogout.Image = global::MusicStation_Pablo.Properties.Resources.icons8_sair_48;
+            this.pboLogout.Location = new System.Drawing.Point(138, 12);
+            this.pboLogout.Name = "pboLogout";
+            this.pboLogout.Size = new System.Drawing.Size(50, 50);
+            this.pboLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboLogout.TabIndex = 1;
+            this.pboLogout.TabStop = false;
+            this.pboLogout.Click += new System.EventHandler(this.pboMenu_Click);
+            // 
+            // pboLogo
+            // 
+            this.pboLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pboLogo.Image = global::MusicStation_Pablo.Properties.Resources.music_station_vetorizada_1;
+            this.pboLogo.Location = new System.Drawing.Point(0, 0);
+            this.pboLogo.Name = "pboLogo";
+            this.pboLogo.Size = new System.Drawing.Size(200, 100);
+            this.pboLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pboLogo.TabIndex = 0;
+            this.pboLogo.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,8 +367,8 @@
             this.Text = "FormBase";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.panelLogout.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelDashBoard.ResumeLayout(false);
@@ -338,6 +377,9 @@
             this.panelOperacional.ResumeLayout(false);
             this.panelCatalogo.ResumeLayout(false);
             this.panelPessoas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboLogout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -363,6 +405,9 @@
         private System.Windows.Forms.Panel panelOperacional;
         private System.Windows.Forms.Panel panelCatalogo;
         private System.Windows.Forms.Panel panelPessoas;
+        private System.Windows.Forms.Panel panelLogout;
+        private System.Windows.Forms.PictureBox pboLogout;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

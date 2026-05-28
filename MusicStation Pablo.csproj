@@ -366,5 +366,23 @@
   <ItemGroup>
     <None Include="Resources\icons8-senha-30.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chalé-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chalé-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chalé-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sair-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-página-inicial-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sair-48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -143,6 +143,22 @@ namespace MusicStation_Pablo
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pboMenu_Click(object sender, EventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
+            this.Close();
+            
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            panelConteudo.Controls.Clear();
+            panelTabelas.Controls.Clear();
 
         }
     }
