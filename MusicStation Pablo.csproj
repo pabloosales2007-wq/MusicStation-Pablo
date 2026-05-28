@@ -68,6 +68,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboard.Designer.cs">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucTabelaDashBoard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -258,6 +264,9 @@
     <EmbeddedResource Include="UC de CRUD Mensagens\UC_CrudNotificacoes.resx">
       <DependentUpon>UC_CrudNotificacoes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboard.resx">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucTabelaDashBoard.resx">
       <DependentUpon>ucTabelaDashBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -383,6 +392,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-sair-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usuário-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gestão-de-cliente-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-administrator-male-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-companhia-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-loja-local-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

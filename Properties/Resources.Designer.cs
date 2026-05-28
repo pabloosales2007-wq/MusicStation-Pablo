@@ -103,6 +103,16 @@ namespace MusicStation_Pablo.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_administrator_male_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-administrator-male-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_chalé_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-chalé-30", resourceCulture);
@@ -126,6 +136,36 @@ namespace MusicStation_Pablo.Properties {
         internal static System.Drawing.Bitmap icons8_chalé_60 {
             get {
                 object obj = ResourceManager.GetObject("icons8-chalé-60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_companhia_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-companhia-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_gestão_de_cliente_60 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-gestão-de-cliente-60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_loja_local_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-loja-local-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +216,16 @@ namespace MusicStation_Pablo.Properties {
         internal static System.Drawing.Bitmap icons8_usuário_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-usuário-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_usuário_501 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-usuário-501", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
