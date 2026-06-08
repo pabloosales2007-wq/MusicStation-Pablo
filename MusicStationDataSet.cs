@@ -78,6 +78,14 @@
             }
         }
 
+        partial class PedidosRow
+        {
+            public override string ToString()
+            {
+                return $" Cliente: {NomeCliente}  |  {EmailCliente}  |  {total}   |  {data_pedido}  |  {acompanhamento}  ";
+            }
+        }
+
 
     }
 }

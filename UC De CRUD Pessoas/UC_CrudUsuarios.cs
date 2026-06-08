@@ -139,7 +139,7 @@ namespace MusicStation_Pablo
 
             if (pesquisa.Text == "")
             {
-                AtualizarLista(); // Recarrega todos os usuários se o campo estiver vazio
+                AtualizarLista(); 
                 return;
             }
 
@@ -148,10 +148,9 @@ namespace MusicStation_Pablo
 
             string textoDigitado = txtPesquisa.Text;
 
-            // Instancia o adaptador de usuários do seu projeto
+
             UsuariosTableAdapter dados = new UsuariosTableAdapter();
 
-            // Faz a busca usando LINQ (procura tanto no Nome quanto no Email)
             var usuarios = from linha in dados.GetData()
                            where linha.nome.ToLower().Contains(textoDigitado.ToLower())
                               || linha.email.ToLower().Contains(textoDigitado.ToLower())

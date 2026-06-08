@@ -125,6 +125,11 @@
             // 
             this.cboAcompanhamento.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.cboAcompanhamento.FormattingEnabled = true;
+            this.cboAcompanhamento.Items.AddRange(new object[] {
+            "Pendente",
+            "Em andamento",
+            "Concluído",
+            "Cancelado"});
             this.cboAcompanhamento.Location = new System.Drawing.Point(272, 113);
             this.cboAcompanhamento.Name = "cboAcompanhamento";
             this.cboAcompanhamento.Size = new System.Drawing.Size(207, 33);
@@ -140,6 +145,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(409, 33);
             this.txtPesquisa.TabIndex = 49;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // label2
             // 
@@ -185,6 +191,7 @@
             this.btnLimpar.TabIndex = 25;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnAtualizarUsuarios
             // 
@@ -200,6 +207,7 @@
             this.btnAtualizarUsuarios.TabIndex = 23;
             this.btnAtualizarUsuarios.Text = "Atualizar";
             this.btnAtualizarUsuarios.UseVisualStyleBackColor = false;
+            this.btnAtualizarUsuarios.Click += new System.EventHandler(this.btnAtualizarUsuarios_Click);
             // 
             // btnDeletarUsuarios
             // 
@@ -215,6 +223,7 @@
             this.btnDeletarUsuarios.TabIndex = 22;
             this.btnDeletarUsuarios.Text = "Deletar";
             this.btnDeletarUsuarios.UseVisualStyleBackColor = false;
+            this.btnDeletarUsuarios.Click += new System.EventHandler(this.btnDeletarUsuarios_Click);
             // 
             // btnCadastrarUsuarios
             // 
@@ -230,6 +239,7 @@
             this.btnCadastrarUsuarios.TabIndex = 18;
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuarios.Click += new System.EventHandler(this.btnCadastrarUsuarios_Click);
             // 
             // lblTotal
             // 
@@ -267,6 +277,7 @@
             this.lboPedidos.ScrollAlwaysVisible = true;
             this.lboPedidos.Size = new System.Drawing.Size(897, 129);
             this.lboPedidos.TabIndex = 35;
+            this.lboPedidos.SelectedIndexChanged += new System.EventHandler(this.lboPedidos_SelectedIndexChanged);
             // 
             // lblDataPedido
             // 
