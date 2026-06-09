@@ -94,6 +94,14 @@
             }
 
         }
+
+        partial class LocacoesRow
+        {
+            public override string ToString()
+            {
+                return $"  {NomeCliente}  |  {id_locacao}  |  {valor_total:F2}   |  {data_inicio}  |  {data_fim}  |  {status}";
+            }
+        }
     }
 }
 

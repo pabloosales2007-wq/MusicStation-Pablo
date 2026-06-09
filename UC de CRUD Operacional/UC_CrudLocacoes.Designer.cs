@@ -31,8 +31,6 @@
             this.panelNomeTop = new System.Windows.Forms.Panel();
             this.lblLocacoes = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtNomeCliente = new System.Windows.Forms.TextBox();
-            this.txtNomeLocacao = new System.Windows.Forms.TextBox();
             this.lblNomeLocacao = new System.Windows.Forms.Label();
             this.cboStatus = new System.Windows.Forms.ComboBox();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -52,6 +50,7 @@
             this.btnCadastrarUsuarios = new System.Windows.Forms.Button();
             this.panelListBox = new System.Windows.Forms.Panel();
             this.lboLocacoes = new System.Windows.Forms.ListBox();
+            this.cboCliente = new System.Windows.Forms.ComboBox();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -83,8 +82,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.txtNomeCliente);
-            this.panel2.Controls.Add(this.txtNomeLocacao);
+            this.panel2.Controls.Add(this.cboCliente);
             this.panel2.Controls.Add(this.lblNomeLocacao);
             this.panel2.Controls.Add(this.cboStatus);
             this.panel2.Controls.Add(this.lblStatus);
@@ -105,44 +103,27 @@
             this.panel2.Size = new System.Drawing.Size(976, 536);
             this.panel2.TabIndex = 39;
             // 
-            // txtNomeCliente
-            // 
-            this.txtNomeCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomeCliente.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtNomeCliente.ForeColor = System.Drawing.Color.Black;
-            this.txtNomeCliente.Location = new System.Drawing.Point(273, 117);
-            this.txtNomeCliente.Name = "txtNomeCliente";
-            this.txtNomeCliente.Size = new System.Drawing.Size(207, 33);
-            this.txtNomeCliente.TabIndex = 70;
-            // 
-            // txtNomeLocacao
-            // 
-            this.txtNomeLocacao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomeLocacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtNomeLocacao.ForeColor = System.Drawing.Color.Black;
-            this.txtNomeLocacao.Location = new System.Drawing.Point(34, 117);
-            this.txtNomeLocacao.Name = "txtNomeLocacao";
-            this.txtNomeLocacao.Size = new System.Drawing.Size(207, 33);
-            this.txtNomeLocacao.TabIndex = 69;
-            // 
             // lblNomeLocacao
             // 
             this.lblNomeLocacao.AutoSize = true;
             this.lblNomeLocacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblNomeLocacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.lblNomeLocacao.ForeColor = System.Drawing.Color.White;
-            this.lblNomeLocacao.Location = new System.Drawing.Point(35, 89);
+            this.lblNomeLocacao.Location = new System.Drawing.Point(35, 107);
             this.lblNomeLocacao.Name = "lblNomeLocacao";
-            this.lblNomeLocacao.Size = new System.Drawing.Size(167, 25);
+            this.lblNomeLocacao.Size = new System.Drawing.Size(134, 25);
             this.lblNomeLocacao.TabIndex = 68;
-            this.lblNomeLocacao.Text = "Nome da Locação:";
+            this.lblNomeLocacao.Text = "Nº da Locação";
             // 
             // cboStatus
             // 
             this.cboStatus.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.cboStatus.FormattingEnabled = true;
+            this.cboStatus.Items.AddRange(new object[] {
+            "ativa",
+            "concluída",
+            "atrasada",
+            "cancelada"});
             this.cboStatus.Location = new System.Drawing.Point(273, 181);
             this.cboStatus.Name = "cboStatus";
             this.cboStatus.Size = new System.Drawing.Size(207, 33);
@@ -245,6 +226,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(409, 33);
             this.txtPesquisa.TabIndex = 49;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // label2
             // 
@@ -290,6 +272,7 @@
             this.btnLimpar.TabIndex = 25;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnAtualizarUsuarios
             // 
@@ -305,6 +288,7 @@
             this.btnAtualizarUsuarios.TabIndex = 23;
             this.btnAtualizarUsuarios.Text = "Atualizar";
             this.btnAtualizarUsuarios.UseVisualStyleBackColor = false;
+            this.btnAtualizarUsuarios.Click += new System.EventHandler(this.btnAtualizarUsuarios_Click);
             // 
             // btnDeletarUsuarios
             // 
@@ -320,6 +304,7 @@
             this.btnDeletarUsuarios.TabIndex = 22;
             this.btnDeletarUsuarios.Text = "Deletar";
             this.btnDeletarUsuarios.UseVisualStyleBackColor = false;
+            this.btnDeletarUsuarios.Click += new System.EventHandler(this.btnDeletarUsuarios_Click);
             // 
             // btnCadastrarUsuarios
             // 
@@ -335,6 +320,7 @@
             this.btnCadastrarUsuarios.TabIndex = 18;
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuarios.Click += new System.EventHandler(this.btnCadastrarUsuarios_Click);
             // 
             // panelListBox
             // 
@@ -360,6 +346,21 @@
             this.lboLocacoes.ScrollAlwaysVisible = true;
             this.lboLocacoes.Size = new System.Drawing.Size(897, 129);
             this.lboLocacoes.TabIndex = 35;
+            this.lboLocacoes.SelectedIndexChanged += new System.EventHandler(this.lboLocacoes_SelectedIndexChanged);
+            // 
+            // cboCliente
+            // 
+            this.cboCliente.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboCliente.FormattingEnabled = true;
+            this.cboCliente.Items.AddRange(new object[] {
+            "ativa",
+            "concluída",
+            "atrasada",
+            "cancelada"});
+            this.cboCliente.Location = new System.Drawing.Point(273, 117);
+            this.cboCliente.Name = "cboCliente";
+            this.cboCliente.Size = new System.Drawing.Size(207, 33);
+            this.cboCliente.TabIndex = 70;
             // 
             // UC_CrudLocacoes
             // 
@@ -404,7 +405,6 @@
         private System.Windows.Forms.DateTimePicker dtpInicio;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblNomeLocacao;
-        private System.Windows.Forms.TextBox txtNomeCliente;
-        private System.Windows.Forms.TextBox txtNomeLocacao;
+        private System.Windows.Forms.ComboBox cboCliente;
     }
 }
