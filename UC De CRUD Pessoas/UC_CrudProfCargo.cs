@@ -113,12 +113,7 @@ namespace MusicStation_Pablo
                 int novoIdCargo = cargoSelecionado.id_cargo;
 
                 Profissional_CargoTableAdapter profCargo = new Profissional_CargoTableAdapter();
-                profCargo.Update(
-                    linhaAntiga.id_profissional,
-                    linhaAntiga.id_cargo,
-                    novoIdProfissional,
-                    novoIdCargo
-                );
+                profCargo.Update(linhaAntiga.id_profissional,linhaAntiga.id_cargo,novoIdProfissional,novoIdCargo );
 
                 LimparElementos();
                 AtualizarLista();

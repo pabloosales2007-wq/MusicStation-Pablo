@@ -86,7 +86,14 @@
             }
         }
 
+        partial class Servicos_PedidosRow
+        {
+            public override string ToString()
+            {
+                return $" Serviço: {NomeServico}  |  Profissional: {NomeProfissional}  |  Valor: R$ {valor_servico:F2}  |  Observação: {observacao}";
+            }
 
+        }
     }
 }
 
