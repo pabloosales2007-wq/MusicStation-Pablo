@@ -40,8 +40,8 @@
             this.btnCadastrarUsuarios = new System.Windows.Forms.Button();
             this.panelListBox = new System.Windows.Forms.Panel();
             this.lboFormaPagamento = new System.Windows.Forms.ListBox();
-            this.txtTipo = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
+            this.cboFormaPagamento = new System.Windows.Forms.ComboBox();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -75,11 +75,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(26)))));
+            this.panel2.Controls.Add(this.cboFormaPagamento);
             this.panel2.Controls.Add(this.txtPesquisa);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panelCRUD);
             this.panel2.Controls.Add(this.panelListBox);
-            this.panel2.Controls.Add(this.txtTipo);
             this.panel2.Controls.Add(this.lblTipo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -97,6 +97,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(409, 33);
             this.txtPesquisa.TabIndex = 49;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // label2
             // 
@@ -142,6 +143,7 @@
             this.btnLimpar.TabIndex = 25;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnAtualizarUsuarios
             // 
@@ -157,6 +159,7 @@
             this.btnAtualizarUsuarios.TabIndex = 23;
             this.btnAtualizarUsuarios.Text = "Atualizar";
             this.btnAtualizarUsuarios.UseVisualStyleBackColor = false;
+            this.btnAtualizarUsuarios.Click += new System.EventHandler(this.btnAtualizarUsuarios_Click);
             // 
             // btnDeletarUsuarios
             // 
@@ -172,6 +175,7 @@
             this.btnDeletarUsuarios.TabIndex = 22;
             this.btnDeletarUsuarios.Text = "Deletar";
             this.btnDeletarUsuarios.UseVisualStyleBackColor = false;
+            this.btnDeletarUsuarios.Click += new System.EventHandler(this.btnDeletarUsuarios_Click);
             // 
             // btnCadastrarUsuarios
             // 
@@ -187,6 +191,7 @@
             this.btnCadastrarUsuarios.TabIndex = 18;
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuarios.Click += new System.EventHandler(this.btnCadastrarUsuarios_Click);
             // 
             // panelListBox
             // 
@@ -212,17 +217,7 @@
             this.lboFormaPagamento.ScrollAlwaysVisible = true;
             this.lboFormaPagamento.Size = new System.Drawing.Size(897, 129);
             this.lboFormaPagamento.TabIndex = 35;
-            // 
-            // txtTipo
-            // 
-            this.txtTipo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTipo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtTipo.ForeColor = System.Drawing.Color.Black;
-            this.txtTipo.Location = new System.Drawing.Point(31, 113);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(415, 33);
-            this.txtTipo.TabIndex = 24;
+            this.lboFormaPagamento.SelectedIndexChanged += new System.EventHandler(this.lboFormaPagamento_SelectedIndexChanged);
             // 
             // lblTipo
             // 
@@ -235,6 +230,15 @@
             this.lblTipo.Size = new System.Drawing.Size(53, 25);
             this.lblTipo.TabIndex = 29;
             this.lblTipo.Text = "Tipo:";
+            // 
+            // cboFormaPagamento
+            // 
+            this.cboFormaPagamento.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboFormaPagamento.FormattingEnabled = true;
+            this.cboFormaPagamento.Location = new System.Drawing.Point(34, 114);
+            this.cboFormaPagamento.Name = "cboFormaPagamento";
+            this.cboFormaPagamento.Size = new System.Drawing.Size(423, 33);
+            this.cboFormaPagamento.TabIndex = 50;
             // 
             // UC_CrudFormasPagamentos
             // 
@@ -268,7 +272,7 @@
         private System.Windows.Forms.Button btnCadastrarUsuarios;
         private System.Windows.Forms.Panel panelListBox;
         private System.Windows.Forms.ListBox lboFormaPagamento;
-        private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.ComboBox cboFormaPagamento;
     }
 }

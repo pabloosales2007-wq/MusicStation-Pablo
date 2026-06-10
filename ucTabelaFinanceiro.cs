@@ -55,7 +55,7 @@ namespace MusicStation_Pablo
         private void btnFormasPagamentos_Click(object sender, EventArgs e)
         {
             // Quando clicar, vai abrir a tela de CRUD de TranPagamentos 
-            SolicitarAbertura?.Invoke(new UC_CrudLocacoesItens());
+            SolicitarAbertura?.Invoke(new UC_CrudFormasPagamentos());
         }
     }
 }

@@ -110,6 +110,14 @@
                 return $"Locação N°: {locacao_id}  |  Instrumento: {NomeInstrumento}  |  Dias: {dias}  |  Subtotal: R$ {subtotal:F2}";
             }
         }
+
+        partial class Formas_PagamentoRow
+        {
+            public override string ToString()
+            {
+                return $"{id_pagamento}  |  {tipo}";
+            }
+        }
     }
 }
 
