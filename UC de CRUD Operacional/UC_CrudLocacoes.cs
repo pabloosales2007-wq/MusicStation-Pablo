@@ -138,9 +138,15 @@ namespace MusicStation_Pablo
 
         private void btnCadastrarUsuarios_Click(object sender, EventArgs e)
         {
+            ClientesRow cliente = cboCliente.SelectedItem as ClientesRow;
 
+            if (cliente == null)
+            {
+                MessageBox.Show("Selecione um cliente.");
+                return;
+            }
 
-            int clienteId = Convert.ToInt32(cboCliente.SelectedValue);
+            int clienteId = cliente.id_cliente;
             string status = cboStatus.Text;
             decimal valorTotal = decimal.Parse(txtTotal.Text);
 
@@ -149,13 +155,15 @@ namespace MusicStation_Pablo
 
             try
             {
-                LocacoesTableAdapter pedidos = new LocacoesTableAdapter();
-                pedidos.Insert(clienteId, dataInicio, dataFim, valorTotal, status );
+                LocacoesTableAdapter locacoes = new LocacoesTableAdapter();
+
+                locacoes.Insert(clienteId,dataInicio,dataFim,valorTotal,status);
 
                 LimparElementos();
                 AtualizarLista();
 
-                MessageBox.Show("Locação cadastrada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Locação cadastrada com sucesso!", "Sucesso",MessageBoxButtons.OK, MessageBoxIcon.Information
+                );
             }
             catch (Exception ex)
             {

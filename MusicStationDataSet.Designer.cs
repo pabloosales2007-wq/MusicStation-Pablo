@@ -4203,6 +4203,8 @@ namespace MusicStation_Pablo {
             
             private global::System.Data.DataColumn columnsubtotal;
             
+            private global::System.Data.DataColumn columnNomeInstrumento;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Locacao_ItensDataTable() {
@@ -4286,6 +4288,14 @@ namespace MusicStation_Pablo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NomeInstrumentoColumn {
+                get {
+                    return this.columnNomeInstrumento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4321,7 +4331,7 @@ namespace MusicStation_Pablo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Locacao_ItensRow AddLocacao_ItensRow(LocacoesRow parentLocacoesRowByFK__Locacao_I__locac__17036CC0, InstrumentosRow parentInstrumentosRowByFK__Locacao_I__instr__17F790F9, decimal preco_locacao, int dias, decimal subtotal) {
+            public Locacao_ItensRow AddLocacao_ItensRow(LocacoesRow parentLocacoesRowByFK__Locacao_I__locac__17036CC0, InstrumentosRow parentInstrumentosRowByFK__Locacao_I__instr__17F790F9, decimal preco_locacao, int dias, decimal subtotal, string NomeInstrumento) {
                 Locacao_ItensRow rowLocacao_ItensRow = ((Locacao_ItensRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -4329,7 +4339,8 @@ namespace MusicStation_Pablo {
                         null,
                         preco_locacao,
                         dias,
-                        subtotal};
+                        subtotal,
+                        NomeInstrumento};
                 if ((parentLocacoesRowByFK__Locacao_I__locac__17036CC0 != null)) {
                     columnValuesArray[1] = parentLocacoesRowByFK__Locacao_I__locac__17036CC0[0];
                 }
@@ -4371,6 +4382,7 @@ namespace MusicStation_Pablo {
                 this.columnpreco_locacao = base.Columns["preco_locacao"];
                 this.columndias = base.Columns["dias"];
                 this.columnsubtotal = base.Columns["subtotal"];
+                this.columnNomeInstrumento = base.Columns["NomeInstrumento"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4388,6 +4400,8 @@ namespace MusicStation_Pablo {
                 base.Columns.Add(this.columndias);
                 this.columnsubtotal = new global::System.Data.DataColumn("subtotal", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsubtotal);
+                this.columnNomeInstrumento = new global::System.Data.DataColumn("NomeInstrumento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNomeInstrumento);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_item}, true));
                 this.columnid_item.AutoIncrement = true;
@@ -4401,6 +4415,8 @@ namespace MusicStation_Pablo {
                 this.columnpreco_locacao.AllowDBNull = false;
                 this.columndias.AllowDBNull = false;
                 this.columnsubtotal.AllowDBNull = false;
+                this.columnNomeInstrumento.AllowDBNull = false;
+                this.columnNomeInstrumento.MaxLength = 150;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12874,6 +12890,17 @@ namespace MusicStation_Pablo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NomeInstrumento {
+                get {
+                    return ((string)(this[this.tableLocacao_Itens.NomeInstrumentoColumn]));
+                }
+                set {
+                    this[this.tableLocacao_Itens.NomeInstrumentoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public InstrumentosRow InstrumentosRow {
                 get {
                     return ((InstrumentosRow)(this.GetParentRow(this.Table.ParentRelations["FK__Locacao_I__instr__17F790F9"])));
@@ -19064,44 +19091,35 @@ SELECT id_chat, usuario1_id, usuario2_id, data_criacao FROM Chats WHERE (id_chat
             tableMapping.ColumnMappings.Add("preco_locacao", "preco_locacao");
             tableMapping.ColumnMappings.Add("dias", "dias");
             tableMapping.ColumnMappings.Add("subtotal", "subtotal");
+            tableMapping.ColumnMappings.Add("NomeInstrumento", "NomeInstrumento");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Locacao_Itens] WHERE (([id_item] = @Original_id_item) AND ([locacao_id] = @Original_locacao_id) AND ([instrumento_id] = @Original_instrumento_id) AND ([preco_locacao] = @Original_preco_locacao) AND ([dias] = @Original_dias) AND ([subtotal] = @Original_subtotal))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_item", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_item", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_locacao_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "locacao_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_instrumento_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "instrumento_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_preco_locacao", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "preco_locacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dias", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_subtotal", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "subtotal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.CommandText = "dbo.DeletarLocacaoItem";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_item", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_item", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Locacao_Itens] ([locacao_id], [instrumento_id], [preco_locacao], [dias], [subtotal]) VALUES (@locacao_id, @instrumento_id, @preco_locacao, @dias, @subtotal);
-SELECT id_item, locacao_id, instrumento_id, preco_locacao, dias, subtotal FROM Locacao_Itens WHERE (id_item = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@locacao_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "locacao_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@instrumento_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "instrumento_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@preco_locacao", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "preco_locacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dias", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@subtotal", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "subtotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.CommandText = "dbo.InserirLocacaoItem";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@locacao_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "locacao_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@instrumento_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "instrumento_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@preco_locacao", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 10, 2, "preco_locacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dias", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "dias", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@subtotal", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 10, 2, "subtotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Locacao_Itens] SET [locacao_id] = @locacao_id, [instrumento_id] = @instrumento_id, [preco_locacao] = @preco_locacao, [dias] = @dias, [subtotal] = @subtotal WHERE (([id_item] = @Original_id_item) AND ([locacao_id] = @Original_locacao_id) AND ([instrumento_id] = @Original_instrumento_id) AND ([preco_locacao] = @Original_preco_locacao) AND ([dias] = @Original_dias) AND ([subtotal] = @Original_subtotal));
-SELECT id_item, locacao_id, instrumento_id, preco_locacao, dias, subtotal FROM Locacao_Itens WHERE (id_item = @id_item)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@locacao_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "locacao_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@instrumento_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "instrumento_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@preco_locacao", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "preco_locacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dias", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@subtotal", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "subtotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_item", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_item", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_locacao_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "locacao_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_instrumento_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "instrumento_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_preco_locacao", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "preco_locacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dias", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dias", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_subtotal", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "subtotal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_item", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_item", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.CommandText = "dbo.AtualizarLocacaoItem";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_item", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_item", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@locacao_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "locacao_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@instrumento_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "instrumento_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@preco_locacao", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 10, 2, "preco_locacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dias", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "dias", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@subtotal", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 10, 2, "subtotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19117,9 +19135,9 @@ SELECT id_item, locacao_id, instrumento_id, preco_locacao, dias, subtotal FROM L
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_item, locacao_id, instrumento_id, preco_locacao, dias, subtotal FROM db" +
-                "o.Locacao_Itens";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].CommandText = "dbo.ObterLocacoesItens";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19179,13 +19197,13 @@ SELECT id_item, locacao_id, instrumento_id, preco_locacao, dias, subtotal FROM L
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_item, int Original_locacao_id, int Original_instrumento_id, decimal Original_preco_locacao, int Original_dias, decimal Original_subtotal) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_item));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_locacao_id));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_instrumento_id));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(Original_preco_locacao));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_dias));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((decimal)(Original_subtotal));
+        public virtual int Delete(global::System.Nullable<int> id_item) {
+            if ((id_item.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(id_item.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -19206,12 +19224,37 @@ SELECT id_item, locacao_id, instrumento_id, preco_locacao, dias, subtotal FROM L
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int locacao_id, int instrumento_id, decimal preco_locacao, int dias, decimal subtotal) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(locacao_id));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(instrumento_id));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(preco_locacao));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(dias));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(subtotal));
+        public virtual int Insert(global::System.Nullable<int> locacao_id, global::System.Nullable<int> instrumento_id, global::System.Nullable<decimal> preco_locacao, global::System.Nullable<int> dias, global::System.Nullable<decimal> subtotal) {
+            if ((locacao_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(locacao_id.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((instrumento_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(instrumento_id.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((preco_locacao.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(preco_locacao.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((dias.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(dias.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((subtotal.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(subtotal.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -19232,19 +19275,43 @@ SELECT id_item, locacao_id, instrumento_id, preco_locacao, dias, subtotal FROM L
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int locacao_id, int instrumento_id, decimal preco_locacao, int dias, decimal subtotal, int Original_id_item, int Original_locacao_id, int Original_instrumento_id, decimal Original_preco_locacao, int Original_dias, decimal Original_subtotal, int id_item) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(locacao_id));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(instrumento_id));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(preco_locacao));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(dias));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(subtotal));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id_item));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_locacao_id));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_instrumento_id));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(Original_preco_locacao));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_dias));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(Original_subtotal));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(id_item));
+        public virtual int Update(global::System.Nullable<int> id_item, global::System.Nullable<int> locacao_id, global::System.Nullable<int> instrumento_id, global::System.Nullable<decimal> preco_locacao, global::System.Nullable<int> dias, global::System.Nullable<decimal> subtotal) {
+            if ((id_item.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(id_item.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((locacao_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(locacao_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((instrumento_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(instrumento_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((preco_locacao.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(preco_locacao.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((dias.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(dias.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((subtotal.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(subtotal.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -19259,14 +19326,6 @@ SELECT id_item, locacao_id, instrumento_id, preco_locacao, dias, subtotal FROM L
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int locacao_id, int instrumento_id, decimal preco_locacao, int dias, decimal subtotal, int Original_id_item, int Original_locacao_id, int Original_instrumento_id, decimal Original_preco_locacao, int Original_dias, decimal Original_subtotal) {
-            return this.Update(locacao_id, instrumento_id, preco_locacao, dias, subtotal, Original_id_item, Original_locacao_id, Original_instrumento_id, Original_preco_locacao, Original_dias, Original_subtotal, Original_id_item);
         }
     }
     

@@ -31,6 +31,7 @@
             this.panelNomeTop = new System.Windows.Forms.Panel();
             this.lblLocacoes = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cboCliente = new System.Windows.Forms.ComboBox();
             this.lblNomeLocacao = new System.Windows.Forms.Label();
             this.cboStatus = new System.Windows.Forms.ComboBox();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.btnCadastrarUsuarios = new System.Windows.Forms.Button();
             this.panelListBox = new System.Windows.Forms.Panel();
             this.lboLocacoes = new System.Windows.Forms.ListBox();
-            this.cboCliente = new System.Windows.Forms.ComboBox();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -102,6 +102,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(976, 536);
             this.panel2.TabIndex = 39;
+            // 
+            // cboCliente
+            // 
+            this.cboCliente.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboCliente.FormattingEnabled = true;
+            this.cboCliente.Location = new System.Drawing.Point(273, 117);
+            this.cboCliente.Name = "cboCliente";
+            this.cboCliente.Size = new System.Drawing.Size(207, 33);
+            this.cboCliente.TabIndex = 70;
             // 
             // lblNomeLocacao
             // 
@@ -347,20 +356,6 @@
             this.lboLocacoes.Size = new System.Drawing.Size(897, 129);
             this.lboLocacoes.TabIndex = 35;
             this.lboLocacoes.SelectedIndexChanged += new System.EventHandler(this.lboLocacoes_SelectedIndexChanged);
-            // 
-            // cboCliente
-            // 
-            this.cboCliente.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.cboCliente.FormattingEnabled = true;
-            this.cboCliente.Items.AddRange(new object[] {
-            "ativa",
-            "concluída",
-            "atrasada",
-            "cancelada"});
-            this.cboCliente.Location = new System.Drawing.Point(273, 117);
-            this.cboCliente.Name = "cboCliente";
-            this.cboCliente.Size = new System.Drawing.Size(207, 33);
-            this.cboCliente.TabIndex = 70;
             // 
             // UC_CrudLocacoes
             // 

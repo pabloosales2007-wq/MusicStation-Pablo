@@ -102,6 +102,14 @@
                 return $"  {NomeCliente}  |  {id_locacao}  |  {valor_total:F2}   |  {data_inicio}  |  {data_fim}  |  {status}";
             }
         }
+
+        partial class Locacao_ItensRow
+        {
+            public override string ToString()
+            {
+                return $"Locação N°: {locacao_id}  |  Instrumento: {NomeInstrumento}  |  Dias: {dias}  |  Subtotal: R$ {subtotal:F2}";
+            }
+        }
     }
 }
 
