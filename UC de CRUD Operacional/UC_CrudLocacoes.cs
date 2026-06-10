@@ -78,23 +78,89 @@ namespace MusicStation_Pablo
 
         private void btnDeletarUsuarios_Click(object sender, EventArgs e)
         {
+            if (lboLocacoes.SelectedItem == null) return;
+            var pedido = lboLocacoes.SelectedItem as LocacoesRow;
+            if (pedido == null) return;
 
+            try
+            {
+                LocacoesTableAdapter pedidos = new LocacoesTableAdapter();
+                pedidos.Delete(pedido.id_locacao);
 
+                LimparElementos();
+                AtualizarLista();
+
+                MessageBox.Show("Locação removido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().Name);
+            }
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-
+            LimparElementos();
         }
 
         private void btnAtualizarUsuarios_Click(object sender, EventArgs e)
         {
+            if (lboLocacoes.SelectedItem == null) return;
+            LocacoesRow locacao = lboLocacoes.SelectedItem as LocacoesRow;
+            if (locacao == null) return;
 
+            string nomeCliente = cboCliente.Text;
+            string status = cboStatus.Text;
+            decimal valorTotal = decimal.Parse(txtTotal.Text);
+            string dataInicio = dtpInicio.Value.ToString("yyyy-MM-dd");
+            string dataFim = dtpFim.Value.ToString("yyyy-MM-dd");
+
+
+            try
+            {
+
+                LocacoesTableAdapter locacoes = new LocacoesTableAdapter();
+
+                locacoes.Update(locacao.id_locacao, locacao.cliente_id, locacao.data_fim,locacao.data_inicio, locacao.valor_total, status);
+
+
+                AtualizarLista();
+                LimparElementos();
+
+                MessageBox.Show("Locação atualizada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                // Caso aconteça algum erro de banco ou digitação, ele entra aqui
+                MessageBox.Show("Erro ao atualizar a Locação: " + ex.Message, "Erro");
+            }
         }
 
         private void btnCadastrarUsuarios_Click(object sender, EventArgs e)
         {
 
+
+            int clienteId = Convert.ToInt32(cboCliente.SelectedValue);
+            string status = cboStatus.Text;
+            decimal valorTotal = decimal.Parse(txtTotal.Text);
+
+            DateTime dataInicio = dtpInicio.Value;
+            DateTime dataFim = dtpFim.Value;
+
+            try
+            {
+                LocacoesTableAdapter pedidos = new LocacoesTableAdapter();
+                pedidos.Insert(clienteId, dataInicio, dataFim, valorTotal, status );
+
+                LimparElementos();
+                AtualizarLista();
+
+                MessageBox.Show("Locação cadastrada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().Name);
+            }
         }
 
         private void AtualizarLista()
