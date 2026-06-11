@@ -59,15 +59,7 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="MusicStationDataSet.cs">
-      <DependentUpon>MusicStationDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="MusicStationDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MusicStationDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MusicStationDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MusicStationDataSet.xsd</DependentUpon>
@@ -338,8 +330,8 @@
     </None>
     <None Include="MusicStationDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MusicStationDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-      <LastGenOutput>MusicStationDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="MusicStationDataSet.xss">
       <DependentUpon>MusicStationDataSet.xsd</DependentUpon>

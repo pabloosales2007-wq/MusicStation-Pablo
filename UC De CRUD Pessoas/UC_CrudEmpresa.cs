@@ -49,7 +49,7 @@ namespace MusicStation_Pablo
                 {
                     EmpresasTableAdapter empresas = new EmpresasTableAdapter();
 
-                    empresas.Delete(empresa.id_empresa, empresa.usuario_id);
+                    empresas.Delete(empresa.usuario_id);
 
                     LimparElementos();
                     AtualizarLista();

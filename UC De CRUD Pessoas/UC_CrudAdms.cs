@@ -42,7 +42,7 @@ namespace MusicStation_Pablo
 
 
             AdministradoresTableAdapter admins = new AdministradoresTableAdapter();
-            admins.Delete(admin.id_admin, admin.usuario_id);
+            admins.Delete(admin.usuario_id);
 
 
 

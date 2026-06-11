@@ -100,7 +100,7 @@ namespace MusicStation_Pablo
 
 
             ClientesTableAdapter clientes = new ClientesTableAdapter();
-            clientes.Delete(cliente.id_cliente, cliente.usuario_id);
+            clientes.Delete( cliente.usuario_id);
 
 
 
