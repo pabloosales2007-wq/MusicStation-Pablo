@@ -333,7 +333,6 @@
     </None>
     <None Include="MusicStationDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MusicStationDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="MusicStationDataSet.xss">
