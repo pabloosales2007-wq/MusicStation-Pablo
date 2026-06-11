@@ -1,4 +1,7 @@
-﻿namespace MusicStation_Pablo
+﻿using System.Runtime.Remoting.Messaging;
+using System.Xml.Schema;
+
+namespace MusicStation_Pablo
 {
 
 
@@ -116,6 +119,22 @@
             public override string ToString()
             {
                 return $"{id_pagamento}  |  {tipo}";
+            }
+        }
+
+        partial class Transacoes_PagamentoRow
+        {
+            public override string ToString()
+            {
+                return $"Codigo Externo: {codigo_externo}  |  {acompanhamento}  |  {data_transacao}";
+            }
+        }
+
+        partial class PagamentosRow
+        {
+            public override string ToString()
+            {
+                return $"Pagamento: {pedido_id}  |  {forma_pagamento}  |  {data_pagamento}  |  {valor_pago}  |  {acompanhamento}";
             }
         }
     }

@@ -57,7 +57,7 @@ namespace MusicStation_Pablo
             try
             {
                 // Instancia o TableAdapter correto que criamos para o administrador
-                VerificarLoginAdminTableAdapter consulta = new VerificarLoginAdminTableAdapter();
+                VerificarLoginAdmin1TableAdapter consulta = new VerificarLoginAdmin1TableAdapter();
 
                 // Faz a busca usando o LINQ (exatamente igual ao padrão do professor)
                 var administrador = (from linha in consulta.GetData(nome, senha)

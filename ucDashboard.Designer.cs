@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelLocacoes = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -66,6 +72,9 @@
             this.panelPedido = new System.Windows.Forms.Panel();
             this.panelValorTotal = new System.Windows.Forms.Panel();
             this.panelTotal = new System.Windows.Forms.Panel();
+            this.chartPedidos = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartFaturamento = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lboPedidos = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panelLocacoes.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -88,9 +97,14 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel7.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.panelValores.SuspendLayout();
             this.panelPedidos.SuspendLayout();
+            this.panelPedido.SuspendLayout();
             this.panelValorTotal.SuspendLayout();
+            this.panelTotal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPedidos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartFaturamento)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -433,6 +447,7 @@
             // 
             // panel15
             // 
+            this.panel15.Controls.Add(this.lboPedidos);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(0, 196);
             this.panel15.Name = "panel15";
@@ -461,6 +476,7 @@
             // panelPedido
             // 
             this.panelPedido.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panelPedido.Controls.Add(this.chartFaturamento);
             this.panelPedido.Location = new System.Drawing.Point(3, 4);
             this.panelPedido.Name = "panelPedido";
             this.panelPedido.Size = new System.Drawing.Size(480, 189);
@@ -478,11 +494,58 @@
             // panelTotal
             // 
             this.panelTotal.BackColor = System.Drawing.Color.SpringGreen;
+            this.panelTotal.Controls.Add(this.chartPedidos);
             this.panelTotal.ForeColor = System.Drawing.Color.Black;
             this.panelTotal.Location = new System.Drawing.Point(4, 4);
             this.panelTotal.Name = "panelTotal";
             this.panelTotal.Size = new System.Drawing.Size(480, 189);
             this.panelTotal.TabIndex = 0;
+            // 
+            // chartPedidos
+            // 
+            this.chartPedidos.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            this.chartPedidos.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartPedidos.Legends.Add(legend2);
+            this.chartPedidos.Location = new System.Drawing.Point(3, 3);
+            this.chartPedidos.Name = "chartPedidos";
+            this.chartPedidos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartPedidos.Series.Add(series2);
+            this.chartPedidos.Size = new System.Drawing.Size(474, 183);
+            this.chartPedidos.TabIndex = 0;
+            this.chartPedidos.Text = "chart1";
+            // 
+            // chartFaturamento
+            // 
+            this.chartFaturamento.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chartFaturamento.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartFaturamento.Legends.Add(legend1);
+            this.chartFaturamento.Location = new System.Drawing.Point(3, 6);
+            this.chartFaturamento.Name = "chartFaturamento";
+            this.chartFaturamento.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartFaturamento.Series.Add(series1);
+            this.chartFaturamento.Size = new System.Drawing.Size(474, 183);
+            this.chartFaturamento.TabIndex = 1;
+            this.chartFaturamento.Text = "chart2";
+            // 
+            // lboPedidos
+            // 
+            this.lboPedidos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lboPedidos.FormattingEnabled = true;
+            this.lboPedidos.ItemHeight = 21;
+            this.lboPedidos.Location = new System.Drawing.Point(7, 7);
+            this.lboPedidos.Name = "lboPedidos";
+            this.lboPedidos.Size = new System.Drawing.Size(960, 193);
+            this.lboPedidos.TabIndex = 0;
             // 
             // ucDashboard
             // 
@@ -525,9 +588,14 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel7.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
             this.panelValores.ResumeLayout(false);
             this.panelPedidos.ResumeLayout(false);
+            this.panelPedido.ResumeLayout(false);
             this.panelValorTotal.ResumeLayout(false);
+            this.panelTotal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartPedidos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartFaturamento)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -572,5 +640,8 @@
         private System.Windows.Forms.Panel panelValorTotal;
         private System.Windows.Forms.Panel panelPedido;
         private System.Windows.Forms.Panel panelTotal;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartFaturamento;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPedidos;
+        private System.Windows.Forms.ListBox lboPedidos;
     }
 }

@@ -37,7 +37,7 @@
             this.lblValorPago = new System.Windows.Forms.Label();
             this.txtValorPago = new System.Windows.Forms.TextBox();
             this.lblDataPagamento = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataPagamento = new System.Windows.Forms.DateTimePicker();
             this.cboFormaPagamento = new System.Windows.Forms.ComboBox();
             this.lblFormaPagamento = new System.Windows.Forms.Label();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
@@ -89,7 +89,7 @@
             this.panel2.Controls.Add(this.lblValorPago);
             this.panel2.Controls.Add(this.txtValorPago);
             this.panel2.Controls.Add(this.lblDataPagamento);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.dtpDataPagamento);
             this.panel2.Controls.Add(this.cboFormaPagamento);
             this.panel2.Controls.Add(this.lblFormaPagamento);
             this.panel2.Controls.Add(this.txtPesquisa);
@@ -107,6 +107,11 @@
             // 
             this.cboStatusPagamento.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.cboStatusPagamento.FormattingEnabled = true;
+            this.cboStatusPagamento.Items.AddRange(new object[] {
+            "pedente",
+            "aprovado",
+            "recusado",
+            "reembolsado"});
             this.cboStatusPagamento.Location = new System.Drawing.Point(278, 111);
             this.cboStatusPagamento.Name = "cboStatusPagamento";
             this.cboStatusPagamento.Size = new System.Drawing.Size(207, 33);
@@ -128,6 +133,7 @@
             // 
             this.txtPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPedido.Enabled = false;
             this.txtPedido.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.txtPedido.ForeColor = System.Drawing.Color.Black;
             this.txtPedido.Location = new System.Drawing.Point(33, 111);
@@ -170,13 +176,13 @@
             this.lblDataPagamento.TabIndex = 55;
             this.lblDataPagamento.Text = "Data Pagamento:";
             // 
-            // dateTimePicker1
+            // dtpDataPagamento
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(40, 239);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
-            this.dateTimePicker1.TabIndex = 54;
+            this.dtpDataPagamento.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDataPagamento.Location = new System.Drawing.Point(40, 239);
+            this.dtpDataPagamento.Name = "dtpDataPagamento";
+            this.dtpDataPagamento.Size = new System.Drawing.Size(200, 25);
+            this.dtpDataPagamento.TabIndex = 54;
             // 
             // cboFormaPagamento
             // 
@@ -209,6 +215,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(409, 33);
             this.txtPesquisa.TabIndex = 49;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // label2
             // 
@@ -254,6 +261,7 @@
             this.btnLimpar.TabIndex = 25;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnAtualizarUsuarios
             // 
@@ -269,6 +277,7 @@
             this.btnAtualizarUsuarios.TabIndex = 23;
             this.btnAtualizarUsuarios.Text = "Atualizar";
             this.btnAtualizarUsuarios.UseVisualStyleBackColor = false;
+            this.btnAtualizarUsuarios.Click += new System.EventHandler(this.btnAtualizarUsuarios_Click);
             // 
             // btnDeletarUsuarios
             // 
@@ -284,6 +293,7 @@
             this.btnDeletarUsuarios.TabIndex = 22;
             this.btnDeletarUsuarios.Text = "Deletar";
             this.btnDeletarUsuarios.UseVisualStyleBackColor = false;
+            this.btnDeletarUsuarios.Click += new System.EventHandler(this.btnDeletarUsuarios_Click);
             // 
             // btnCadastrarUsuarios
             // 
@@ -299,6 +309,7 @@
             this.btnCadastrarUsuarios.TabIndex = 18;
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuarios.Click += new System.EventHandler(this.btnCadastrarUsuarios_Click);
             // 
             // panelListBox
             // 
@@ -324,6 +335,7 @@
             this.lboPagamentos.ScrollAlwaysVisible = true;
             this.lboPagamentos.Size = new System.Drawing.Size(897, 129);
             this.lboPagamentos.TabIndex = 35;
+            this.lboPagamentos.SelectedIndexChanged += new System.EventHandler(this.lboPagamentos_SelectedIndexChanged);
             // 
             // lblPedido
             // 
@@ -373,7 +385,7 @@
         private System.Windows.Forms.ComboBox cboFormaPagamento;
         private System.Windows.Forms.Label lblFormaPagamento;
         private System.Windows.Forms.Label lblDataPagamento;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDataPagamento;
         private System.Windows.Forms.Label lblValorPago;
         private System.Windows.Forms.TextBox txtValorPago;
         private System.Windows.Forms.TextBox txtPedido;
