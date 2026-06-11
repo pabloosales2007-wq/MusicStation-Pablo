@@ -124,6 +124,7 @@
             public override string ToString()
             {
                 return $"Codigo Externo: {codigo_externo}  |  {acompanhamento}  |  {data_transacao}";
+
             }
         }
 
