@@ -27,9 +27,9 @@ namespace MusicStation_Pablo
 
             UsuariosTableAdapter usuarios = new UsuariosTableAdapter();
             var obterUsuarios= from linha in usuarios.GetData() select linha;
-            foreach (var cliente in obterUsuarios)
+            foreach (var usuario in obterUsuarios)
             {
-                cboUsuario2.Items.Add(cliente);
+                cboUsuario2.Items.Add(usuario);
             }
             cboUsuario2.SelectedIndex = -1;
             AtualizarLista();
@@ -55,6 +55,41 @@ namespace MusicStation_Pablo
         }
 
         private void lboChats_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lboChats.SelectedItem == null) return;
+            ChatsRow admin = lboChats.SelectedItem as ChatsRow;
+            if (admin == null) return;
+
+            cboUsuario1.Text = admin.NomeUsuario1;
+            cboUsuario2.Text = admin.NomeUsuario2;
+            dtpDataCriacao.Value = admin.data_criacao;
+        }
+
+        private void btnDeletarUsuarios_Click(object sender, EventArgs e)
+        {
+            if (lboChats.SelectedItem == null) return;
+            ChatsRow chats = lboChats.SelectedItem as ChatsRow;
+            if (chats == null) return;
+
+
+
+
+            ChatsTableAdapter clientes = new ChatsTableAdapter();
+            clientes.Delete(chats.id_chat);
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparElementos();
+        }
+
+        private void btnAtualizarUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
             // Filtra a ListBox em tempo real conforme o usuário digita o nome ou email
             TextBox pesquisa = sender as TextBox;
@@ -85,26 +120,6 @@ namespace MusicStation_Pablo
             {
                 lboChats.Items.Add(usuario);
             }
-        }
-
-        private void btnDeletarUsuarios_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            LimparElementos();
-        }
-
-        private void btnAtualizarUsuarios_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPesquisa_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCadastrarUsuarios_Click(object sender, EventArgs e)
