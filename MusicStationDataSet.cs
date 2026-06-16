@@ -143,5 +143,13 @@
                 return $"Chat entre {NomeUsuario1}  |  {NomeUsuario2}  |  {data_criacao}";
             }
         }
+
+        partial class MensagensRow
+        {
+            public override string ToString()
+            {
+                return $"Mensagem: {NomeRemetente}  |  {NomeChat}  |  {conteudo}  |  {lida}  |  {data_envio}";
+            }
+        }
     }
 }

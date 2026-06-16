@@ -5265,6 +5265,10 @@ namespace MusicStation_Pablo {
             
             private global::System.Data.DataColumn columnlida;
             
+            private global::System.Data.DataColumn columnNomeChat;
+            
+            private global::System.Data.DataColumn columnNomeRemetente;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public MensagensDataTable() {
@@ -5348,6 +5352,22 @@ namespace MusicStation_Pablo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NomeChatColumn {
+                get {
+                    return this.columnNomeChat;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NomeRemetenteColumn {
+                get {
+                    return this.columnNomeRemetente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5383,7 +5403,7 @@ namespace MusicStation_Pablo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MensagensRow AddMensagensRow(ChatsRow parentChatsRowByFK__Mensagens__chat___25518C17, UsuariosRow parentUsuariosRowByFK__Mensagens__remet__2645B050, string conteudo, System.DateTime data_envio, bool lida) {
+            public MensagensRow AddMensagensRow(ChatsRow parentChatsRowByFK__Mensagens__chat___25518C17, UsuariosRow parentUsuariosRowByFK__Mensagens__remet__2645B050, string conteudo, System.DateTime data_envio, bool lida, string NomeChat, string NomeRemetente) {
                 MensagensRow rowMensagensRow = ((MensagensRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -5391,7 +5411,9 @@ namespace MusicStation_Pablo {
                         null,
                         conteudo,
                         data_envio,
-                        lida};
+                        lida,
+                        NomeChat,
+                        NomeRemetente};
                 if ((parentChatsRowByFK__Mensagens__chat___25518C17 != null)) {
                     columnValuesArray[1] = parentChatsRowByFK__Mensagens__chat___25518C17[0];
                 }
@@ -5433,6 +5455,8 @@ namespace MusicStation_Pablo {
                 this.columnconteudo = base.Columns["conteudo"];
                 this.columndata_envio = base.Columns["data_envio"];
                 this.columnlida = base.Columns["lida"];
+                this.columnNomeChat = base.Columns["NomeChat"];
+                this.columnNomeRemetente = base.Columns["NomeRemetente"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5450,6 +5474,10 @@ namespace MusicStation_Pablo {
                 base.Columns.Add(this.columndata_envio);
                 this.columnlida = new global::System.Data.DataColumn("lida", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlida);
+                this.columnNomeChat = new global::System.Data.DataColumn("NomeChat", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNomeChat);
+                this.columnNomeRemetente = new global::System.Data.DataColumn("NomeRemetente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNomeRemetente);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_mensagem}, true));
                 this.columnid_mensagem.AutoIncrement = true;
@@ -5464,6 +5492,10 @@ namespace MusicStation_Pablo {
                 this.columnconteudo.MaxLength = 500;
                 this.columndata_envio.AllowDBNull = false;
                 this.columnlida.AllowDBNull = false;
+                this.columnNomeChat.ReadOnly = true;
+                this.columnNomeChat.MaxLength = 403;
+                this.columnNomeRemetente.AllowDBNull = false;
+                this.columnNomeRemetente.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16443,6 +16475,33 @@ namespace MusicStation_Pablo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NomeChat {
+                get {
+                    try {
+                        return ((string)(this[this.tableMensagens.NomeChatColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'NomeChat\' na tabela \'Mensagens\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMensagens.NomeChatColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NomeRemetente {
+                get {
+                    return ((string)(this[this.tableMensagens.NomeRemetenteColumn]));
+                }
+                set {
+                    this[this.tableMensagens.NomeRemetenteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ChatsRow ChatsRow {
                 get {
                     return ((ChatsRow)(this.GetParentRow(this.Table.ParentRelations["FK__Mensagens__chat___25518C17"])));
@@ -16461,6 +16520,18 @@ namespace MusicStation_Pablo {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK__Mensagens__remet__2645B050"]);
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsNomeChatNull() {
+                return this.IsNull(this.tableMensagens.NomeChatColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetNomeChatNull() {
+                this[this.tableMensagens.NomeChatColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -24302,6 +24373,8 @@ SELECT id_avaliacao, servico_pedido_id, cliente_id, nota, comentario, data_avali
             tableMapping.ColumnMappings.Add("conteudo", "conteudo");
             tableMapping.ColumnMappings.Add("data_envio", "data_envio");
             tableMapping.ColumnMappings.Add("lida", "lida");
+            tableMapping.ColumnMappings.Add("NomeChat", "NomeChat");
+            tableMapping.ColumnMappings.Add("NomeRemetente", "NomeRemetente");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;

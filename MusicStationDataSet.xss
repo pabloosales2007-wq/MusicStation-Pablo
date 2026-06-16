@@ -16,7 +16,7 @@
     <Shape ID="DesignTable:Instrumentos" ZOrder="59" X="603" Y="2210" Height="210" Width="222" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:Locacao_Itens" ZOrder="58" X="860" Y="1057" Height="210" Width="224" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:Locacoes" ZOrder="9" X="594" Y="1057" Height="210" Width="196" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
-    <Shape ID="DesignTable:Mensagens" ZOrder="57" X="334" Y="535" Height="191" Width="210" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
+    <Shape ID="DesignTable:Mensagens" ZOrder="57" X="334" Y="535" Height="229" Width="210" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
     <Shape ID="DesignTable:Notificacoes" ZOrder="56" X="334" Y="2528" Height="210" Width="216" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:Pagamentos" ZOrder="7" X="854" Y="1318" Height="210" Width="216" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:Pedidos" ZOrder="8" X="594" Y="1318" Height="210" Width="190" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />

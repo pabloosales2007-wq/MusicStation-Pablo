@@ -655,6 +655,8 @@ SELECT id_avaliacao, servico_pedido_id, cliente_id, nota, comentario, data_avali
               <Mapping SourceColumn="conteudo" DataSetColumn="conteudo" />
               <Mapping SourceColumn="data_envio" DataSetColumn="data_envio" />
               <Mapping SourceColumn="lida" DataSetColumn="lida" />
+              <Mapping SourceColumn="NomeChat" DataSetColumn="NomeChat" />
+              <Mapping SourceColumn="NomeRemetente" DataSetColumn="NomeRemetente" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -2574,6 +2576,20 @@ SELECT id_notificacao, usuario_id, titulo, mensagem, tipo, data_envio, lida FROM
               </xs:element>
               <xs:element name="data_envio" msprop:Generator_ColumnPropNameInTable="data_envioColumn" msprop:Generator_ColumnPropNameInRow="data_envio" msprop:Generator_UserColumnName="data_envio" msprop:Generator_ColumnVarNameInTable="columndata_envio" type="xs:dateTime" />
               <xs:element name="lida" msprop:Generator_ColumnPropNameInTable="lidaColumn" msprop:Generator_ColumnPropNameInRow="lida" msprop:Generator_UserColumnName="lida" msprop:Generator_ColumnVarNameInTable="columnlida" type="xs:boolean" />
+              <xs:element name="NomeChat" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="NomeChat" msprop:Generator_ColumnPropNameInTable="NomeChatColumn" msprop:Generator_ColumnVarNameInTable="columnNomeChat" msprop:Generator_UserColumnName="NomeChat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="403" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NomeRemetente" msprop:Generator_ColumnPropNameInRow="NomeRemetente" msprop:Generator_ColumnPropNameInTable="NomeRemetenteColumn" msprop:Generator_ColumnVarNameInTable="columnNomeRemetente" msprop:Generator_UserColumnName="NomeRemetente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
