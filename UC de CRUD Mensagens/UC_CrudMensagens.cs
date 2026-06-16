@@ -47,7 +47,15 @@ namespace MusicStation_Pablo
 
         private void btnDeletarUsuarios_Click(object sender, EventArgs e)
         {
+            if (lboMensagens.SelectedItem == null) return;
+            MensagensRow mensagem = lboMensagens.SelectedItem as MensagensRow;
+            if (mensagem == null) return;
 
+
+
+
+            MensagensTableAdapter clientes = new MensagensTableAdapter();
+            clientes.Delete(mensagem.id_mensagem);
         }
 
         private void btnAtualizarUsuarios_Click(object sender, EventArgs e)
