@@ -31,7 +31,6 @@
             this.panelNomeTop = new System.Windows.Forms.Panel();
             this.lblMensagens = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblDataHora = new System.Windows.Forms.Label();
             this.chkLida = new System.Windows.Forms.CheckBox();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,11 +41,14 @@
             this.btnCadastrarUsuarios = new System.Windows.Forms.Button();
             this.panelListBox = new System.Windows.Forms.Panel();
             this.lboMensagens = new System.Windows.Forms.ListBox();
-            this.lblDDataHora = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
+            this.cboChat = new System.Windows.Forms.ComboBox();
+            this.cboRemetente = new System.Windows.Forms.ComboBox();
+            this.txtConteudo = new System.Windows.Forms.TextBox();
+            this.dtpDataEnvio = new System.Windows.Forms.DateTimePicker();
+            this.lblChat = new System.Windows.Forms.Label();
+            this.lblRemetente = new System.Windows.Forms.Label();
             this.lblConteudo = new System.Windows.Forms.Label();
-            this.txtMensagem = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDataCriacao = new System.Windows.Forms.Label();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -78,41 +80,31 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.lblDataHora);
+            this.panel2.Controls.Add(this.lblDataCriacao);
+            this.panel2.Controls.Add(this.lblConteudo);
+            this.panel2.Controls.Add(this.lblRemetente);
+            this.panel2.Controls.Add(this.lblChat);
+            this.panel2.Controls.Add(this.dtpDataEnvio);
+            this.panel2.Controls.Add(this.txtConteudo);
+            this.panel2.Controls.Add(this.cboRemetente);
+            this.panel2.Controls.Add(this.cboChat);
             this.panel2.Controls.Add(this.chkLida);
             this.panel2.Controls.Add(this.txtPesquisa);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panelCRUD);
             this.panel2.Controls.Add(this.panelListBox);
-            this.panel2.Controls.Add(this.lblDDataHora);
-            this.panel2.Controls.Add(this.txtNome);
-            this.panel2.Controls.Add(this.lblConteudo);
-            this.panel2.Controls.Add(this.txtMensagem);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(976, 536);
             this.panel2.TabIndex = 39;
             // 
-            // lblDataHora
-            // 
-            this.lblDataHora.AutoSize = true;
-            this.lblDataHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblDataHora.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblDataHora.ForeColor = System.Drawing.Color.White;
-            this.lblDataHora.Location = new System.Drawing.Point(26, 266);
-            this.lblDataHora.Name = "lblDataHora";
-            this.lblDataHora.Size = new System.Drawing.Size(128, 25);
-            this.lblDataHora.TabIndex = 51;
-            this.lblDataHora.Text = "Data de Envio";
-            // 
             // chkLida
             // 
             this.chkLida.AutoSize = true;
             this.chkLida.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.chkLida.ForeColor = System.Drawing.Color.White;
-            this.chkLida.Location = new System.Drawing.Point(273, 117);
+            this.chkLida.Location = new System.Drawing.Point(351, 117);
             this.chkLida.Name = "chkLida";
             this.chkLida.Size = new System.Drawing.Size(66, 29);
             this.chkLida.TabIndex = 50;
@@ -129,6 +121,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(409, 33);
             this.txtPesquisa.TabIndex = 49;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // label2
             // 
@@ -174,6 +167,7 @@
             this.btnLimpar.TabIndex = 25;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnAtualizarUsuarios
             // 
@@ -189,6 +183,7 @@
             this.btnAtualizarUsuarios.TabIndex = 23;
             this.btnAtualizarUsuarios.Text = "Atualizar";
             this.btnAtualizarUsuarios.UseVisualStyleBackColor = false;
+            this.btnAtualizarUsuarios.Click += new System.EventHandler(this.btnAtualizarUsuarios_Click);
             // 
             // btnDeletarUsuarios
             // 
@@ -204,6 +199,7 @@
             this.btnDeletarUsuarios.TabIndex = 22;
             this.btnDeletarUsuarios.Text = "Deletar";
             this.btnDeletarUsuarios.UseVisualStyleBackColor = false;
+            this.btnDeletarUsuarios.Click += new System.EventHandler(this.btnDeletarUsuarios_Click);
             // 
             // btnCadastrarUsuarios
             // 
@@ -219,6 +215,7 @@
             this.btnCadastrarUsuarios.TabIndex = 18;
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuarios.Click += new System.EventHandler(this.btnCadastrarUsuarios_Click);
             // 
             // panelListBox
             // 
@@ -244,29 +241,65 @@
             this.lboMensagens.ScrollAlwaysVisible = true;
             this.lboMensagens.Size = new System.Drawing.Size(897, 129);
             this.lboMensagens.TabIndex = 35;
+            this.lboMensagens.SelectedIndexChanged += new System.EventHandler(this.lboMensagens_SelectedIndexChanged);
             // 
-            // lblDDataHora
+            // cboChat
             // 
-            this.lblDDataHora.AutoSize = true;
-            this.lblDDataHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblDDataHora.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblDDataHora.ForeColor = System.Drawing.Color.White;
-            this.lblDDataHora.Location = new System.Drawing.Point(27, 230);
-            this.lblDDataHora.Name = "lblDDataHora";
-            this.lblDDataHora.Size = new System.Drawing.Size(132, 25);
-            this.lblDDataHora.TabIndex = 31;
-            this.lblDDataHora.Text = "Data de Envio:";
+            this.cboChat.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboChat.FormattingEnabled = true;
+            this.cboChat.Location = new System.Drawing.Point(34, 113);
+            this.cboChat.Name = "cboChat";
+            this.cboChat.Size = new System.Drawing.Size(200, 33);
+            this.cboChat.TabIndex = 51;
             // 
-            // txtNome
+            // cboRemetente
             // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNome.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtNome.ForeColor = System.Drawing.Color.Black;
-            this.txtNome.Location = new System.Drawing.Point(31, 113);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(207, 33);
-            this.txtNome.TabIndex = 24;
+            this.cboRemetente.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboRemetente.FormattingEnabled = true;
+            this.cboRemetente.Location = new System.Drawing.Point(34, 177);
+            this.cboRemetente.Name = "cboRemetente";
+            this.cboRemetente.Size = new System.Drawing.Size(200, 33);
+            this.cboRemetente.TabIndex = 52;
+            // 
+            // txtConteudo
+            // 
+            this.txtConteudo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtConteudo.Location = new System.Drawing.Point(37, 239);
+            this.txtConteudo.Name = "txtConteudo";
+            this.txtConteudo.Size = new System.Drawing.Size(200, 33);
+            this.txtConteudo.TabIndex = 53;
+            // 
+            // dtpDataEnvio
+            // 
+            this.dtpDataEnvio.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.dtpDataEnvio.Location = new System.Drawing.Point(37, 308);
+            this.dtpDataEnvio.Name = "dtpDataEnvio";
+            this.dtpDataEnvio.Size = new System.Drawing.Size(357, 33);
+            this.dtpDataEnvio.TabIndex = 54;
+            // 
+            // lblChat
+            // 
+            this.lblChat.AutoSize = true;
+            this.lblChat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblChat.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblChat.ForeColor = System.Drawing.Color.White;
+            this.lblChat.Location = new System.Drawing.Point(32, 85);
+            this.lblChat.Name = "lblChat";
+            this.lblChat.Size = new System.Drawing.Size(55, 25);
+            this.lblChat.TabIndex = 55;
+            this.lblChat.Text = "Chat:";
+            // 
+            // lblRemetente
+            // 
+            this.lblRemetente.AutoSize = true;
+            this.lblRemetente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblRemetente.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblRemetente.ForeColor = System.Drawing.Color.White;
+            this.lblRemetente.Location = new System.Drawing.Point(32, 149);
+            this.lblRemetente.Name = "lblRemetente";
+            this.lblRemetente.Size = new System.Drawing.Size(105, 25);
+            this.lblRemetente.TabIndex = 56;
+            this.lblRemetente.Text = "Remetente:";
             // 
             // lblConteudo
             // 
@@ -274,34 +307,23 @@
             this.lblConteudo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblConteudo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.lblConteudo.ForeColor = System.Drawing.Color.White;
-            this.lblConteudo.Location = new System.Drawing.Point(31, 147);
+            this.lblConteudo.Location = new System.Drawing.Point(38, 211);
             this.lblConteudo.Name = "lblConteudo";
             this.lblConteudo.Size = new System.Drawing.Size(99, 25);
-            this.lblConteudo.TabIndex = 30;
-            this.lblConteudo.Text = "Conteudo:";
+            this.lblConteudo.TabIndex = 57;
+            this.lblConteudo.Text = "Conteúdo:";
             // 
-            // txtMensagem
+            // lblDataCriacao
             // 
-            this.txtMensagem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMensagem.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtMensagem.ForeColor = System.Drawing.Color.Black;
-            this.txtMensagem.Location = new System.Drawing.Point(31, 175);
-            this.txtMensagem.Name = "txtMensagem";
-            this.txtMensagem.Size = new System.Drawing.Size(207, 33);
-            this.txtMensagem.TabIndex = 25;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(32, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 25);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Nome:";
+            this.lblDataCriacao.AutoSize = true;
+            this.lblDataCriacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblDataCriacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblDataCriacao.ForeColor = System.Drawing.Color.White;
+            this.lblDataCriacao.Location = new System.Drawing.Point(32, 280);
+            this.lblDataCriacao.Name = "lblDataCriacao";
+            this.lblDataCriacao.Size = new System.Drawing.Size(124, 25);
+            this.lblDataCriacao.TabIndex = 58;
+            this.lblDataCriacao.Text = "Data Criaçao:";
             // 
             // UC_CrudMensagens
             // 
@@ -336,12 +358,14 @@
         private System.Windows.Forms.Button btnCadastrarUsuarios;
         private System.Windows.Forms.Panel panelListBox;
         private System.Windows.Forms.ListBox lboMensagens;
-        private System.Windows.Forms.Label lblDDataHora;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label lblConteudo;
-        private System.Windows.Forms.TextBox txtMensagem;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkLida;
-        private System.Windows.Forms.Label lblDataHora;
+        private System.Windows.Forms.DateTimePicker dtpDataEnvio;
+        private System.Windows.Forms.TextBox txtConteudo;
+        private System.Windows.Forms.ComboBox cboRemetente;
+        private System.Windows.Forms.ComboBox cboChat;
+        private System.Windows.Forms.Label lblDataCriacao;
+        private System.Windows.Forms.Label lblConteudo;
+        private System.Windows.Forms.Label lblRemetente;
+        private System.Windows.Forms.Label lblChat;
     }
 }
