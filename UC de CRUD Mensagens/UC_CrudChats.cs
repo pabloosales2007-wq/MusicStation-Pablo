@@ -86,7 +86,30 @@ namespace MusicStation_Pablo
 
         private void btnAtualizarUsuarios_Click(object sender, EventArgs e)
         {
+            if (lboChats.SelectedItem == null) return;
+            ChatsRow chat = lboChats.SelectedItem as ChatsRow;
+            if (chat == null) return;
 
+            string nome = cboUsuario1.Text;
+            string nome2 = cboUsuario2.Text;
+            DateTime dataCriacao = dtpDataCriacao.Value;
+
+            try
+            {
+                ChatsTableAdapter chats = new ChatsTableAdapter();
+
+                // Passa os IDs do registro selecionado + os novos dados da tela
+                chats.Update(chat.id_chat,chat.usuario1_id, chat.usuario2_id, chat.data_criacao);
+
+                LimparElementos();
+                AtualizarLista();
+
+                MessageBox.Show("Chat atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().Name);
+            }
         }
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
@@ -124,7 +147,26 @@ namespace MusicStation_Pablo
 
         private void btnCadastrarUsuarios_Click(object sender, EventArgs e)
         {
+            
+            int nome = int.Parse(cboUsuario1.Text);
+            int nome2 = int.Parse(cboUsuario2.Text);
+            DateTime dataCriacao = dtpDataCriacao.Value;
+    
+            try
+            {
+                ChatsTableAdapter chats = new ChatsTableAdapter();
 
+                chats.Insert(nome, nome2, dataCriacao);
+
+                LimparElementos();
+                AtualizarLista();
+
+                MessageBox.Show("Chat cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().Name);
+            }
         }
     }
 }
