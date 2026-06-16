@@ -2815,6 +2815,10 @@ namespace MusicStation_Pablo {
             
             private global::System.Data.DataColumn columndata_criacao;
             
+            private global::System.Data.DataColumn columnNomeUsuario1;
+            
+            private global::System.Data.DataColumn columnNomeUsuario2;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ChatsDataTable() {
@@ -2882,6 +2886,22 @@ namespace MusicStation_Pablo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NomeUsuario1Column {
+                get {
+                    return this.columnNomeUsuario1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NomeUsuario2Column {
+                get {
+                    return this.columnNomeUsuario2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2917,13 +2937,15 @@ namespace MusicStation_Pablo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ChatsRow AddChatsRow(UsuariosRow parentUsuariosRowByFK__Chats__usuario1___76969D2E, UsuariosRow parentUsuariosRowByFK__Chats__usuario2___778AC167, System.DateTime data_criacao) {
+            public ChatsRow AddChatsRow(UsuariosRow parentUsuariosRowByFK__Chats__usuario1___76969D2E, UsuariosRow parentUsuariosRowByFK__Chats__usuario2___778AC167, System.DateTime data_criacao, string NomeUsuario1, string NomeUsuario2) {
                 ChatsRow rowChatsRow = ((ChatsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         null,
-                        data_criacao};
+                        data_criacao,
+                        NomeUsuario1,
+                        NomeUsuario2};
                 if ((parentUsuariosRowByFK__Chats__usuario1___76969D2E != null)) {
                     columnValuesArray[1] = parentUsuariosRowByFK__Chats__usuario1___76969D2E[0];
                 }
@@ -2963,6 +2985,8 @@ namespace MusicStation_Pablo {
                 this.columnusuario1_id = base.Columns["usuario1_id"];
                 this.columnusuario2_id = base.Columns["usuario2_id"];
                 this.columndata_criacao = base.Columns["data_criacao"];
+                this.columnNomeUsuario1 = base.Columns["NomeUsuario1"];
+                this.columnNomeUsuario2 = base.Columns["NomeUsuario2"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2976,6 +3000,10 @@ namespace MusicStation_Pablo {
                 base.Columns.Add(this.columnusuario2_id);
                 this.columndata_criacao = new global::System.Data.DataColumn("data_criacao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndata_criacao);
+                this.columnNomeUsuario1 = new global::System.Data.DataColumn("NomeUsuario1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNomeUsuario1);
+                this.columnNomeUsuario2 = new global::System.Data.DataColumn("NomeUsuario2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNomeUsuario2);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_chat}, true));
                 this.columnid_chat.AutoIncrement = true;
@@ -2987,6 +3015,10 @@ namespace MusicStation_Pablo {
                 this.columnusuario1_id.AllowDBNull = false;
                 this.columnusuario2_id.AllowDBNull = false;
                 this.columndata_criacao.AllowDBNull = false;
+                this.columnNomeUsuario1.AllowDBNull = false;
+                this.columnNomeUsuario1.MaxLength = 200;
+                this.columnNomeUsuario2.AllowDBNull = false;
+                this.columnNomeUsuario2.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15579,6 +15611,28 @@ namespace MusicStation_Pablo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NomeUsuario1 {
+                get {
+                    return ((string)(this[this.tableChats.NomeUsuario1Column]));
+                }
+                set {
+                    this[this.tableChats.NomeUsuario1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NomeUsuario2 {
+                get {
+                    return ((string)(this[this.tableChats.NomeUsuario2Column]));
+                }
+                set {
+                    this[this.tableChats.NomeUsuario2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public UsuariosRow UsuariosRowByFK__Chats__usuario1___76969D2E {
                 get {
                     return ((UsuariosRow)(this.GetParentRow(this.Table.ParentRelations["FK__Chats__usuario1___76969D2E"])));
@@ -21723,39 +21777,32 @@ SELECT id_avaliacao, servico_pedido_id, cliente_id, nota, comentario, data_avali
             tableMapping.ColumnMappings.Add("usuario1_id", "usuario1_id");
             tableMapping.ColumnMappings.Add("usuario2_id", "usuario2_id");
             tableMapping.ColumnMappings.Add("data_criacao", "data_criacao");
+            tableMapping.ColumnMappings.Add("NomeUsuario1", "NomeUsuario1");
+            tableMapping.ColumnMappings.Add("NomeUsuario2", "NomeUsuario2");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Chats] WHERE (([id_chat] = @Original_id_chat) AND ([usuario1_i" +
-                "d] = @Original_usuario1_id) AND ([usuario2_id] = @Original_usuario2_id) AND ([da" +
-                "ta_criacao] = @Original_data_criacao))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_chat", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_chat", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_usuario1_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario1_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_usuario2_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario2_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_criacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_criacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.CommandText = "dbo.DeletarChat";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_chat", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_chat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Chats] ([usuario1_id], [usuario2_id], [data_criacao]) VALUES (" +
-                "@usuario1_id, @usuario2_id, @data_criacao);\r\nSELECT id_chat, usuario1_id, usuari" +
-                "o2_id, data_criacao FROM Chats WHERE (id_chat = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario1_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario1_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario2_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario2_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_criacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_criacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.CommandText = "dbo.InserirChat";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario1_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "usuario1_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario2_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "usuario2_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_criacao", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, "data_criacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Chats] SET [usuario1_id] = @usuario1_id, [usuario2_id] = @usuario2_id, [data_criacao] = @data_criacao WHERE (([id_chat] = @Original_id_chat) AND ([usuario1_id] = @Original_usuario1_id) AND ([usuario2_id] = @Original_usuario2_id) AND ([data_criacao] = @Original_data_criacao));
-SELECT id_chat, usuario1_id, usuario2_id, data_criacao FROM Chats WHERE (id_chat = @id_chat)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario1_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario1_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario2_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario2_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_criacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_criacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_chat", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_chat", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_usuario1_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario1_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_usuario2_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuario2_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_criacao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_criacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_chat", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_chat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.CommandText = "dbo.AtualizarChat";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_chat", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_chat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario1_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "usuario1_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuario2_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "usuario2_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_criacao", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, "data_criacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -21771,8 +21818,9 @@ SELECT id_chat, usuario1_id, usuario2_id, data_criacao FROM Chats WHERE (id_chat
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_chat, usuario1_id, usuario2_id, data_criacao FROM dbo.Chats";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].CommandText = "dbo.ObterChats";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -21832,11 +21880,13 @@ SELECT id_chat, usuario1_id, usuario2_id, data_criacao FROM Chats WHERE (id_chat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_chat, int Original_usuario1_id, int Original_usuario2_id, System.DateTime Original_data_criacao) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_chat));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_usuario1_id));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_usuario2_id));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_data_criacao));
+        public virtual int Delete(global::System.Nullable<int> id_chat) {
+            if ((id_chat.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(id_chat.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -21857,10 +21907,25 @@ SELECT id_chat, usuario1_id, usuario2_id, data_criacao FROM Chats WHERE (id_chat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int usuario1_id, int usuario2_id, System.DateTime data_criacao) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(usuario1_id));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(usuario2_id));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(data_criacao));
+        public virtual int Insert(global::System.Nullable<int> usuario1_id, global::System.Nullable<int> usuario2_id, global::System.Nullable<global::System.DateTime> data_criacao) {
+            if ((usuario1_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(usuario1_id.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((usuario2_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(usuario2_id.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((data_criacao.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(data_criacao.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -21881,15 +21946,31 @@ SELECT id_chat, usuario1_id, usuario2_id, data_criacao FROM Chats WHERE (id_chat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int usuario1_id, int usuario2_id, System.DateTime data_criacao, int Original_id_chat, int Original_usuario1_id, int Original_usuario2_id, System.DateTime Original_data_criacao, int id_chat) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(usuario1_id));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(usuario2_id));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(data_criacao));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_id_chat));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_usuario1_id));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_usuario2_id));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_data_criacao));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(id_chat));
+        public virtual int Update(global::System.Nullable<int> id_chat, global::System.Nullable<int> usuario1_id, global::System.Nullable<int> usuario2_id, global::System.Nullable<global::System.DateTime> data_criacao) {
+            if ((id_chat.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(id_chat.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((usuario1_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(usuario1_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((usuario2_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(usuario2_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((data_criacao.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(data_criacao.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -21904,14 +21985,6 @@ SELECT id_chat, usuario1_id, usuario2_id, data_criacao FROM Chats WHERE (id_chat
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int usuario1_id, int usuario2_id, System.DateTime data_criacao, int Original_id_chat, int Original_usuario1_id, int Original_usuario2_id, System.DateTime Original_data_criacao) {
-            return this.Update(usuario1_id, usuario2_id, data_criacao, Original_id_chat, Original_usuario1_id, Original_usuario2_id, Original_data_criacao, Original_id_chat);
         }
     }
     

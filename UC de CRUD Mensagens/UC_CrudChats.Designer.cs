@@ -40,10 +40,12 @@
             this.btnCadastrarUsuarios = new System.Windows.Forms.Button();
             this.panelListBox = new System.Windows.Forms.Panel();
             this.lboChats = new System.Windows.Forms.ListBox();
-            this.lblMensagem = new System.Windows.Forms.Label();
             this.lblusuario2_id = new System.Windows.Forms.Label();
             this.lblusuario1_id = new System.Windows.Forms.Label();
-            this.txtMensagem = new System.Windows.Forms.TextBox();
+            this.cboUsuario1 = new System.Windows.Forms.ComboBox();
+            this.cboUsuario2 = new System.Windows.Forms.ComboBox();
+            this.dtpDataCriacao = new System.Windows.Forms.DateTimePicker();
+            this.lblDataCriacao = new System.Windows.Forms.Label();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -77,14 +79,16 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(26)))));
+            this.panel2.Controls.Add(this.lblDataCriacao);
+            this.panel2.Controls.Add(this.dtpDataCriacao);
+            this.panel2.Controls.Add(this.cboUsuario2);
+            this.panel2.Controls.Add(this.cboUsuario1);
             this.panel2.Controls.Add(this.txtPesquisa);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panelCRUD);
             this.panel2.Controls.Add(this.panelListBox);
-            this.panel2.Controls.Add(this.lblMensagem);
             this.panel2.Controls.Add(this.lblusuario2_id);
             this.panel2.Controls.Add(this.lblusuario1_id);
-            this.panel2.Controls.Add(this.txtMensagem);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -101,6 +105,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(409, 33);
             this.txtPesquisa.TabIndex = 49;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // label2
             // 
@@ -146,6 +151,7 @@
             this.btnLimpar.TabIndex = 25;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnAtualizarUsuarios
             // 
@@ -161,6 +167,7 @@
             this.btnAtualizarUsuarios.TabIndex = 23;
             this.btnAtualizarUsuarios.Text = "Atualizar";
             this.btnAtualizarUsuarios.UseVisualStyleBackColor = false;
+            this.btnAtualizarUsuarios.Click += new System.EventHandler(this.btnAtualizarUsuarios_Click);
             // 
             // btnDeletarUsuarios
             // 
@@ -176,6 +183,7 @@
             this.btnDeletarUsuarios.TabIndex = 22;
             this.btnDeletarUsuarios.Text = "Deletar";
             this.btnDeletarUsuarios.UseVisualStyleBackColor = false;
+            this.btnDeletarUsuarios.Click += new System.EventHandler(this.btnDeletarUsuarios_Click);
             // 
             // btnCadastrarUsuarios
             // 
@@ -191,6 +199,7 @@
             this.btnCadastrarUsuarios.TabIndex = 18;
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuarios.Click += new System.EventHandler(this.btnCadastrarUsuarios_Click);
             // 
             // panelListBox
             // 
@@ -216,18 +225,7 @@
             this.lboChats.ScrollAlwaysVisible = true;
             this.lboChats.Size = new System.Drawing.Size(897, 129);
             this.lboChats.TabIndex = 35;
-            // 
-            // lblMensagem
-            // 
-            this.lblMensagem.AutoSize = true;
-            this.lblMensagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.lblMensagem.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lblMensagem.ForeColor = System.Drawing.Color.White;
-            this.lblMensagem.Location = new System.Drawing.Point(31, 211);
-            this.lblMensagem.Name = "lblMensagem";
-            this.lblMensagem.Size = new System.Drawing.Size(109, 25);
-            this.lblMensagem.TabIndex = 31;
-            this.lblMensagem.Text = "Mensagem:";
+            this.lboChats.SelectedIndexChanged += new System.EventHandler(this.lboChats_SelectedIndexChanged);
             // 
             // lblusuario2_id
             // 
@@ -235,7 +233,7 @@
             this.lblusuario2_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblusuario2_id.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.lblusuario2_id.ForeColor = System.Drawing.Color.White;
-            this.lblusuario2_id.Location = new System.Drawing.Point(32, 120);
+            this.lblusuario2_id.Location = new System.Drawing.Point(31, 153);
             this.lblusuario2_id.Name = "lblusuario2_id";
             this.lblusuario2_id.Size = new System.Drawing.Size(91, 25);
             this.lblusuario2_id.TabIndex = 30;
@@ -253,16 +251,43 @@
             this.lblusuario1_id.TabIndex = 29;
             this.lblusuario1_id.Text = "Usuario1:";
             // 
-            // txtMensagem
+            // cboUsuario1
             // 
-            this.txtMensagem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMensagem.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtMensagem.ForeColor = System.Drawing.Color.Black;
-            this.txtMensagem.Location = new System.Drawing.Point(31, 239);
-            this.txtMensagem.Name = "txtMensagem";
-            this.txtMensagem.Size = new System.Drawing.Size(415, 33);
-            this.txtMensagem.TabIndex = 26;
+            this.cboUsuario1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboUsuario1.FormattingEnabled = true;
+            this.cboUsuario1.Location = new System.Drawing.Point(34, 113);
+            this.cboUsuario1.Name = "cboUsuario1";
+            this.cboUsuario1.Size = new System.Drawing.Size(409, 33);
+            this.cboUsuario1.TabIndex = 50;
+            // 
+            // cboUsuario2
+            // 
+            this.cboUsuario2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboUsuario2.FormattingEnabled = true;
+            this.cboUsuario2.Location = new System.Drawing.Point(34, 181);
+            this.cboUsuario2.Name = "cboUsuario2";
+            this.cboUsuario2.Size = new System.Drawing.Size(412, 33);
+            this.cboUsuario2.TabIndex = 51;
+            // 
+            // dtpDataCriacao
+            // 
+            this.dtpDataCriacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.dtpDataCriacao.Location = new System.Drawing.Point(37, 259);
+            this.dtpDataCriacao.Name = "dtpDataCriacao";
+            this.dtpDataCriacao.Size = new System.Drawing.Size(357, 33);
+            this.dtpDataCriacao.TabIndex = 52;
+            // 
+            // lblDataCriacao
+            // 
+            this.lblDataCriacao.AutoSize = true;
+            this.lblDataCriacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblDataCriacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblDataCriacao.ForeColor = System.Drawing.Color.White;
+            this.lblDataCriacao.Location = new System.Drawing.Point(32, 231);
+            this.lblDataCriacao.Name = "lblDataCriacao";
+            this.lblDataCriacao.Size = new System.Drawing.Size(120, 25);
+            this.lblDataCriacao.TabIndex = 53;
+            this.lblDataCriacao.Text = "Data Criaçao";
             // 
             // UC_CrudChats
             // 
@@ -296,9 +321,11 @@
         private System.Windows.Forms.Button btnCadastrarUsuarios;
         private System.Windows.Forms.Panel panelListBox;
         private System.Windows.Forms.ListBox lboChats;
-        private System.Windows.Forms.Label lblMensagem;
         private System.Windows.Forms.Label lblusuario2_id;
         private System.Windows.Forms.Label lblusuario1_id;
-        private System.Windows.Forms.TextBox txtMensagem;
+        private System.Windows.Forms.Label lblDataCriacao;
+        private System.Windows.Forms.DateTimePicker dtpDataCriacao;
+        private System.Windows.Forms.ComboBox cboUsuario2;
+        private System.Windows.Forms.ComboBox cboUsuario1;
     }
 }

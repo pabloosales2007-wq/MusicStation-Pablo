@@ -135,5 +135,13 @@
                 return $"Pagamento: {pedido_id}  |  {forma_pagamento}  |  {data_pagamento}  |  {valor_pago}  |  {acompanhamento}";
             }
         }
+
+        partial class ChatsRow
+        {
+            public override string ToString()
+            {
+                return $"Chat entre {NomeUsuario1}  |  {NomeUsuario2}  |  {data_criacao}";
+            }
+        }
     }
 }
