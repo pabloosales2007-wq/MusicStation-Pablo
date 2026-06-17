@@ -60,7 +60,32 @@ namespace MusicStation_Pablo
 
         private void btnAtualizarUsuarios_Click(object sender, EventArgs e)
         {
+            if (lboMensagens.SelectedItem == null) return;
+            MensagensRow mensagem = lboMensagens.SelectedItem as MensagensRow;
+            if (mensagem == null) return;
 
+            string nome = cboChat.Text;
+            string nome2 = cboRemetente.Text;
+            DateTime data = dtpDataEnvio.Value;
+            string conteudo = txtConteudo.Text;
+            bool lida = chkLida.Checked;
+
+            try
+            {
+                MensagensTableAdapter mensagens = new MensagensTableAdapter();
+
+                // Passa os IDs do registro selecionado + os novos dados da tela
+                mensagens.Update(mensagem.id_mensagem,mensagem.chat_id,mensagem.remetente_id, conteudo, data,lida);
+
+                LimparElementos();
+                AtualizarLista();
+
+                MessageBox.Show("Chat atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().Name);
+            }
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -103,7 +128,27 @@ namespace MusicStation_Pablo
 
         private void btnCadastrarUsuarios_Click(object sender, EventArgs e)
         {
+            int nome = int.Parse(cboChat.Text);
+            int remetente = int.Parse(cboRemetente.Text);
+            string conteudo = txtConteudo.Text;
+            DateTime data = dtpDataEnvio.Value;
+            bool lida = chkLida.Checked;
 
+            try
+            {
+                MensagensTableAdapter mensagens = new MensagensTableAdapter();
+
+                mensagens.Insert(nome, remetente, conteudo, data, lida);
+
+                LimparElementos();
+                AtualizarLista();
+
+                MessageBox.Show("Mensagem cadastrada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ex.GetType().Name);
+            }
         }
 
         private void AtualizarLista()

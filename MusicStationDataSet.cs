@@ -151,5 +151,13 @@
                 return $"Mensagem: {NomeRemetente}  |  {NomeChat}  |  {conteudo}  |  {lida}  |  {data_envio}";
             }
         }
+
+        partial class NotificacoesRow
+        {
+            public override string ToString()
+            {
+                return $"Notificação: {usuario_id}  |  {titulo}  |  {mensagem}  |  {tipo}  |  {lida}  |  {data_envio}";
+            }
+        }
     }
 }

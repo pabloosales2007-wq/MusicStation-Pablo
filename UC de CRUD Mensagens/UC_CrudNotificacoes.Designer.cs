@@ -31,7 +31,6 @@
             this.panelNomeTop = new System.Windows.Forms.Panel();
             this.lblNotificacoes = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cboTipo = new System.Windows.Forms.ComboBox();
             this.chkLida = new System.Windows.Forms.CheckBox();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,11 +43,14 @@
             this.panelListBox = new System.Windows.Forms.Panel();
             this.lboNotificacoes = new System.Windows.Forms.ListBox();
             this.lblMensagem = new System.Windows.Forms.Label();
-            this.txtDestinatario = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.lblDestinatario = new System.Windows.Forms.Label();
             this.txtMensagem = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboUsuario = new System.Windows.Forms.ComboBox();
+            this.cboTipo = new System.Windows.Forms.ComboBox();
+            this.dtpEnvio = new System.Windows.Forms.DateTimePicker();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -80,7 +82,10 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.dtpEnvio);
             this.panel2.Controls.Add(this.cboTipo);
+            this.panel2.Controls.Add(this.cboUsuario);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.chkLida);
             this.panel2.Controls.Add(this.txtPesquisa);
             this.panel2.Controls.Add(this.label2);
@@ -88,7 +93,6 @@
             this.panel2.Controls.Add(this.lblTipo);
             this.panel2.Controls.Add(this.panelListBox);
             this.panel2.Controls.Add(this.lblMensagem);
-            this.panel2.Controls.Add(this.txtDestinatario);
             this.panel2.Controls.Add(this.lblTitulo);
             this.panel2.Controls.Add(this.txtTitulo);
             this.panel2.Controls.Add(this.lblDestinatario);
@@ -99,26 +103,12 @@
             this.panel2.Size = new System.Drawing.Size(976, 536);
             this.panel2.TabIndex = 39;
             // 
-            // cboTipo
-            // 
-            this.cboTipo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Items.AddRange(new object[] {
-            "sistema",
-            "agendamento",
-            "mensagem",
-            "promocao"});
-            this.cboTipo.Location = new System.Drawing.Point(34, 304);
-            this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(204, 33);
-            this.cboTipo.TabIndex = 52;
-            // 
             // chkLida
             // 
             this.chkLida.AutoSize = true;
             this.chkLida.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.chkLida.ForeColor = System.Drawing.Color.White;
-            this.chkLida.Location = new System.Drawing.Point(291, 115);
+            this.chkLida.Location = new System.Drawing.Point(278, 175);
             this.chkLida.Name = "chkLida";
             this.chkLida.Size = new System.Drawing.Size(66, 29);
             this.chkLida.TabIndex = 51;
@@ -135,6 +125,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(409, 33);
             this.txtPesquisa.TabIndex = 49;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // label2
             // 
@@ -180,6 +171,7 @@
             this.btnLimpar.TabIndex = 25;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnAtualizarUsuarios
             // 
@@ -195,6 +187,7 @@
             this.btnAtualizarUsuarios.TabIndex = 23;
             this.btnAtualizarUsuarios.Text = "Atualizar";
             this.btnAtualizarUsuarios.UseVisualStyleBackColor = false;
+            this.btnAtualizarUsuarios.Click += new System.EventHandler(this.btnAtualizarUsuarios_Click);
             // 
             // btnDeletarUsuarios
             // 
@@ -210,6 +203,7 @@
             this.btnDeletarUsuarios.TabIndex = 22;
             this.btnDeletarUsuarios.Text = "Deletar";
             this.btnDeletarUsuarios.UseVisualStyleBackColor = false;
+            this.btnDeletarUsuarios.Click += new System.EventHandler(this.btnDeletarUsuarios_Click);
             // 
             // btnCadastrarUsuarios
             // 
@@ -225,6 +219,7 @@
             this.btnCadastrarUsuarios.TabIndex = 18;
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuarios.Click += new System.EventHandler(this.btnCadastrarUsuarios_Click);
             // 
             // lblTipo
             // 
@@ -232,11 +227,11 @@
             this.lblTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblTipo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.lblTipo.ForeColor = System.Drawing.Color.White;
-            this.lblTipo.Location = new System.Drawing.Point(31, 275);
+            this.lblTipo.Location = new System.Drawing.Point(31, 274);
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(135, 25);
+            this.lblTipo.Size = new System.Drawing.Size(106, 25);
             this.lblTipo.TabIndex = 32;
-            this.lblTipo.Text = "Data Cadastro:";
+            this.lblTipo.Text = "Data Envio:";
             // 
             // panelListBox
             // 
@@ -262,6 +257,7 @@
             this.lboNotificacoes.ScrollAlwaysVisible = true;
             this.lboNotificacoes.Size = new System.Drawing.Size(897, 129);
             this.lboNotificacoes.TabIndex = 35;
+            this.lboNotificacoes.SelectedIndexChanged += new System.EventHandler(this.lboNotificacoes_SelectedIndexChanged);
             // 
             // lblMensagem
             // 
@@ -269,22 +265,11 @@
             this.lblMensagem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.lblMensagem.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.lblMensagem.ForeColor = System.Drawing.Color.White;
-            this.lblMensagem.Location = new System.Drawing.Point(31, 211);
+            this.lblMensagem.Location = new System.Drawing.Point(273, 85);
             this.lblMensagem.Name = "lblMensagem";
             this.lblMensagem.Size = new System.Drawing.Size(109, 25);
             this.lblMensagem.TabIndex = 31;
             this.lblMensagem.Text = "Mensagem:";
-            // 
-            // txtDestinatario
-            // 
-            this.txtDestinatario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDestinatario.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtDestinatario.ForeColor = System.Drawing.Color.Black;
-            this.txtDestinatario.Location = new System.Drawing.Point(31, 113);
-            this.txtDestinatario.Name = "txtDestinatario";
-            this.txtDestinatario.Size = new System.Drawing.Size(207, 33);
-            this.txtDestinatario.TabIndex = 24;
             // 
             // lblTitulo
             // 
@@ -327,10 +312,53 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMensagem.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.txtMensagem.ForeColor = System.Drawing.Color.Black;
-            this.txtMensagem.Location = new System.Drawing.Point(31, 239);
+            this.txtMensagem.Location = new System.Drawing.Point(273, 113);
             this.txtMensagem.Name = "txtMensagem";
             this.txtMensagem.Size = new System.Drawing.Size(207, 33);
             this.txtMensagem.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(31, 210);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 25);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Tipo:";
+            // 
+            // cboUsuario
+            // 
+            this.cboUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboUsuario.FormattingEnabled = true;
+            this.cboUsuario.Location = new System.Drawing.Point(31, 113);
+            this.cboUsuario.Name = "cboUsuario";
+            this.cboUsuario.Size = new System.Drawing.Size(206, 33);
+            this.cboUsuario.TabIndex = 55;
+            // 
+            // cboTipo
+            // 
+            this.cboTipo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboTipo.FormattingEnabled = true;
+            this.cboTipo.Items.AddRange(new object[] {
+            "sistema",
+            "agendamento",
+            "mensagem",
+            "promocao"});
+            this.cboTipo.Location = new System.Drawing.Point(36, 238);
+            this.cboTipo.Name = "cboTipo";
+            this.cboTipo.Size = new System.Drawing.Size(201, 33);
+            this.cboTipo.TabIndex = 56;
+            // 
+            // dtpEnvio
+            // 
+            this.dtpEnvio.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.dtpEnvio.Location = new System.Drawing.Point(36, 303);
+            this.dtpEnvio.Name = "dtpEnvio";
+            this.dtpEnvio.Size = new System.Drawing.Size(376, 33);
+            this.dtpEnvio.TabIndex = 57;
             // 
             // UC_CrudNotificacoes
             // 
@@ -366,13 +394,15 @@
         private System.Windows.Forms.Panel panelListBox;
         private System.Windows.Forms.ListBox lboNotificacoes;
         private System.Windows.Forms.Label lblMensagem;
-        private System.Windows.Forms.TextBox txtDestinatario;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Label lblDestinatario;
         private System.Windows.Forms.TextBox txtMensagem;
-        private System.Windows.Forms.ComboBox cboTipo;
         private System.Windows.Forms.CheckBox chkLida;
         private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.ComboBox cboTipo;
+        private System.Windows.Forms.ComboBox cboUsuario;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtpEnvio;
     }
 }
