@@ -159,5 +159,13 @@
                 return $"Notificação: {usuario_id}  |  {titulo}  |  {mensagem}  |  {tipo}  |  {lida}  |  {data_envio}";
             }
         }
+
+        partial class AvaliacoesRow
+        {
+            public override string ToString()
+            {
+                return $"Avaliação: {NomeCliente}  |  {NomeServico}  |  {nota}  |  {comentario}  |  {data_avaliacao}";
+            }
+        }
     }
 }

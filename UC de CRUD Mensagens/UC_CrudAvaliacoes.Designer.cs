@@ -31,10 +31,8 @@
             this.panelNomeTop = new System.Windows.Forms.Panel();
             this.lblAvaliacoes = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtpDataAvaliacao = new System.Windows.Forms.DateTimePicker();
+            this.lblDataAvaliacao = new System.Windows.Forms.Label();
             this.lblComentario = new System.Windows.Forms.Label();
-            this.txtComentario = new System.Windows.Forms.TextBox();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelCRUD = new System.Windows.Forms.TableLayoutPanel();
@@ -45,11 +43,13 @@
             this.panelListBox = new System.Windows.Forms.Panel();
             this.lboAvaliacoes = new System.Windows.Forms.ListBox();
             this.lblNota = new System.Windows.Forms.Label();
-            this.txtServicoPedido = new System.Windows.Forms.TextBox();
             this.lblCliente = new System.Windows.Forms.Label();
-            this.txtCliente = new System.Windows.Forms.TextBox();
             this.lblServicoPedido = new System.Windows.Forms.Label();
-            this.txtNota = new System.Windows.Forms.TextBox();
+            this.cboServicoPedido = new System.Windows.Forms.ComboBox();
+            this.cboCliente = new System.Windows.Forms.ComboBox();
+            this.cboNota = new System.Windows.Forms.ComboBox();
+            this.dtpDataAvaliacao = new System.Windows.Forms.DateTimePicker();
+            this.txtComentario = new System.Windows.Forms.TextBox();
             this.panelNomeTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelCRUD.SuspendLayout();
@@ -81,45 +81,37 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.dtpDataAvaliacao);
-            this.panel2.Controls.Add(this.lblComentario);
             this.panel2.Controls.Add(this.txtComentario);
+            this.panel2.Controls.Add(this.dtpDataAvaliacao);
+            this.panel2.Controls.Add(this.cboNota);
+            this.panel2.Controls.Add(this.cboCliente);
+            this.panel2.Controls.Add(this.cboServicoPedido);
+            this.panel2.Controls.Add(this.lblDataAvaliacao);
+            this.panel2.Controls.Add(this.lblComentario);
             this.panel2.Controls.Add(this.txtPesquisa);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panelCRUD);
             this.panel2.Controls.Add(this.panelListBox);
             this.panel2.Controls.Add(this.lblNota);
-            this.panel2.Controls.Add(this.txtServicoPedido);
             this.panel2.Controls.Add(this.lblCliente);
-            this.panel2.Controls.Add(this.txtCliente);
             this.panel2.Controls.Add(this.lblServicoPedido);
-            this.panel2.Controls.Add(this.txtNota);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(976, 536);
             this.panel2.TabIndex = 39;
             // 
-            // label4
+            // lblDataAvaliacao
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(276, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 25);
-            this.label4.TabIndex = 53;
-            this.label4.Text = "Data Cadastro:";
-            // 
-            // dtpDataAvaliacao
-            // 
-            this.dtpDataAvaliacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.dtpDataAvaliacao.Location = new System.Drawing.Point(276, 113);
-            this.dtpDataAvaliacao.Name = "dtpDataAvaliacao";
-            this.dtpDataAvaliacao.Size = new System.Drawing.Size(200, 33);
-            this.dtpDataAvaliacao.TabIndex = 52;
+            this.lblDataAvaliacao.AutoSize = true;
+            this.lblDataAvaliacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.lblDataAvaliacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lblDataAvaliacao.ForeColor = System.Drawing.Color.White;
+            this.lblDataAvaliacao.Location = new System.Drawing.Point(276, 85);
+            this.lblDataAvaliacao.Name = "lblDataAvaliacao";
+            this.lblDataAvaliacao.Size = new System.Drawing.Size(141, 25);
+            this.lblDataAvaliacao.TabIndex = 53;
+            this.lblDataAvaliacao.Text = "Data Avaliaçao:";
             // 
             // lblComentario
             // 
@@ -133,17 +125,6 @@
             this.lblComentario.TabIndex = 51;
             this.lblComentario.Text = "Comentário:";
             // 
-            // txtComentario
-            // 
-            this.txtComentario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtComentario.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtComentario.ForeColor = System.Drawing.Color.Black;
-            this.txtComentario.Location = new System.Drawing.Point(31, 303);
-            this.txtComentario.Name = "txtComentario";
-            this.txtComentario.Size = new System.Drawing.Size(207, 33);
-            this.txtComentario.TabIndex = 50;
-            // 
             // txtPesquisa
             // 
             this.txtPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -154,6 +135,7 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(409, 33);
             this.txtPesquisa.TabIndex = 49;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // label2
             // 
@@ -199,6 +181,7 @@
             this.btnLimpar.TabIndex = 25;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnAtualizarUsuarios
             // 
@@ -214,6 +197,7 @@
             this.btnAtualizarUsuarios.TabIndex = 23;
             this.btnAtualizarUsuarios.Text = "Atualizar";
             this.btnAtualizarUsuarios.UseVisualStyleBackColor = false;
+            this.btnAtualizarUsuarios.Click += new System.EventHandler(this.btnAtualizarUsuarios_Click);
             // 
             // btnDeletarUsuarios
             // 
@@ -229,6 +213,7 @@
             this.btnDeletarUsuarios.TabIndex = 22;
             this.btnDeletarUsuarios.Text = "Deletar";
             this.btnDeletarUsuarios.UseVisualStyleBackColor = false;
+            this.btnDeletarUsuarios.Click += new System.EventHandler(this.btnDeletarUsuarios_Click);
             // 
             // btnCadastrarUsuarios
             // 
@@ -244,6 +229,7 @@
             this.btnCadastrarUsuarios.TabIndex = 18;
             this.btnCadastrarUsuarios.Text = "Cadastrar";
             this.btnCadastrarUsuarios.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuarios.Click += new System.EventHandler(this.btnCadastrarUsuarios_Click);
             // 
             // panelListBox
             // 
@@ -269,6 +255,7 @@
             this.lboAvaliacoes.ScrollAlwaysVisible = true;
             this.lboAvaliacoes.Size = new System.Drawing.Size(897, 129);
             this.lboAvaliacoes.TabIndex = 35;
+            this.lboAvaliacoes.SelectedIndexChanged += new System.EventHandler(this.lboAvaliacoes_SelectedIndexChanged);
             // 
             // lblNota
             // 
@@ -282,17 +269,6 @@
             this.lblNota.TabIndex = 31;
             this.lblNota.Text = "Nota:";
             // 
-            // txtServicoPedido
-            // 
-            this.txtServicoPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtServicoPedido.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtServicoPedido.ForeColor = System.Drawing.Color.Black;
-            this.txtServicoPedido.Location = new System.Drawing.Point(31, 113);
-            this.txtServicoPedido.Name = "txtServicoPedido";
-            this.txtServicoPedido.Size = new System.Drawing.Size(207, 33);
-            this.txtServicoPedido.TabIndex = 24;
-            // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
@@ -304,17 +280,6 @@
             this.lblCliente.Size = new System.Drawing.Size(75, 25);
             this.lblCliente.TabIndex = 30;
             this.lblCliente.Text = "Cliente:";
-            // 
-            // txtCliente
-            // 
-            this.txtCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCliente.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtCliente.ForeColor = System.Drawing.Color.Black;
-            this.txtCliente.Location = new System.Drawing.Point(31, 175);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(207, 33);
-            this.txtCliente.TabIndex = 25;
             // 
             // lblServicoPedido
             // 
@@ -328,16 +293,51 @@
             this.lblServicoPedido.TabIndex = 29;
             this.lblServicoPedido.Text = "Serviço Pedido:";
             // 
-            // txtNota
+            // cboServicoPedido
             // 
-            this.txtNota.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cboServicoPedido.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboServicoPedido.FormattingEnabled = true;
+            this.cboServicoPedido.Location = new System.Drawing.Point(34, 114);
+            this.cboServicoPedido.Name = "cboServicoPedido";
+            this.cboServicoPedido.Size = new System.Drawing.Size(138, 33);
+            this.cboServicoPedido.TabIndex = 54;
+            // 
+            // cboCliente
+            // 
+            this.cboCliente.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboCliente.FormattingEnabled = true;
+            this.cboCliente.Location = new System.Drawing.Point(34, 175);
+            this.cboCliente.Name = "cboCliente";
+            this.cboCliente.Size = new System.Drawing.Size(138, 33);
+            this.cboCliente.TabIndex = 55;
+            // 
+            // cboNota
+            // 
+            this.cboNota.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.cboNota.FormattingEnabled = true;
+            this.cboNota.Location = new System.Drawing.Point(34, 238);
+            this.cboNota.Name = "cboNota";
+            this.cboNota.Size = new System.Drawing.Size(138, 33);
+            this.cboNota.TabIndex = 56;
+            // 
+            // dtpDataAvaliacao
+            // 
+            this.dtpDataAvaliacao.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.dtpDataAvaliacao.Location = new System.Drawing.Point(281, 114);
+            this.dtpDataAvaliacao.Name = "dtpDataAvaliacao";
+            this.dtpDataAvaliacao.Size = new System.Drawing.Size(217, 33);
+            this.dtpDataAvaliacao.TabIndex = 58;
+            // 
+            // txtComentario
+            // 
+            this.txtComentario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNota.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.txtNota.ForeColor = System.Drawing.Color.Black;
-            this.txtNota.Location = new System.Drawing.Point(31, 239);
-            this.txtNota.Name = "txtNota";
-            this.txtNota.Size = new System.Drawing.Size(207, 33);
-            this.txtNota.TabIndex = 26;
+            this.txtComentario.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.txtComentario.ForeColor = System.Drawing.Color.Black;
+            this.txtComentario.Location = new System.Drawing.Point(34, 303);
+            this.txtComentario.Name = "txtComentario";
+            this.txtComentario.Size = new System.Drawing.Size(138, 33);
+            this.txtComentario.TabIndex = 59;
             // 
             // UC_CrudAvaliacoes
             // 
@@ -373,14 +373,14 @@
         private System.Windows.Forms.Panel panelListBox;
         private System.Windows.Forms.ListBox lboAvaliacoes;
         private System.Windows.Forms.Label lblNota;
-        private System.Windows.Forms.TextBox txtServicoPedido;
         private System.Windows.Forms.Label lblCliente;
-        private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label lblServicoPedido;
-        private System.Windows.Forms.TextBox txtNota;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dtpDataAvaliacao;
+        private System.Windows.Forms.Label lblDataAvaliacao;
         private System.Windows.Forms.Label lblComentario;
+        private System.Windows.Forms.ComboBox cboNota;
+        private System.Windows.Forms.ComboBox cboCliente;
+        private System.Windows.Forms.ComboBox cboServicoPedido;
+        private System.Windows.Forms.DateTimePicker dtpDataAvaliacao;
         private System.Windows.Forms.TextBox txtComentario;
     }
 }

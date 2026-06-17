@@ -2182,6 +2182,10 @@ namespace MusicStation_Pablo {
             
             private global::System.Data.DataColumn columndata_avaliacao;
             
+            private global::System.Data.DataColumn columnNomeServico;
+            
+            private global::System.Data.DataColumn columnNomeCliente;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public AvaliacoesDataTable() {
@@ -2265,6 +2269,22 @@ namespace MusicStation_Pablo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NomeServicoColumn {
+                get {
+                    return this.columnNomeServico;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NomeClienteColumn {
+                get {
+                    return this.columnNomeCliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2300,7 +2320,7 @@ namespace MusicStation_Pablo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AvaliacoesRow AddAvaliacoesRow(Servicos_PedidosRow parentServicos_PedidosRowByFK__Avaliacoe__servi__06CD04F7, ClientesRow parentClientesRowByFK__Avaliacoe__clien__05D8E0BE, int nota, string comentario, System.DateTime data_avaliacao) {
+            public AvaliacoesRow AddAvaliacoesRow(Servicos_PedidosRow parentServicos_PedidosRowByFK__Avaliacoe__servi__06CD04F7, ClientesRow parentClientesRowByFK__Avaliacoe__clien__05D8E0BE, int nota, string comentario, System.DateTime data_avaliacao, string NomeServico, string NomeCliente) {
                 AvaliacoesRow rowAvaliacoesRow = ((AvaliacoesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2308,7 +2328,9 @@ namespace MusicStation_Pablo {
                         null,
                         nota,
                         comentario,
-                        data_avaliacao};
+                        data_avaliacao,
+                        NomeServico,
+                        NomeCliente};
                 if ((parentServicos_PedidosRowByFK__Avaliacoe__servi__06CD04F7 != null)) {
                     columnValuesArray[1] = parentServicos_PedidosRowByFK__Avaliacoe__servi__06CD04F7[0];
                 }
@@ -2350,6 +2372,8 @@ namespace MusicStation_Pablo {
                 this.columnnota = base.Columns["nota"];
                 this.columncomentario = base.Columns["comentario"];
                 this.columndata_avaliacao = base.Columns["data_avaliacao"];
+                this.columnNomeServico = base.Columns["NomeServico"];
+                this.columnNomeCliente = base.Columns["NomeCliente"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2367,6 +2391,10 @@ namespace MusicStation_Pablo {
                 base.Columns.Add(this.columncomentario);
                 this.columndata_avaliacao = new global::System.Data.DataColumn("data_avaliacao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndata_avaliacao);
+                this.columnNomeServico = new global::System.Data.DataColumn("NomeServico", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNomeServico);
+                this.columnNomeCliente = new global::System.Data.DataColumn("NomeCliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNomeCliente);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_avaliacao}, true));
                 this.columnid_avaliacao.AutoIncrement = true;
@@ -2380,6 +2408,10 @@ namespace MusicStation_Pablo {
                 this.columnnota.AllowDBNull = false;
                 this.columncomentario.MaxLength = 300;
                 this.columndata_avaliacao.AllowDBNull = false;
+                this.columnNomeServico.AllowDBNull = false;
+                this.columnNomeServico.MaxLength = 100;
+                this.columnNomeCliente.AllowDBNull = false;
+                this.columnNomeCliente.MaxLength = 200;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15507,6 +15539,28 @@ namespace MusicStation_Pablo {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NomeServico {
+                get {
+                    return ((string)(this[this.tableAvaliacoes.NomeServicoColumn]));
+                }
+                set {
+                    this[this.tableAvaliacoes.NomeServicoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string NomeCliente {
+                get {
+                    return ((string)(this[this.tableAvaliacoes.NomeClienteColumn]));
+                }
+                set {
+                    this[this.tableAvaliacoes.NomeClienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ClientesRow ClientesRow {
                 get {
                     return ((ClientesRow)(this.GetParentRow(this.Table.ParentRelations["FK__Avaliacoe__clien__05D8E0BE"])));
@@ -21199,46 +21253,36 @@ namespace MusicStation_Pablo.MusicStationDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("nota", "nota");
             tableMapping.ColumnMappings.Add("comentario", "comentario");
             tableMapping.ColumnMappings.Add("data_avaliacao", "data_avaliacao");
+            tableMapping.ColumnMappings.Add("NomeServico", "NomeServico");
+            tableMapping.ColumnMappings.Add("NomeCliente", "NomeCliente");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Avaliacoes] WHERE (([id_avaliacao] = @Original_id_avaliacao) AND ([servico_pedido_id] = @Original_servico_pedido_id) AND ([cliente_id] = @Original_cliente_id) AND ([nota] = @Original_nota) AND ((@IsNull_comentario = 1 AND [comentario] IS NULL) OR ([comentario] = @Original_comentario)) AND ([data_avaliacao] = @Original_data_avaliacao))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_avaliacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_avaliacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_servico_pedido_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "servico_pedido_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cliente_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cliente_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nota", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nota", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_comentario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "comentario", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_comentario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "comentario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_avaliacao", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_avaliacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.CommandText = "dbo.DeletarAvaliacao";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_avaliacao", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_avaliacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Avaliacoes] ([servico_pedido_id], [cliente_id], [nota], [comentario], [data_avaliacao]) VALUES (@servico_pedido_id, @cliente_id, @nota, @comentario, @data_avaliacao);
-SELECT id_avaliacao, servico_pedido_id, cliente_id, nota, comentario, data_avaliacao FROM Avaliacoes WHERE (id_avaliacao = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@servico_pedido_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "servico_pedido_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cliente_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cliente_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nota", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nota", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@comentario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "comentario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_avaliacao", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_avaliacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.CommandText = "dbo.InserirAvaliacao";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@servico_pedido_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "servico_pedido_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cliente_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "cliente_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nota", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "nota", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@comentario", global::System.Data.SqlDbType.VarChar, 300, global::System.Data.ParameterDirection.Input, 0, 0, "comentario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_avaliacao", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, "data_avaliacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Avaliacoes] SET [servico_pedido_id] = @servico_pedido_id, [cliente_id] = @cliente_id, [nota] = @nota, [comentario] = @comentario, [data_avaliacao] = @data_avaliacao WHERE (([id_avaliacao] = @Original_id_avaliacao) AND ([servico_pedido_id] = @Original_servico_pedido_id) AND ([cliente_id] = @Original_cliente_id) AND ([nota] = @Original_nota) AND ((@IsNull_comentario = 1 AND [comentario] IS NULL) OR ([comentario] = @Original_comentario)) AND ([data_avaliacao] = @Original_data_avaliacao));
-SELECT id_avaliacao, servico_pedido_id, cliente_id, nota, comentario, data_avaliacao FROM Avaliacoes WHERE (id_avaliacao = @id_avaliacao)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@servico_pedido_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "servico_pedido_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cliente_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cliente_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nota", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nota", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@comentario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "comentario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_avaliacao", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_avaliacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_avaliacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_avaliacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_servico_pedido_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "servico_pedido_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cliente_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cliente_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nota", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nota", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_comentario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "comentario", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_comentario", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "comentario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_avaliacao", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_avaliacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_avaliacao", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_avaliacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.CommandText = "dbo.AtualizarAvaliacao";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_avaliacao", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "id_avaliacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@servico_pedido_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "servico_pedido_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cliente_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "cliente_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nota", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "nota", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@comentario", global::System.Data.SqlDbType.VarChar, 300, global::System.Data.ParameterDirection.Input, 0, 0, "comentario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_avaliacao", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, "data_avaliacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -21254,9 +21298,9 @@ SELECT id_avaliacao, servico_pedido_id, cliente_id, nota, comentario, data_avali
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_avaliacao, servico_pedido_id, cliente_id, nota, comentario, data_avalia" +
-                "cao FROM dbo.Avaliacoes";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].CommandText = "dbo.ObterAvaliacoes";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -21316,20 +21360,13 @@ SELECT id_avaliacao, servico_pedido_id, cliente_id, nota, comentario, data_avali
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_avaliacao, int Original_servico_pedido_id, int Original_cliente_id, int Original_nota, string Original_comentario, System.DateTime Original_data_avaliacao) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_avaliacao));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_servico_pedido_id));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_cliente_id));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_nota));
-            if ((Original_comentario == null)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+        public virtual int Delete(global::System.Nullable<int> id_avaliacao) {
+            if ((id_avaliacao.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(id_avaliacao.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_comentario));
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_data_avaliacao));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -21350,17 +21387,37 @@ SELECT id_avaliacao, servico_pedido_id, cliente_id, nota, comentario, data_avali
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int servico_pedido_id, int cliente_id, int nota, string comentario, System.DateTime data_avaliacao) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(servico_pedido_id));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(cliente_id));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(nota));
-            if ((comentario == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+        public virtual int Insert(global::System.Nullable<int> servico_pedido_id, global::System.Nullable<int> cliente_id, global::System.Nullable<int> nota, string comentario, global::System.Nullable<global::System.DateTime> data_avaliacao) {
+            if ((servico_pedido_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(servico_pedido_id.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(comentario));
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(data_avaliacao));
+            if ((cliente_id.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(cliente_id.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((nota.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(nota.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((comentario == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(comentario));
+            }
+            if ((data_avaliacao.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(data_avaliacao.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -21381,31 +21438,43 @@ SELECT id_avaliacao, servico_pedido_id, cliente_id, nota, comentario, data_avali
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int servico_pedido_id, int cliente_id, int nota, string comentario, System.DateTime data_avaliacao, int Original_id_avaliacao, int Original_servico_pedido_id, int Original_cliente_id, int Original_nota, string Original_comentario, System.DateTime Original_data_avaliacao, int id_avaliacao) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(servico_pedido_id));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(cliente_id));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(nota));
-            if ((comentario == null)) {
+        public virtual int Update(global::System.Nullable<int> id_avaliacao, global::System.Nullable<int> servico_pedido_id, global::System.Nullable<int> cliente_id, global::System.Nullable<int> nota, string comentario, global::System.Nullable<global::System.DateTime> data_avaliacao) {
+            if ((id_avaliacao.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(id_avaliacao.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((servico_pedido_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(servico_pedido_id.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((cliente_id.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(cliente_id.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(comentario));
-            }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(data_avaliacao));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id_avaliacao));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_servico_pedido_id));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_cliente_id));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_nota));
-            if ((Original_comentario == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            if ((nota.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(nota.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_comentario));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_data_avaliacao));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(id_avaliacao));
+            if ((comentario == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(comentario));
+            }
+            if ((data_avaliacao.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(data_avaliacao.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -21420,14 +21489,6 @@ SELECT id_avaliacao, servico_pedido_id, cliente_id, nota, comentario, data_avali
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int servico_pedido_id, int cliente_id, int nota, string comentario, System.DateTime data_avaliacao, int Original_id_avaliacao, int Original_servico_pedido_id, int Original_cliente_id, int Original_nota, string Original_comentario, System.DateTime Original_data_avaliacao) {
-            return this.Update(servico_pedido_id, cliente_id, nota, comentario, data_avaliacao, Original_id_avaliacao, Original_servico_pedido_id, Original_cliente_id, Original_nota, Original_comentario, Original_data_avaliacao, Original_id_avaliacao);
         }
     }
     
