@@ -142,6 +142,7 @@ namespace MusicStation_Pablo
             cboNota.SelectedIndex = -1;
             txtComentario.Clear();
             dtpDataAvaliacao.Value = DateTime.Now;
+
         }
 
         private void AtualizarLista()
