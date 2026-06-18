@@ -1,4 +1,6 @@
-﻿namespace MusicStation_Pablo
+﻿using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+
+namespace MusicStation_Pablo
 {
 
 
@@ -115,7 +117,7 @@
         {
             public override string ToString()
             {
-                return $"{id_pagamento}  |  {tipo}";
+                return $"{tipo}";
             }
         }
 
@@ -156,7 +158,7 @@
         {
             public override string ToString()
             {
-                return $"Notificação: {usuario_id}  |  {titulo}  |  {mensagem}  |  {tipo}  |  {lida}  |  {data_envio}";
+                return $"Notificação: {NomeUsuario}  |  {titulo}  |  {mensagem}  |  {tipo}  |  {lida}  |  {data_envio}";
             }
         }
 
